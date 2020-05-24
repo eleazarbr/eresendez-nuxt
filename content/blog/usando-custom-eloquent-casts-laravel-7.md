@@ -3,7 +3,7 @@ title: "Usando Custom Eloquent Casts en Laravel 7"
 summary: "Atymic explica una nueva característica de Laravel 7: Los Eloquent Casts personalizados."
 date: 2020-03-08 18:36:00
 image: 10.png
-external\_url:
+external_url:
   url: https://atymic.dev/blog/laravel-custom-casts/
   site: https://atymic.dev
 tags: [Laravel]

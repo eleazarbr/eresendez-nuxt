@@ -3,7 +3,7 @@ title: "La mejor manera de hacer natural-sort en Javascript"
 summary: "Bradley T. comparte una manera de hacer natural-sort en JavaScript con una sola línea de código."
 date: 2020-03-10 16:36:00
 image:
-external\_url:
+external_url:
   url: http://fuzzytolerance.info/blog/2019/07/19/The-better-way-to-do-natural-sort-in-JavaScript/
   site: http://fuzzytolerance.info
 tags: [JavaScript]
