@@ -4,14 +4,16 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.APP_NAME || '',
+    titleTemplate: '%s - ' + process.env.APP_NAME,
+    htmlAttrs: { lang: 'es' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Eleazar Resendez Blog'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -20,33 +22,71 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
+
+  router: {
+    middleware: ['locale'],
+    linkActiveClass: 'is-active'
+  },
+
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    { src: '~assets/sass/app.scss', lang: 'scss' }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~plugins/i18n',
+  ],
+
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/moment',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
-    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/router',
+    '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-buefy'
   ],
+
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css',
+    exposeConfig: false
+  },
+
+  buefy: {
+    materialDesignIcons: true,
+    defaultIconPack: 'mdi'
+  },
+
+  moment: {
+    defaultTimezone: 'America/Monterrey',
+    defaultLocale: 'es',
+    locales: ['es']
+  },
+
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-dracula.css'
+      }
+    }
+  },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -56,9 +96,12 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    extractCSS: true,
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     '_': 'lodash'
+    //   })
+    // ],
+    extend(config, ctx) { }
   }
 }

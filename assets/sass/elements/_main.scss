@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #e6e6e6 0%, white 71%, white 100%);
+  background-repeat: repeat-x;
+}
+
+.image.is-256x256 {
+  height: 256px;
+  width: 256px;
+}
+
+.image.is-256xauto {
+  height: 256px;
+  width: 100%;
+}
+
+.image.is-128xauto {
+  height: 128px;
+  width: 100%;
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+}
