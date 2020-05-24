@@ -4,7 +4,7 @@
 			<b-navbar-item tag="router-link" :to="{ name: user ? 'home' : 'welcome' }">{{ appName }}</b-navbar-item>
 		</template>
 		<template slot="start">
-			<!-- <locale-dropdown /> -->
+			<locale-dropdown />
 		</template>
 		<template slot="end">
 			<!-- Authenticated -->
@@ -47,7 +47,7 @@ export default {
 	},
 
 	data: () => ({
-		appName: process.env.appName
+		appName: process.env.APP_NAME
 	}),
 
 	computed: mapGetters({

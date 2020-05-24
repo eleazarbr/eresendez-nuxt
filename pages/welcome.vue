@@ -66,7 +66,6 @@ export default {
 	},
 
 	data: () => ({
-		title: process.env.appName,
 		posts: [],
 		keyword: "",
 		currentPage: 1,
