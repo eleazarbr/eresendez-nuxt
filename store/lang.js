@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 
 // state
 export const state = () => ({
-  locale: process.env.appLocale,
+  locale: process.env.APP_LOCALE,
   locales: {
     'en': 'EN',
     'es': 'ES'

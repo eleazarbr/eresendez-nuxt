@@ -3,9 +3,7 @@ import webpack from 'webpack'
 
 export default {
   mode: 'spa',
-  /*
-   ** Headers of the page
-   */
+
   head: {
     title: process.env.APP_NAME || '',
     titleTemplate: '%s - ' + process.env.APP_NAME,
@@ -21,40 +19,28 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
+
   loading: { color: '#fff' },
 
   router: {
-    middleware: ['locale'],
+    middleware: ['locale', 'check-auth'],
     linkActiveClass: 'is-active'
   },
 
-  /*
-   ** Global CSS
-   */
   css: [
     { src: '~assets/sass/app.scss', lang: 'scss' }
   ],
-  /*
-   ** Plugins to load before mounting the App
-   */
+
   plugins: [
     '~plugins/i18n',
   ],
 
-  /*
-   ** Nuxt.js dev-modules
-   */
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/moment',
     '@nuxtjs/google-analytics'
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
   modules: [
     '@nuxtjs/router',
     '@nuxt/content',
@@ -89,14 +75,8 @@ export default {
     }
   },
 
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
   axios: {},
-  /*
-   ** Build configuration
-   */
+
   build: {
     extractCSS: true,
     plugins: [
