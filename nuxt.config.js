@@ -1,3 +1,6 @@
+require('dotenv').config()
+import webpack from 'webpack'
+
 export default {
   mode: 'spa',
   /*
@@ -45,7 +48,6 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/moment',
     '@nuxtjs/google-analytics'
@@ -97,11 +99,11 @@ export default {
    */
   build: {
     extractCSS: true,
-    // plugins: [
-    //   new webpack.ProvidePlugin({
-    //     '_': 'lodash'
-    //   })
-    // ],
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ],
     extend(config, ctx) { }
   }
 }
