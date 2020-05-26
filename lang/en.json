@@ -46,6 +46,7 @@
     "comments_1": "Comments? I'm",
     "comments_2": "on Twitter",
     "tags": "Tags: {tags}",
-    "share": "Share:"
+    "share": "Share:",
+    "last_update": "Last update: {date}"
   }
 }

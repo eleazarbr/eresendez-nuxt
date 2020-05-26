@@ -46,6 +46,7 @@
     "comments_1": "¿Comentarios? Soy",
     "comments_2": "en Twitter",
     "tags": "Etiquetas: {tags}",
-    "share": "Compartir:"
+    "share": "Compartir:",
+    "last_update": "Última actualización {date}"
   }
 }
