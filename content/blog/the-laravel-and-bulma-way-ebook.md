@@ -2,8 +2,8 @@
 title: The Laravel and Bulma way (ebook)
 summary: Un pequeño ebook para empezar a crear tus aplicaciones web con los frameworks Laravel y Bulma.
 date: 2020-05-25 10:13:00
-last_updated_at: 2020-05-25 19:16:00
-is_featured: true
+last\_updated\_at: 2020-05-25 19:16:00
+is\_featured: true
 image:
 tags: [Laravel, Bulma]
 ---
@@ -46,5 +46,45 @@ Creo que Laravel y Bulma pueden hacer que tus ideas sean realidad, sin perder tu
 Esta sería la tabla de contenidos (por ahora).
 
 <book-outline></book-outline>
+
+```js
+{
+	title: 'Capítulo 1 - Introducción',
+	list: [
+		'PHP en la actualidad',
+		'¿Por qué usar Laravel?',
+	    '¡Hola, Mundo!',
+	    'Bulma CSS',
+	    'Conclusión'
+	]
+},
+{
+	title: 'Capítulo 2 - Cómo configurar tu primer proyecto',
+	list: [
+	    'Los requerimientos del sistema',
+	    'Composer',
+	    'Instalación de Laravel y Bulma',
+	    'Conclusión'
+  ]
+},
+{
+	title: 'Capítulo 3 - La estructura de archivos en Laravel y Bulma',
+	list: [
+	    'Directorios principales',
+	    'Archivos importantes',
+	    'La Configuración de Laravel',
+	    'Personalización de Bulma',
+	    'Conclusión '
+  ]
+},
+{
+	title: 'Capítulo 4 - El camino con Laravel y Bulma',
+	list: [
+	    'Introducción al proyecto del libro',
+	    'El patrón de diseño MVC',
+	    'Enrutamiento',
+  ]
+}
+```
 
 WIP...
