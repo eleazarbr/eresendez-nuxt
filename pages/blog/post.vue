@@ -192,4 +192,12 @@ samp {
 	content: '#';
 	margin-right: 0.5rem;
 }
+
+.content blockquote {
+	color: #2160c4;
+	background-color: #eef3fc;
+	border-left: 5px solid #3273dc;
+	padding: 1.25em 1.5em;
+	quotes: '\201C''\201D''\2018''\2019';
+}
 </style>

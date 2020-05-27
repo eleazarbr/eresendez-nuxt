@@ -45,4 +45,6 @@ Creo que Laravel y Bulma pueden hacer que tus ideas sean realidad, sin perder tu
 
 Esta sería la tabla de contenidos (por ahora).
 
+<book-outline></book-outline>
+
 WIP...
