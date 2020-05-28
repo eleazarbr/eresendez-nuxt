@@ -6,6 +6,15 @@
           <div class="columns is-centered is-vcentered">
             <!-- Title and metadata -->
             <div class="column">
+              <p class="text-base font-bold">
+                <b-icon icon="library"></b-icon>
+                <span>
+                  This post is in a series on
+                  <a class="underline" href="">
+                    Laravel Tips
+                  </a>
+                </span>
+              </p>
               <h2
                 class="font-bold text-2xl sm:text-3xl has-text-black leading-tight"
               >{{ page.title }}</h2>
