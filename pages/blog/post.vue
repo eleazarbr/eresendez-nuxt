@@ -108,7 +108,16 @@ export default {
 	name: 'post',
 	transition: 'slide',
 	head() {
-		return { title: this.page.title }
+		return {
+      title: this.page.title,
+       meta: [
+        { hid: 'description', name: 'description', content: this.page.summary },
+        { hid: 'og:title', property: 'og:title', content: this.page.title },
+        { hid: 'og:description', property: 'og:description', content: this.page.summary },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.page.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.page.summary }
+      ]
+    }
 	},
 
 	async asyncData(context) {
