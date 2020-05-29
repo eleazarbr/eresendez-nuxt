@@ -69,18 +69,18 @@
 
             <!-- Subscribe form -->
             <div class="content">
-              <!-- Tags -->
-              <p>{{ $t('blog.tags', {tags: page.tags.join(', ')}) }}</p>
               <!-- Comments -->
-              <p>
-                {{ $t('blog.comments_1') }}
-                <a
-                  class="has-text-primary"
+              <b-field :label="$t('blog.comments')">
+                <b-button
+                  tag="a"
                   href="https://twitter.com/eleazarbr"
                   target="_blank"
-                >@eleazarbr</a>
-                {{ $t('blog.comments_2') }}
-              </p>
+                  type="is-text"
+                  outlined
+                >{{ $t('blog.tweet') }}</b-button>
+              </b-field>
+              <!-- Tags -->
+              <p>{{ $t('blog.tags', {tags: page.tags.join(', ')}) }}</p>
               <!-- Share -->
               <div class="columns is-vcentered is-mobile is-variable is-1">
                 <div class="column is-narrow">{{ $t('blog.share') }}</div>
@@ -94,11 +94,8 @@
       </div>
     </div>
 
+    <!-- Previous post -->
     <!-- Next post -->
-
-    <!-- Random post -->
-
-    <!-- Floating header -->
   </div>
 </template>
 <script>
@@ -109,20 +106,32 @@ export default {
 	transition: 'slide',
 	head() {
 		return {
-      title: this.page.title,
-       meta: [
-        { hid: 'description', name: 'description', content: this.page.summary },
-        { hid: 'og:title', property: 'og:title', content: this.page.title },
-        { hid: 'og:description', property: 'og:description', content: this.page.summary },
-        { hid: 'twitter:title', name: 'twitter:title', content: this.page.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.page.summary }
-      ]
-    }
+			title: this.page.title,
+			meta: [
+				{ hid: 'description', name: 'description', content: this.page.summary },
+				{ hid: 'og:title', property: 'og:title', content: this.page.title },
+				{
+					hid: 'og:description',
+					property: 'og:description',
+					content: this.page.summary
+				},
+				{
+					hid: 'twitter:title',
+					name: 'twitter:title',
+					content: this.page.title
+				},
+				{
+					hid: 'twitter:description',
+					name: 'twitter:description',
+					content: this.page.summary
+				}
+			]
+		}
 	},
 
-	async asyncData(context) {
-		let slug = context.params.slug
-		const page = await context.$content('blog/' + slug).fetch()
+	async asyncData({ $content, params }) {
+		let slug = params.slug
+		const page = await $content('blog/' + slug).fetch()
 
 		return {
 			page

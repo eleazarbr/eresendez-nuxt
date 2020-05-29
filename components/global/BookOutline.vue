@@ -2,7 +2,7 @@
   <section class="px-10 pb-5">
     <b-collapse
       class="card"
-      animation="rotate"
+      animation="none"
       v-for="(collapse, index) of collapses"
       :key="index"
       :open="isOpen == index"

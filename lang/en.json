@@ -43,10 +43,11 @@
     "read_more": "Read more",
     "post_by": "{date} by {author}",
     "old_post": "Warning: This post is over a six months old. I don't always update old posts with new information, so some of this information may be out of date.",
-    "comments_1": "Comments? I'm",
-    "comments_2": "on Twitter",
+    "comments": "Comments?",
+    "tweet": "Tweet a Thanks",
     "tags": "Tags: {tags}",
     "share": "Share:",
-    "last_update": "Last update: {date}"
+    "last_update": "Last update: {date}",
+    "thanks": "Thank you @eleazarbr. {title} {url}"
   }
 }
