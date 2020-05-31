@@ -37,7 +37,7 @@ export default {
 					title: 'Capítulo 1 - Introducción',
 					list: [
 						'PHP en la actualidad',
-						'¿Por qué usar Laravel?',
+						'¿Por qué Laravel y Bulma?',
 						'¡Hola, Mundo!',
 						'Bulma CSS',
 						'Conclusión'
@@ -55,10 +55,10 @@ export default {
 				{
 					title: 'Capítulo 3 - La estructura de archivos en Laravel y Bulma',
 					list: [
-						'Directorios principales',
-						'Archivos importantes',
+						'Los directorios principales',
+						'Los archivos más importantes',
 						'La Configuración de Laravel',
-						'Personalización de Bulma',
+						'Cómo personalizar Bulma',
 						'Conclusión '
 					]
 				},
@@ -67,7 +67,21 @@ export default {
 					list: [
 						'Introducción al proyecto del libro',
 						'El patrón de diseño MVC',
-						'Enrutamiento'
+						'Enrutamiento (definición de rutas, grupos, namespaces, prefijos, rutas firmadas)',
+						'Controladores (inyección de dependencias, resource, api resource)',
+						'Vistas (Laravel Blade, Laravel Mix, paginación, Lozalication)',
+						'Bases de datos y Eloquent (configuración, seeders, migrations, query builder)',
+						'Artisan y Tinker',
+						'Collections'
+					]
+				},
+				{
+					title: 'Bonos',
+					list: [
+						'TailwindCSS',
+						'Laravel Livewire',
+						'Jigsaw - Static Sites',
+						'AlpineJS'
 					]
 				}
 			]
