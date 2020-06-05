@@ -39,13 +39,13 @@
   "search": "Buscar",
   "blog": {
     "posts": "Entradas",
-    "posted_on": "Publicado en {date}.",
+    "posted_on": "Publicado el {date}.",
     "read_more": "Leer más",
     "post_by": "{date} por {author}",
     "old_post": "Advertencia: esta publicación tiene más de seis meses. No siempre actualizo las publicaciones antiguas con nueva información, por lo que puede estar desactualizada.",
     "comments": "¿Comentarios?",
     "tweet": "Soy @eleazarbr en Twitter",
-    "tags": "Etiquetas: {tags}",
+    "tags": "Etiquetas:",
     "share": "Compartir:",
     "last_update": "Última actualización {date}",
     "thanks": "Gracias @eleazarbr. {title} {url}"

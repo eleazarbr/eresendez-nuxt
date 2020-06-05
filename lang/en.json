@@ -45,7 +45,7 @@
     "old_post": "Warning: This post is over a six months old. I don't always update old posts with new information, so some of this information may be out of date.",
     "comments": "Comments?",
     "tweet": "Tweet a Thanks",
-    "tags": "Tags: {tags}",
+    "tags": "Tags:",
     "share": "Share:",
     "last_update": "Last update: {date}",
     "thanks": "Thank you @eleazarbr. {title} {url}"

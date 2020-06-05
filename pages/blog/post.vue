@@ -10,7 +10,7 @@
                 class="font-bold text-2xl sm:text-3xl has-text-black leading-tight"
               >{{ page.title }}</h2>
               <div class="text-sm sm:text-base text-black mt-2">
-                <p>{{ $moment(page.date).locale($store.getters['lang/locale']).format('LL') }}</p>
+                <p>{{ $t('blog.posted_on', {date: $moment(page.date).locale($store.getters['lang/locale']).format('LL')}) }}</p>
                 <p
                   v-if="page.last_updated_at"
                 >{{ $t('blog.last_update', {date: $moment(page.last_updated_at).locale($store.getters['lang/locale']).fromNow()}) }}</p>
@@ -68,26 +68,28 @@
             <hr />
 
             <!-- Subscribe form -->
-            <div class="content">
+            <div class>
               <!-- Comments -->
-              <b-field :label="$t('blog.comments')">
+              <b-field horizontal :label="$t('blog.comments')">
                 <b-button
                   tag="a"
                   href="https://twitter.com/eleazarbr"
                   target="_blank"
-                  type="is-text"
+                  type="is-info"
                   outlined
+                  icon-right="twitter"
                 >{{ $t('blog.tweet') }}</b-button>
               </b-field>
               <!-- Tags -->
-              <p>{{ $t('blog.tags', {tags: page.tags.join(', ')}) }}</p>
-              <!-- Share -->
-              <div class="columns is-vcentered is-mobile is-variable is-1">
-                <div class="column is-narrow">{{ $t('blog.share') }}</div>
-                <div class="column">
-                  <add-to-any />
+              <b-field horizontal :label="$t('blog.tags')">
+                <div class="tags">
+                  <b-tag type="is-primary" v-for="(tag, index) in page.tags" :key="index">{{ tag }}</b-tag>
                 </div>
-              </div>
+              </b-field>
+              <!-- Share -->
+              <b-field :label="$t('blog.share')">
+                <add-to-any />
+              </b-field>
             </div>
           </div>
         </div>
