@@ -165,6 +165,7 @@ export default {
 }
 
 hr {
+	font-size: 1.25rem;
 	border: none;
 	color: #111;
 	letter-spacing: 1em;
