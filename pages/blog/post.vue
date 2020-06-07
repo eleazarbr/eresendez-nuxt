@@ -11,10 +11,21 @@
                 class="font-bold text-2xl sm:text-3xl has-text-black leading-tight"
               >{{ page.title }}</h2>
               <div class="text-sm sm:text-base text-black mt-2">
-                <p>{{ $t('blog.posted_on', {date: $moment(page.date).locale($store.getters['lang/locale']).format('LL')}) }}</p>
+                <p>
+                  <b-icon icon="calendar-month" size="is-small"></b-icon>
+                  {{ $t('blog.posted_on', {date: $moment(page.date).locale($store.getters['lang/locale']).format('LL')}) }}
+                </p>
                 <p
                   v-if="page.last_updated_at"
                 >{{ $t('blog.last_update', {date: $moment(page.last_updated_at).locale($store.getters['lang/locale']).fromNow()}) }}</p>
+                <p>
+                  <b-icon icon="clock-outline" size="is-small"></b-icon>
+                  {{ page.readingTime }}
+                </p>
+                <p>
+                  <b-icon icon="tag-multiple-outline" size="is-small"></b-icon>
+                  {{ page.tags.join(', ') }}
+                </p>
               </div>
             </div>
             <!-- Image -->
@@ -54,7 +65,7 @@
                   </ul>
                 </ul>
               </div>
-            </div> -->
+            </div>-->
 
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-xl">
@@ -97,11 +108,11 @@
                 >{{ $t('blog.tweet') }}</b-button>
               </b-field>
               <!-- Tags -->
-              <b-field horizontal :label="$t('blog.tags')">
+              <!-- <b-field horizontal :label="$t('blog.tags')">
                 <div class="tags">
                   <b-tag type="is-primary" v-for="(tag, index) in page.tags" :key="index">{{ tag }}</b-tag>
                 </div>
-              </b-field>
+              </b-field>-->
               <!-- Share -->
               <b-field :label="$t('blog.share')">
                 <add-to-any />
