@@ -17,7 +17,10 @@ Tienes que hacer lo siguiente:
 3. Guardar tarjeta
 4. Suscribir cliente
 
-##  Crear un plan
+## Crear un plan
+
+###  Test 1
+###  Test 2
 
 Un plan es una plantilla para una suscripción que contiene el costo, la frecuencia de carga, el período de prueba, etc. Un plan se puede crear mediante la API o desde el dashboard.
 

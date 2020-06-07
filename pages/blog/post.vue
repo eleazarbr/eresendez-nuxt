@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Post header and metadata -->
     <div class="hero is-light is-bold is-small">
       <div class="hero-body">
         <div class="container">
@@ -39,6 +40,21 @@
               has-icon
               aria-close-label="Close notification"
             >{{$t('blog.old_post')}}</b-notification>
+
+            <!-- TOC -->
+            <!-- <div class="content" v-if="page.toc">
+              <p>
+                Tabla de contenido
+              </p>
+              <div class="text-xs">
+                <ul v-for="item in page.toc" :key="item.id">
+                  <li v-if="item.depth == 2">{{ item.text }}</li>
+                  <ul v-if="item.depth == 3">
+                    <li>{{ item.text }}</li>
+                  </ul>
+                </ul>
+              </div>
+            </div> -->
 
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-xl">
@@ -96,8 +112,37 @@
       </div>
     </div>
 
-    <!-- Previous post -->
-    <!-- Next post -->
+    <!-- Surround posts -->
+    <div class="hero is-white">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column is-6">
+              <div class="text-left" v-if="next">
+                <p class="title is-6">
+                  <nuxt-link :to="{name: 'blog.post', params: {slug: next.slug}}">
+                    <b-icon icon="arrow-left" size="is-small"></b-icon>
+                    <span>{{ next.title }}</span>
+                  </nuxt-link>
+                </p>
+                <p class="subtitle is-6">{{ next.summary }}</p>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="text-right" v-if="prev">
+                <p class="title is-6">
+                  <nuxt-link :to="{name: 'blog.post', params: {slug: prev.slug}}">
+                    <span>{{ prev.title }}</span>
+                    <b-icon icon="arrow-right" size="is-small"></b-icon>
+                  </nuxt-link>
+                </p>
+                <p class="subtitle is-6">{{ prev.summary }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -135,8 +180,16 @@ export default {
 		let slug = params.slug
 		const page = await $content('blog/' + slug).fetch()
 
+		const [prev, next] = await $content('blog')
+			.only(['title', 'summary', 'slug'])
+			.sortBy('date')
+			.surround(slug)
+			.fetch()
+
 		return {
-			page
+			page,
+			prev,
+			next
 		}
 	},
 
