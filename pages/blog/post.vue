@@ -285,4 +285,16 @@ samp {
 	padding: 1.25em 1.5em;
 	quotes: '\201C''\201D''\2018''\2019';
 }
+
+.cp_embed_wrapper {
+  overflow: hidden;
+  resize: both;
+  background: white;
+  padding-bottom: 10px;
+  height: 400px;
+}
+
+.cp_embed_wrapper iframe {
+  height: 100% !important;
+}
 </style>
