@@ -95,36 +95,30 @@
             <hr />
 
             <!-- Subscribe form -->
-            <div class>
-              <!-- Comments -->
-              <b-field horizontal :label="$t('blog.comments')">
-                <b-button
-                  tag="a"
-                  href="https://twitter.com/eleazarbr"
-                  target="_blank"
-                  type="is-info"
-                  outlined
-                  icon-right="twitter"
-                >{{ $t('blog.tweet') }}</b-button>
-              </b-field>
-              <!-- Tags -->
-              <!-- <b-field horizontal :label="$t('blog.tags')">
-                <div class="tags">
-                  <b-tag type="is-primary" v-for="(tag, index) in page.tags" :key="index">{{ tag }}</b-tag>
-                </div>
-              </b-field>-->
-              <!-- Share -->
-              <b-field :label="$t('blog.share')">
-                <add-to-any />
-              </b-field>
+
+            <!-- GitHub Comments -->
+            <div>
+              <script
+                src="https://utteranc.es/client.js"
+                repo="eleazarbr/eresendez"
+                issue-term="pathname"
+                theme="preferred-color-scheme"
+                crossorigin="anonymous"
+                async
+              ></script>
             </div>
+
+            <!-- Share this -->
+            <b-field :label="$t('blog.share')">
+              <add-to-any />
+            </b-field>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Surround posts -->
-    <div class="hero is-white">
+    <div class="hero is-black is-bold">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-mobile">
@@ -287,14 +281,14 @@ samp {
 }
 
 .cp_embed_wrapper {
-  overflow: hidden;
-  resize: both;
-  background: white;
-  padding-bottom: 10px;
-  height: 400px;
+	overflow: hidden;
+	resize: both;
+	background: white;
+	padding-bottom: 10px;
+	height: 400px;
 }
 
 .cp_embed_wrapper iframe {
-  height: 100% !important;
+	height: 100% !important;
 }
 </style>
