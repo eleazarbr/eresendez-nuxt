@@ -15,6 +15,16 @@
             </div>
             <div class="level-right">
               <div class="level-item">
+                <div class="buttons">
+                  <b-button @click="blogLayout = 'cards'" type="is-text" icon-right="card-text-outline"></b-button>
+                  <b-button
+                    @click="blogLayout = 'list'"
+                    type="is-text"
+                    icon-right="table-of-contents"
+                  ></b-button>
+                </div>
+              </div>
+              <div class="level-item">
                 <b-field expanded>
                   <b-input
                     :placeholder="$t('search')"
@@ -29,11 +39,52 @@
           </div>
 
           <!-- Blog posts -->
-          <div class="columns is-multiline mt-5">
+          <!-- List -->
+          <div v-if="blogLayout == 'list'">
+            <b-table
+              :hoverable="true"
+              default-sort="name"
+              :data="posts"
+              class="mb-5"
+              detailed
+              :show-detail-icon="true"
+            >
+              <template slot-scope="props">
+                <b-table-column label="Título">
+                  <nuxt-link
+                    class="hover:underline"
+                    :to="{name: 'blog.post', params: {slug: props.row.slug}}"
+                  >{{ props.row.title }}</nuxt-link>
+                </b-table-column>
+                <b-table-column label="Etiquetas">
+                  <div class="tags">
+                    <b-tag v-for="(tag, index) in props.row.tags" :key="index">{{ tag }}</b-tag>
+                  </div>
+                </b-table-column>
+                <b-table-column
+                  label="Fecha"
+                >{{ $moment(props.row.date).locale($store.getters['lang/locale']).format('LL') }}</b-table-column>
+              </template>
+              <template slot="detail" slot-scope="props">
+                <article class="media">
+                  <figure class="media-left" v-if="props.row.image">
+                    <div class="image is-64x64">
+                      <img :src="imagesDir + props.row.image" />
+                    </div>
+                  </figure>
+                  <div class="media-content">{{ props.row.summary }}</div>
+                </article>
+              </template>
+            </b-table>
+          </div>
+
+          <!-- Cards -->
+          <div class="columns is-multiline mt-5" v-if="blogLayout == 'cards'">
             <div class="column is-6" v-for="post in posts" :key="post.id">
               <post-card :post="post"></post-card>
             </div>
           </div>
+          <!-- Pagination -->
           <div class="columns is-centered">
             <div class="column is-narrow">
               <b-pagination
@@ -46,6 +97,15 @@
               ></b-pagination>
             </div>
           </div>
+
+          <!-- Subscribe form -->
+          <div class="section">
+            <div class="columns is-centered">
+              <div class="column is-7">
+                <subscribe-form></subscribe-form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -55,10 +115,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import PostCard from '~/components/blog/PostCard'
+import SubscribeForm from '~/components/blog/SubscribeForm'
 
 export default {
 	components: {
-		PostCard
+		PostCard,
+		SubscribeForm
 	},
 
 	head() {
@@ -71,7 +133,9 @@ export default {
 		currentPage: 1,
 		nextPosts: 0,
 		perPage: 6,
-		total: 0
+		total: 0,
+		imagesDir: 'blog/',
+		blogLayout: 'list'
 	}),
 
 	mounted() {

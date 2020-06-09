@@ -38,6 +38,7 @@
   "register_with": "Registro con",
   "search": "Buscar",
   "blog": {
+    "bio":"Mi objetivo es compartir continuamente el conocimiento que adquiero a través de mi trabajo diario. Si te interesa Laravel y Vue ¡adelante, regístrate!",
     "posts": "Entradas",
     "posted_on": "Publicado el {date}",
     "read_more": "Leer más",

@@ -38,6 +38,7 @@
   "verify_email_address": "We sent you an email with an the verification link.",
   "search": "Search",
   "blog": {
+    "bio":"My goal is to continuously share the knowledge I acquire through my daily work. If you like Laravel and Vue go ahead and sign up!",
     "posts": "Posts",
     "posted_on": "Posted on {date}.",
     "read_more": "Read more",

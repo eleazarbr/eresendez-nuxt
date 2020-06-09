@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Post header and metadata -->
-    <div class="hero is-light is-bold is-small">
+    <div class="hero is-white is-bold is-small">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered is-vcentered">
@@ -68,7 +68,7 @@
             </div>-->
 
             <!-- Post body -->
-            <div class="content text-base sm:text-lg md:text-xl">
+            <div class="content text-base sm:text-lg md:text-lg">
               <nuxt-content :document="page" />
             </div>
 
@@ -92,9 +92,16 @@
               </b-tooltip>
             </div>
 
-            <hr />
-
             <!-- Subscribe form -->
+            <div class="section">
+              <div class="columns is-centered">
+                <div class="column is-9">
+                  <subscribe-form></subscribe-form>
+                </div>
+              </div>
+            </div>
+
+            <hr />
 
             <!-- GitHub Comments -->
             <div>
@@ -152,10 +159,16 @@
 </template>
 <script>
 import AddToAny from '~/components/blog/AddToAny'
+import SubscribeForm from '~/components/blog/SubscribeForm'
 
 export default {
 	name: 'post',
 	transition: 'slide',
+	components: {
+		AddToAny,
+		SubscribeForm
+	},
+
 	head() {
 		return {
 			title: this.page.title,
@@ -197,8 +210,6 @@ export default {
 			next
 		}
 	},
-
-	components: { AddToAny },
 
 	data: () => ({
 		author: 'Eleazar R.',

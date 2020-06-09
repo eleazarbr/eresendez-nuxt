@@ -1,5 +1,5 @@
 ---
-title: Acerca de ConvertKit :)
+title: Acerca de ConvertKit
 summary: ConvertKit es una solución de marketing por correo electrónico para aquellos que estén interesados en aumentar las conversiones y optimizar su embudo de ventas.
 date: 2020-06-03 17:14:00
 image:
