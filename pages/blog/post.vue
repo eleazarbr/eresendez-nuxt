@@ -40,7 +40,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="section">
+    <div class="section has-background-white">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-8">
@@ -167,7 +167,7 @@ export default {
 	components: {
 		AddToAny,
 		SubscribeForm
-	},
+  },
 
 	head() {
 		return {

@@ -70,9 +70,13 @@ export default {
 
   content: {
     markdown: {
+      footnotes: {
+        inlineNotes: true
+      },
       prism: {
         theme: 'prism-themes/themes/prism-dracula.css'
-      }
+      },
+      plugins: []
     }
   },
 
