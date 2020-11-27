@@ -2,7 +2,7 @@ require('dotenv').config()
 import webpack from 'webpack'
 
 export default {
-  mode: 'spa',
+  ssr: false,
 
   head: {
     title: process.env.APP_NAME || '',
@@ -76,7 +76,7 @@ export default {
       prism: {
         theme: 'prism-themes/themes/prism-dracula.css'
       },
-      plugins: []
+      remarkPlugins: []
     }
   },
 
