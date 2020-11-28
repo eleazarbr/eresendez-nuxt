@@ -85,15 +85,6 @@
               </div>
             </template>
           </b-table>
-
-          <!-- Subscribe form -->
-          <div class="section">
-            <div class="columns is-centered">
-              <div class="column is-7">
-                <subscribe-form></subscribe-form>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

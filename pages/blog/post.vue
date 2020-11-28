@@ -108,15 +108,6 @@
               </b-tooltip>
             </div>
 
-            <!-- Subscribe form -->
-            <div class="section">
-              <div class="columns is-centered">
-                <div class="column is-9">
-                  <subscribe-form></subscribe-form>
-                </div>
-              </div>
-            </div>
-
             <hr />
 
             <!-- GitHub Comments -->
