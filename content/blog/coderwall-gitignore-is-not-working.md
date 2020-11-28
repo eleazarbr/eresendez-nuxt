@@ -1,7 +1,7 @@
 ---
 title: "Coderwall Tip: .gitignore is not working"
 summary: "Que hacer cuando quieres ignorar un archivo (.gitignore) y este todavía se encuentra en tu lista de cambios."
-date: 2020-02-06 15:48:00
+date: 2020-02-06 15:48
 image: 4.jpeg
 tags: [Tip]
 ---

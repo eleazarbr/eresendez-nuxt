@@ -31,6 +31,8 @@
           <!-- Blog posts -->
           <b-table
             detailed
+            default-sort="date"
+            default-sort-direction="desc"
             :loading="table.loading"
             :hoverable="true"
             :data="posts"
@@ -58,7 +60,7 @@
                   >
                 </b-taglist>
               </b-table-column>
-              <b-table-column :label="$t('blog.date')">{{
+              <b-table-column :label="$t('blog.date')" sortable field="date">{{
                 $moment(props.row.date)
                   .locale($store.getters['lang/locale'])
                   .format('LL')
@@ -147,18 +149,16 @@ export default {
     },
 
     queryPosts() {
-      return this.$content('blog')
-        .only([
-          'title',
-          'summary',
-          'image',
-          'slug',
-          'date',
-          'tags',
-          'author',
-          'is_featured',
-        ])
-        .sortBy('date', 'desc')
+      return this.$content('blog').only([
+        'title',
+        'summary',
+        'image',
+        'slug',
+        'date',
+        'tags',
+        'author',
+        'is_featured',
+      ])
     },
   },
 
