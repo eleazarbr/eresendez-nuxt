@@ -3,6 +3,7 @@ import webpack from 'webpack'
 
 export default {
   ssr: false,
+  target: 'static',
 
   head: {
     title: process.env.APP_NAME || '',
