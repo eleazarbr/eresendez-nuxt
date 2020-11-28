@@ -33,7 +33,8 @@ export default {
 
   plugins: [
     '~components/global',
-    '~plugins/i18n'
+    '~plugins/i18n',
+    '~/plugins/vue2-filters'
   ],
 
   buildModules: [

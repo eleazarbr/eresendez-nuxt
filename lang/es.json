@@ -38,7 +38,7 @@
   "register_with": "Registro con",
   "search": "Buscar",
   "blog": {
-    "bio":"Mi objetivo es compartir continuamente el conocimiento que adquiero a través de mi trabajo diario. Si te interesa Laravel y Vue ¡adelante, regístrate!",
+    "bio": "Mi objetivo es compartir continuamente el conocimiento que adquiero a través de mi trabajo diario. Si te interesa Laravel y Vue ¡adelante, regístrate!",
     "posts": "Entradas",
     "posted_on": "Publicado el {date}",
     "read_more": "Leer más",
@@ -46,9 +46,11 @@
     "old_post": "Advertencia: esta publicación tiene más de seis meses. No siempre actualizo las publicaciones antiguas con nueva información, por lo que puede estar desactualizada.",
     "comments": "¿Comentarios?",
     "tweet": "Soy @eleazarbr en Twitter",
-    "tags": "Etiquetas:",
-    "share": "Compartir:",
+    "tags": "Etiquetas",
+    "share": "Compartir con amigos:",
     "last_update": "Última actualización {date}",
-    "thanks": "Gracias @eleazarbr. {title} {url}"
+    "thanks": "Gracias @eleazarbr. {title} {url}",
+    "title": "Título",
+    "date": "Fecha"
   }
 }

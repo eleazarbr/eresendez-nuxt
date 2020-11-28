@@ -15,28 +15,12 @@
             </div>
             <div class="level-right">
               <div class="level-item">
-                <div class="buttons">
-                  <b-button
-                    @click="blogLayout = 'cards'"
-                    :active="blogLayout == 'cards'"
-                    type="is-text"
-                    icon-right="card-text-outline"
-                  ></b-button>
-                  <b-button
-                    @click="blogLayout = 'list'"
-                    :active="blogLayout == 'list'"
-                    type="is-text"
-                    icon-right="table-of-contents"
-                  ></b-button>
-                </div>
-              </div>
-              <div class="level-item">
                 <b-field expanded>
                   <b-input
                     :placeholder="$t('search')"
                     type="search"
                     icon="search-web"
-                    v-model="keyword"
+                    v-model="searchKeyword"
                     @input="search"
                   ></b-input>
                 </b-field>
@@ -45,76 +29,60 @@
           </div>
 
           <!-- Blog posts -->
-          <!-- List -->
-          <div v-if="blogLayout == 'list'">
-            <b-table
-              :hoverable="true"
-              default-sort="name"
-              :data="posts"
-              class="mb-5"
-              detailed
-              :show-detail-icon="true"
-            >
-              <template slot-scope="props">
-                <b-table-column label="Título">
-                  <nuxt-link
-                    class="hover:underline"
-                    :to="{
-                      name: 'blog.post',
-                      params: { slug: props.row.slug },
-                    }"
-                    >{{ props.row.title }}</nuxt-link
+          <b-table
+            detailed
+            :loading="table.loading"
+            :hoverable="true"
+            :data="posts"
+            :show-detail-icon="true"
+          >
+            <template slot-scope="props">
+              <b-table-column :label="$t('blog.title')">
+                <nuxt-link
+                  class="hover:underline"
+                  :to="{
+                    name: 'blog.post',
+                    params: { slug: props.row.slug },
+                  }"
+                  >{{ props.row.title }}</nuxt-link
+                >
+              </b-table-column>
+              <b-table-column :label="$t('blog.tags')">
+                <b-taglist>
+                  <b-tag
+                    v-for="(tag, index) in props.row.tags"
+                    :key="index"
+                    type="is-dark"
+                    class="is-light"
+                    >{{ tag }}</b-tag
                   >
-                </b-table-column>
-                <b-table-column label="Etiquetas">
-                  <b-taglist>
-                    <b-tag
-                      v-for="(tag, index) in props.row.tags"
-                      :key="index"
-                      type="is-dark"
-                      class="is-light"
-                      >{{ tag }}</b-tag
-                    >
-                  </b-taglist>
-                </b-table-column>
-                <b-table-column label="Fecha">{{
-                  $moment(props.row.date)
-                    .locale($store.getters['lang/locale'])
-                    .format('LL')
-                }}</b-table-column>
-              </template>
-              <template slot="detail" slot-scope="props">
-                <article class="media">
-                  <figure class="media-left" v-if="props.row.image">
-                    <div class="image is-64x64">
-                      <img :src="`${imagesDir}/${props.row.image}`" />
-                    </div>
-                  </figure>
-                  <div class="media-content">{{ props.row.summary }}</div>
-                </article>
-              </template>
-            </b-table>
-          </div>
-
-          <!-- Cards -->
-          <div class="columns is-multiline mt-5" v-if="blogLayout == 'cards'">
-            <div class="column is-6" v-for="post in posts" :key="post.id">
-              <post-card :post="post"></post-card>
-            </div>
-          </div>
-          <!-- Pagination -->
-          <div class="columns is-centered">
-            <div class="column is-narrow">
-              <b-pagination
-                :total="total"
-                :current.sync="currentPage"
-                :per-page="perPage"
-                range-before="3"
-                range-after="1"
-                @change="onPageChange"
-              ></b-pagination>
-            </div>
-          </div>
+                </b-taglist>
+              </b-table-column>
+              <b-table-column :label="$t('blog.date')">{{
+                $moment(props.row.date)
+                  .locale($store.getters['lang/locale'])
+                  .format('LL')
+              }}</b-table-column>
+            </template>
+            <template slot="detail" slot-scope="props">
+              <article class="media">
+                <figure class="media-left" v-if="props.row.image">
+                  <div class="image is-64x64">
+                    <img :src="`${imagesDir}/${props.row.image}`" />
+                  </div>
+                </figure>
+                <div class="media-content">{{ props.row.summary }}</div>
+              </article>
+            </template>
+            <template slot="empty">
+              <div class="section has-text-centered">
+                <div v-if="!table.loading">
+                  <b-icon icon="table"></b-icon>
+                  <p class="font-bold">No se encontraron registros.</p>
+                </div>
+              </div>
+            </template>
+          </b-table>
 
           <!-- Subscribe form -->
           <div class="section">
@@ -132,12 +100,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import PostCard from '~/components/blog/PostCard'
 import SubscribeForm from '~/components/blog/SubscribeForm'
 
 export default {
+  name: 'welcome',
   components: {
-    PostCard,
     SubscribeForm,
   },
 
@@ -147,43 +114,36 @@ export default {
 
   data: () => ({
     posts: [],
-    keyword: '',
-    currentPage: 1,
-    nextPosts: 0,
-    perPage: 6,
-    total: 0,
+    searchKeyword: '',
     imagesDir: 'blog',
-    blogLayout: 'list',
+    table: {
+      loading: false,
+    },
   }),
 
   mounted() {
     this.getPosts()
-    this.$content('blog')
-      .only('slug')
-      .fetch()
-      .then((r) => {
-        this.total = r.length
-      })
   },
 
   methods: {
     search: _.debounce(function () {
-      this.keyword ? this.searchPost() : this.getPosts()
+      this.searchKeyword ? this.searchPost() : this.getPosts()
     }, 1000),
 
     async searchPost() {
-      let posts = await this.queryPosts().search('title', this.keyword).fetch()
-
+      this.table.loading = true
+      var posts = await this.queryPosts()
+        .search('title', this.searchKeyword)
+        .fetch()
       this.posts = posts
+      this.table.loading = false
     },
 
     async getPosts() {
-      let posts = await this.queryPosts()
-        .limit(this.perPage)
-        .skip(this.nextPosts)
-        .fetch()
-
+      this.table.loading = true
+      var posts = await this.queryPosts().fetch()
       this.posts = posts
+      this.table.loading = false
     },
 
     queryPosts() {
@@ -199,15 +159,6 @@ export default {
           'is_featured',
         ])
         .sortBy('date', 'desc')
-    },
-
-    onPageChange(page) {
-      this.nextPosts =
-        page > this.currentPage
-          ? this.nextPosts + this.perPage
-          : this.nextPosts - this.perPage
-      this.getPosts()
-      this.currentPage = page
     },
   },
 

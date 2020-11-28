@@ -38,7 +38,7 @@
   "verify_email_address": "We sent you an email with an the verification link.",
   "search": "Search",
   "blog": {
-    "bio":"My goal is to continuously share the knowledge I acquire through my daily work. If you like Laravel and Vue go ahead and sign up!",
+    "bio": "My goal is to continuously share the knowledge I acquire through my daily work. If you like Laravel and Vue go ahead and sign up!",
     "posts": "Posts",
     "posted_on": "Posted on {date}.",
     "read_more": "Read more",
@@ -46,9 +46,11 @@
     "old_post": "Warning: This post is over a six months old. I don't always update old posts with new information, so some of this information may be out of date.",
     "comments": "Comments?",
     "tweet": "Tweet a Thanks",
-    "tags": "Tags:",
-    "share": "Share:",
+    "tags": "Tags",
+    "share": "Share with friends:",
     "last_update": "Last update: {date}",
-    "thanks": "Thank you @eleazarbr. {title} {url}"
+    "thanks": "Thank you @eleazarbr. {title} {url}",
+    "title": "Title",
+    "date": "Date"
   }
 }

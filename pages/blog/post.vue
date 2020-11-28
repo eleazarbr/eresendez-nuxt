@@ -146,29 +146,31 @@
         <div class="container">
           <div class="columns is-mobile">
             <div class="column is-6">
-              <div class="text-left" v-if="next">
+              <div v-if="next" class="text-left">
                 <p class="title is-6">
                   <nuxt-link
+                    class="has-text-white"
                     :to="{ name: 'blog.post', params: { slug: next.slug } }"
                   >
                     <b-icon icon="arrow-left" size="is-small"></b-icon>
                     <span>{{ next.title }}</span>
                   </nuxt-link>
                 </p>
-                <p class="subtitle is-6">{{ next.summary }}</p>
+                <p class="subtitle is-6">{{ next.summary | truncate(100) }}</p>
               </div>
             </div>
             <div class="column is-6">
-              <div class="text-right" v-if="prev">
+              <div v-if="prev" class="text-right">
                 <p class="title is-6">
                   <nuxt-link
+                    class="has-text-white"
                     :to="{ name: 'blog.post', params: { slug: prev.slug } }"
                   >
                     <span>{{ prev.title }}</span>
                     <b-icon icon="arrow-right" size="is-small"></b-icon>
                   </nuxt-link>
                 </p>
-                <p class="subtitle is-6">{{ prev.summary }}</p>
+                <p class="subtitle is-6">{{ prev.summary | truncate(100) }}</p>
               </div>
             </div>
           </div>
@@ -180,7 +182,6 @@
 <script>
 import AddToAny from '~/components/blog/AddToAny'
 import SubscribeForm from '~/components/blog/SubscribeForm'
-
 export default {
   name: 'post',
   transition: 'slide',
