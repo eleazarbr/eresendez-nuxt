@@ -9,6 +9,7 @@ const page = path => () => import(`~/pages/${path}`).then(m => m.default || m)
 
 const routes = [
   { path: '/', name: 'welcome', component: page('welcome.vue') },
+  { path: '/curriculum', name: 'curriculum', component: page('web/curriculum.vue') },
   { path: '/:slug', name: 'blog.post', component: page('blog/post.vue') },
 ]
 
