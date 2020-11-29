@@ -69,7 +69,7 @@
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-lg">
               <!-- Table of contents -->
-              <p>Tabla de contenidos:</p>
+              <p>Tabla de contenidos, esto es lo que vamos a cubrir:</p>
               <ul>
                 <li
                   v-for="link of page.toc"
@@ -203,11 +203,11 @@ export default {
 
   async asyncData({ $content, params }) {
     let slug = params.slug
-    const page = await $content('blog/' + slug).fetch()
+    const page = await $content(`blog/${slug}`).fetch()
 
     const [prev, next] = await $content('blog')
       .only(['title', 'summary', 'slug'])
-      .sortBy('date')
+      .sortBy('date', 'asc')
       .surround(slug)
       .fetch()
 
