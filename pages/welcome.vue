@@ -17,10 +17,11 @@
               <div class="level-item">
                 <b-field expanded>
                   <b-input
-                    :placeholder="$t('search')"
                     type="search"
+                    autocomplete="off"
                     icon="search-web"
-                    v-model="searchKeyword"
+                    v-model="searchQuery"
+                    :placeholder="$t('search')"
                     @input="search"
                   ></b-input>
                 </b-field>
@@ -107,7 +108,7 @@ export default {
 
   data: () => ({
     posts: [],
-    searchKeyword: '',
+    searchQuery: '',
     imagesDir: 'blog',
     table: {
       loading: false,
@@ -120,22 +121,20 @@ export default {
 
   methods: {
     search: _.debounce(function () {
-      this.searchKeyword ? this.searchPost() : this.getPosts()
+      this.searchQuery ? this.searchPost() : this.getPosts()
     }, 1000),
 
     async searchPost() {
       this.table.loading = true
-      var posts = await this.queryPosts()
-        .search('title', this.searchKeyword)
+      this.posts = await this.queryPosts()
+        .search('title', this.searchQuery)
         .fetch()
-      this.posts = posts
       this.table.loading = false
     },
 
     async getPosts() {
       this.table.loading = true
-      var posts = await this.queryPosts().fetch()
-      this.posts = posts
+      this.posts = await this.queryPosts().fetch()
       this.table.loading = false
     },
 

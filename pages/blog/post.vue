@@ -63,27 +63,22 @@
               v-if="$moment(page.date).add(6, 'months').isBefore()"
               type="is-info"
               has-icon
-              aria-close-label="Close notification"
               >{{ $t('blog.old_post') }}</b-notification
             >
 
-            <!-- TOC -->
-            <!-- <div class="content" v-if="page.toc">
-              <p>
-                Tabla de contenido
-              </p>
-              <div class="text-xs">
-                <ul v-for="item in page.toc" :key="item.id">
-                  <li v-if="item.depth == 2">{{ item.text }}</li>
-                  <ul v-if="item.depth == 3">
-                    <li>{{ item.text }}</li>
-                  </ul>
-                </ul>
-              </div>
-            </div>-->
-
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-lg">
+              <!-- Table of contents -->
+              <p>Tabla de contenidos:</p>
+              <ul>
+                <li
+                  v-for="link of page.toc"
+                  :key="link.id"
+                  :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
+                >
+                  <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+                </li>
+              </ul>
               <nuxt-content :document="page" />
             </div>
 
@@ -313,5 +308,13 @@ samp {
 
 .cp_embed_wrapper iframe {
   height: 100% !important;
+}
+
+.toc3 {
+  margin-left: 1.25rem;
+}
+
+.toc4 {
+  margin-left: 2.5rem;
 }
 </style>

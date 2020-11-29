@@ -78,7 +78,10 @@ export default {
       prism: {
         theme: 'prism-themes/themes/prism-dracula.css'
       },
-      remarkPlugins: ['remark-emoji']
+      remarkPlugins: [
+        'remark-emoji',
+        'remark-footnotes'
+      ]
     }
   },
 
