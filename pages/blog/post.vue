@@ -68,18 +68,8 @@
 
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-lg">
-              <!-- Table of contents -->
-              <p>Tabla de contenidos, esto es lo que vamos a cubrir:</p>
-              <ul>
-                <li
-                  v-for="link of page.toc"
-                  :key="link.id"
-                  :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
-                >
-                  <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
-                </li>
-              </ul>
-              <nuxt-content :document="page" />
+              <table-of-contents :document="page"></table-of-contents>
+              <nuxt-content :document="page"></nuxt-content>
             </div>
 
             <!-- Optional External URL  -->
@@ -166,14 +156,16 @@
   </div>
 </template>
 <script>
-import AddToAny from '~/components/blog/AddToAny'
+import TableOfContents from '~/components/blog/TableOfContents.vue'
 import SubscribeForm from '~/components/blog/SubscribeForm'
+import AddToAny from '~/components/blog/AddToAny'
 export default {
   name: 'post',
   transition: 'slide',
   components: {
     AddToAny,
     SubscribeForm,
+    TableOfContents,
   },
 
   head() {
@@ -228,6 +220,9 @@ export default {
 <style lang="css">
 .content a {
   color: #3273dc;
+}
+
+.content a:hover {
   text-decoration: underline;
 }
 
@@ -308,13 +303,5 @@ samp {
 
 .cp_embed_wrapper iframe {
   height: 100% !important;
-}
-
-.toc3 {
-  margin-left: 1.25rem;
-}
-
-.toc4 {
-  margin-left: 2.5rem;
 }
 </style>

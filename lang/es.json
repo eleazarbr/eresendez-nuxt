@@ -51,6 +51,7 @@
     "last_update": "Última actualización {date}",
     "thanks": "Gracias @eleazarbr. {title} {url}",
     "title": "Título",
-    "date": "Fecha"
+    "date": "Fecha",
+    "toc_title": "Tabla de contenido:"
   }
 }
