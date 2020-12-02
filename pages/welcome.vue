@@ -57,6 +57,7 @@
                     :key="index"
                     type="is-dark"
                     class="is-light"
+                    :class="{ 'is-danger': tag === 'Draft' }"
                     >{{ tag }}</b-tag
                   >
                 </b-taglist>
