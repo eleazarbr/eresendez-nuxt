@@ -304,4 +304,8 @@ samp {
 .cp_embed_wrapper iframe {
   height: 100% !important;
 }
+
+.nuxt-content-highlight {
+  margin-bottom: 1em;
+}
 </style>
