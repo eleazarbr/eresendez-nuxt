@@ -15,15 +15,29 @@
             </div>
             <div class="level-right">
               <div class="level-item">
-                <b-field expanded>
-                  <b-input
-                    type="search"
-                    autocomplete="off"
-                    icon="search-web"
-                    v-model="searchQuery"
-                    :placeholder="$t('search')"
-                    @input="search"
-                  ></b-input>
+                <b-field group-multiline grouped>
+                  <b-field v-show="false" expanded>
+                    <b-select placeholder="Etiquetas">
+                      <option :value="null"></option>
+                      <option
+                        v-for="(tag, index) in tags"
+                        :key="index"
+                        :value="tag"
+                      >
+                        {{ tag }}
+                      </option>
+                    </b-select>
+                  </b-field>
+                  <b-field expanded>
+                    <b-input
+                      v-model="searchQuery"
+                      type="search"
+                      autocomplete="off"
+                      icon="search-web"
+                      :placeholder="$t('search')"
+                      @input="search"
+                    ></b-input>
+                  </b-field>
                 </b-field>
               </div>
             </div>
@@ -109,6 +123,7 @@ export default {
 
   data: () => ({
     posts: [],
+    tags: [],
     searchQuery: '',
     imagesDir: 'blog',
     table: {
@@ -125,6 +140,10 @@ export default {
       this.searchQuery ? this.searchPost() : this.getPosts()
     }, 1000),
 
+    searchByTag() {
+      // const products = await this.$content('products').where({ 'categories.slug': { $contains: 'top' } }).fetch()
+    },
+
     async searchPost() {
       this.table.loading = true
       this.posts = await this.queryPosts()
@@ -136,6 +155,10 @@ export default {
     async getPosts() {
       this.table.loading = true
       this.posts = await this.queryPosts().fetch()
+
+      var tags = this.posts.map((post) => post.tags)
+      tags = _.sortBy(_.uniq(_.flatten(tags)))
+      this.tags = tags
       this.table.loading = false
     },
 
