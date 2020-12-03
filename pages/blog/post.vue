@@ -24,7 +24,7 @@
                     $t('blog.posted_on', {
                       date: $moment(page.date)
                         .locale($store.getters['lang/locale'])
-                        .format('ll'),
+                        .format('LL'),
                     })
                   }}
                 </p>

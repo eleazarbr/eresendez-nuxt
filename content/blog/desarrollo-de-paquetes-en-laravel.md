@@ -2,7 +2,7 @@
 title: Desarrollo de paquetes en Laravel
 summary: Cómo desarrollar paquetes en Laravel
 date: 2020-11-28 11:25:00
-image:
+image: u2Ru4QBXA5Q
 tags: [Laravel, Composer, Draft]
 ---
 
