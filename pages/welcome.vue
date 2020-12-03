@@ -84,11 +84,6 @@
             </template>
             <template slot="detail" slot-scope="props">
               <article class="media">
-                <figure class="media-left" v-if="props.row.image">
-                  <div class="image is-64x64">
-                    <img :src="`${imagesDir}/${props.row.image}`" />
-                  </div>
-                </figure>
                 <div class="media-content">{{ props.row.summary }}</div>
               </article>
             </template>

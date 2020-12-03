@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Post header and metadata -->
-    <div class="hero is-black is-bold h-64">
+    <div class="hero is-black is-bold h-80">
       <div
-        class="has-bg-image is-parallax absolute w-full h-64"
+        class="has-bg-image is-parallax absolute w-full h-80"
         :style="`
           filter: blur(5px);
           background-image: url('https://source.unsplash.com/${page.image}');

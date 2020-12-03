@@ -2,7 +2,7 @@
 title: Secciones no visibles del Bulma Modal (full-height) en iOS
 summary: Un UX issue en Safari iOS en el Bulma Modal.
 date: 2020-12-01 17:22:00
-image:
+image: DtDlVpy-vvQ
 tags: [Bulma]
 ---
 

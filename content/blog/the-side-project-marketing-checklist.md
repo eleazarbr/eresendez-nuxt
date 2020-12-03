@@ -2,7 +2,7 @@
 title: The Side Project Marketing Checklist
 summary: The Side Project Marketing Checklist es una lista completa y ordenada cronológicamente de tácticas e ideas de marketing que podemos usar para nuestros proyectos paralelos.
 date: 2020-11-29 11:51:00
-image:
+image: oqStl2L5oxI
 tags: [Marketing]
 ---
 

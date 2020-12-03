@@ -2,7 +2,7 @@
 title: Laravel Tournament Package (Bracket Generator)
 summary: Este paquete de Laravel te permite generar un bracket personalizable para torneos.
 date: 2020-12-02 09:00:00
-image: m5pQZzipruY
+image: ryRU-cd1yas
 tags: [Laravel, Packages, Draft]
 ---
 
