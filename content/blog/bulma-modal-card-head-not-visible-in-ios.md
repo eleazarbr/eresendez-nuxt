@@ -3,7 +3,7 @@ title: Secciones no visibles del Bulma Modal (full-height) en iOS
 summary: Un UX issue en Safari iOS en el Bulma Modal.
 date: 2020-12-01 17:22:00
 image:
-tags: [Bulma, Draft]
+tags: [Bulma]
 ---
 
 Al abrir un modal relativamente grande en iOS Safari, aparece una barra inferior y superior del navegador. Como resultado, las barras de herramientas bloquean una parte del encabezado y footer del modal, lo que dificulta el uso de botones en dichas secciones. [^1]

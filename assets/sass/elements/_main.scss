@@ -19,7 +19,20 @@ html {
   width: 100%;
 }
 
-.image img {
+.bg-cover {
   height: 100%;
   object-fit: cover;
+}
+
+.has-bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.has-bg-image.is-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

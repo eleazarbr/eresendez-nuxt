@@ -1,25 +1,30 @@
 <template>
   <div>
     <!-- Post header and metadata -->
-    <div class="hero is-white is-bold is-small">
-      <div class="hero-body">
+    <div class="hero is-black is-bold h-64">
+      <div
+        class="has-bg-image is-parallax absolute w-full h-64"
+        :style="`
+          filter: blur(5px);
+          background-image: url('https://source.unsplash.com/${page.image}');
+        `"
+      ></div>
+      <div class="hero-body flex items-center">
         <div class="container">
-          <div class="columns is-centered is-vcentered">
+          <div class="columns is-mobile is-centered is-vcentered">
             <!-- Title and metadata -->
-            <div class="column">
-              <h2
-                class="font-bold text-2xl sm:text-3xl has-text-black leading-tight"
-              >
+            <div class="column is-auto">
+              <h2 class="font-bold text-2xl sm:text-3xl leading-tight">
                 {{ page.title }}
               </h2>
-              <div class="text-sm sm:text-base text-black mt-2">
+              <div class="text-sm sm:text-base mt-2">
                 <p>
                   <b-icon icon="calendar-month" size="is-small"></b-icon>
                   {{
                     $t('blog.posted_on', {
                       date: $moment(page.date)
                         .locale($store.getters['lang/locale'])
-                        .format('LL'),
+                        .format('ll'),
                     })
                   }}
                 </p>
@@ -41,12 +46,6 @@
                   {{ page.tags.join(', ') }}
                 </p>
               </div>
-            </div>
-            <!-- Image -->
-            <div class="column is-4" v-if="page.image">
-              <figure class="image is-256xauto">
-                <img :src="imagesDir + page.image" />
-              </figure>
             </div>
           </div>
         </div>
