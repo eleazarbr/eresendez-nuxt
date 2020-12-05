@@ -1,56 +1,6 @@
 <template>
   <div>
-    <!-- Post header and metadata -->
-    <div class="hero is-black is-bold h-80">
-      <div
-        class="has-bg-image is-parallax absolute w-full h-80"
-        :style="`
-          filter: blur(5px);
-          background-image: url('https://source.unsplash.com/${page.image}');
-        `"
-      ></div>
-      <div class="hero-body flex items-center">
-        <div class="container">
-          <div class="columns is-mobile is-centered is-vcentered">
-            <!-- Title and metadata -->
-            <div class="column is-auto">
-              <h2 class="font-bold text-2xl sm:text-3xl leading-tight">
-                {{ page.title }}
-              </h2>
-              <div class="text-sm sm:text-base mt-2">
-                <p>
-                  <b-icon icon="calendar-month" size="is-small"></b-icon>
-                  {{
-                    $t('blog.posted_on', {
-                      date: $moment(page.date)
-                        .locale($store.getters['lang/locale'])
-                        .format('LL'),
-                    })
-                  }}
-                </p>
-                <p v-if="page.last_updated_at">
-                  {{
-                    $t('blog.last_update', {
-                      date: $moment(page.last_updated_at)
-                        .locale($store.getters['lang/locale'])
-                        .fromNow(),
-                    })
-                  }}
-                </p>
-                <p>
-                  <b-icon icon="clock-outline" size="is-small"></b-icon>
-                  {{ page.readingTime }}
-                </p>
-                <p>
-                  <b-icon icon="tag-multiple-outline" size="is-small"></b-icon>
-                  {{ page.tags.join(', ') }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <post-header :page="page"></post-header>
 
     <!-- Main Content -->
     <div class="section has-background-white">
@@ -156,6 +106,7 @@
 </template>
 <script>
 import TableOfContents from '~/components/blog/TableOfContents.vue'
+import PostHeader from '~/components/blog/PostHeader.vue'
 import SubscribeForm from '~/components/blog/SubscribeForm'
 import AddToAny from '~/components/blog/AddToAny'
 export default {
@@ -165,6 +116,7 @@ export default {
     AddToAny,
     SubscribeForm,
     TableOfContents,
+    PostHeader
   },
 
   head() {

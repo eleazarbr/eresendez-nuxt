@@ -49,7 +49,7 @@ php artisan make:auth
 - Usar equipos en lugar de competidores
 
 ## Uso
-Para empezar a usar el proyecto podemos ejecutar el seeder y empezar a utilizar la información de muestra.
+Para empezar a usar el proyecto podemos ejecutar el seeder y obtener la información de muestra.
 
 ```bash
 php artisan db:seed --class=LaravelTournamentSeeder

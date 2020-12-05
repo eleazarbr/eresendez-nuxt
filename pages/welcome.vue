@@ -50,8 +50,10 @@
             default-sort-direction="desc"
             :loading="table.loading"
             :hoverable="true"
-            :data="posts"
+            :striped="true"
+            :narrowed="true"
             :show-detail-icon="true"
+            :data="posts"
           >
             <template slot-scope="props">
               <b-table-column :label="$t('blog.title')">

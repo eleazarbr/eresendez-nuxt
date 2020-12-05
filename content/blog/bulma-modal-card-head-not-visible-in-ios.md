@@ -1,5 +1,5 @@
 ---
-title: Secciones no visibles del Bulma Modal (full-height) en iOS
+title: Cómo mejorar el spacing del Bulma Modal en iOS
 summary: Un UX issue en Safari iOS en el Bulma Modal.
 date: 2020-12-01 17:22:00
 image: DtDlVpy-vvQ
@@ -21,7 +21,7 @@ $modal-card-spacing: 80px; // default 40px;
 
 #### Local Testing con LambdaTest
 
-LambaTest es una alternativa a BrowserStack. La idea es probar el cambio especifico en la UI como si estuvieramos en un determinado sistema operativo antes de subirlo a producción. [^2]
+LambaTest es una alternativa a BrowserStack. La idea es probar el cambio especifico en la UI como si estuviéramos en un determinado sistema operativo antes de subirlo a producción. [^2]
 
 Resultado: 
 ![Bulma Modal resultado en iOS][image-1]
