@@ -16,17 +16,12 @@
             <div class="level-right">
               <div class="level-item">
                 <b-field group-multiline grouped>
-                  <b-field v-show="false" expanded>
-                    <b-select placeholder="Etiquetas">
-                      <option :value="null"></option>
-                      <option
-                        v-for="(tag, index) in tags"
-                        :key="index"
-                        :value="tag"
-                      >
+                  <b-field v-if="tag" expanded>
+                    <div class="tags">
+                      <b-tag type="is-dark" closable @close="clearSearch">
                         {{ tag }}
-                      </option>
-                    </b-select>
+                      </b-tag>
+                    </div>
                   </b-field>
                   <b-field expanded>
                     <b-input
@@ -72,8 +67,9 @@
                     v-for="(tag, index) in props.row.tags"
                     :key="index"
                     type="is-dark"
-                    class="is-light"
+                    class="is-light cursor-pointer"
                     :class="{ 'is-danger': tag === 'Draft' }"
+                    @click.native="filterByTag(tag)"
                     >{{ tag }}</b-tag
                   >
                 </b-taglist>
@@ -119,10 +115,10 @@ export default {
   },
 
   data: () => ({
-    posts: [],
-    tags: [],
     searchQuery: '',
     imagesDir: 'blog',
+    posts: [],
+    tag: null,
     table: {
       loading: false,
     },
@@ -137,8 +133,18 @@ export default {
       this.searchQuery ? this.searchPost() : this.getPosts()
     }, 1000),
 
-    searchByTag() {
-      // const products = await this.$content('products').where({ 'categories.slug': { $contains: 'top' } }).fetch()
+    clearSearch() {
+      this.tag = null
+      this.getPosts()
+    },
+
+    async filterByTag(tag) {
+      this.table.loading = true
+      this.tag = tag
+      this.posts = await this.queryPosts()
+        .where({ tags: { $contains: tag } })
+        .fetch()
+      this.table.loading = false
     },
 
     async searchPost() {
@@ -152,23 +158,22 @@ export default {
     async getPosts() {
       this.table.loading = true
       this.posts = await this.queryPosts().fetch()
+      this.table.loading = false
+    },
 
+    getTags() {
       var tags = this.posts.map((post) => post.tags)
       tags = _.sortBy(_.uniq(_.flatten(tags)))
       this.tags = tags
-      this.table.loading = false
     },
 
     queryPosts() {
       return this.$content('blog').only([
         'title',
         'summary',
-        'image',
         'slug',
         'date',
-        'tags',
-        'author',
-        'is_featured',
+        'tags'
       ])
     },
   },

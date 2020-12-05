@@ -7,7 +7,6 @@
             class="hover:underline"
             :to="{name: 'blog.post', params: {slug: post.slug}}"
           >{{ post.title }}</nuxt-link>
-          <b-icon v-if="post.is_featured" icon="star" class="has-text-warning"></b-icon>
         </div>
         <div class="text-base pb-2 leading-normal">{{ post.summary }}</div>
         <div class="buttons text-sm sm:text-base mb-5">
