@@ -47,6 +47,7 @@
             <!-- GitHub Comments -->
             <div>
               <script
+                type="application/javascript"
                 src="https://utteranc.es/client.js"
                 repo="eleazarbr/eresendez"
                 issue-term="pathname"
