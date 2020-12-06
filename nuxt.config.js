@@ -1,6 +1,18 @@
 require('dotenv').config()
 import webpack from 'webpack'
 
+let posts = [];
+const createSitemapRoutes = async () => {
+  let routes = [];
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('blog').fetch();
+  for (const post of posts) {
+    routes.push(`blog/${post.slug}`);
+  }
+  return routes;
+}
+
 export default {
   ssr: false,
   target: 'static',
@@ -50,7 +62,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/sitemap'
   ],
 
   tailwindcss: {
@@ -62,6 +75,12 @@ export default {
   buefy: {
     materialDesignIcons: true,
     defaultIconPack: 'mdi'
+  },
+
+  sitemap: {
+    hostname: 'https://eresendez.com',
+    gzip: true,
+    routes: createSitemapRoutes
   },
 
   moment: {
