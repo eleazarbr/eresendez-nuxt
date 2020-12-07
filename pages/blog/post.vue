@@ -117,7 +117,7 @@ export default {
     AddToAny,
     SubscribeForm,
     TableOfContents,
-    PostHeader
+    PostHeader,
   },
 
   head() {
@@ -162,10 +162,7 @@ export default {
     }
   },
 
-  data: () => ({
-    author: 'Eleazar R.',
-    imagesDir: 'blog/',
-  }),
+  data: () => ({}),
 }
 </script>
 

@@ -53,5 +53,8 @@
     "title": "Título",
     "date": "Fecha",
     "toc_title": "Tabla de contenido:"
+  },
+  "navbar": {
+    "projects": "Side Projects"
   }
 }
