@@ -2,14 +2,6 @@ html {
   height: 100%;
 }
 
-.content a {
-  color: #3273dc;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}
-
 .image.is-256x256 {
   height: 256px;
   width: 256px;
@@ -25,7 +17,7 @@ html {
   width: 100%;
 }
 
-.bg-cover {
+.has-bg-cover {
   height: 100%;
   object-fit: cover;
 }
@@ -41,4 +33,9 @@ html {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.a2a_svg,
+.a2a_count {
+  border-radius: 0 !important;
 }

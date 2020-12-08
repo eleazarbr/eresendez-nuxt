@@ -11,7 +11,7 @@
             <div class="card-image">
               <figure class="image is-3by1">
                 <img
-                  class="bg-cover"
+                  class="has-bg-cover"
                   :src="`https://source.unsplash.com/${project.image}`"
                   :alt="project.title"
                 />

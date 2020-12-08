@@ -1,0 +1,85 @@
+.content a {
+  color: #3273dc;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  font-size: 1.25rem;
+  border: none;
+  color: #111;
+  letter-spacing: 1em;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+hr:before {
+  content: "...";
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.875rem;
+}
+
+code,
+kbd,
+samp {
+  font-size: 1rem;
+}
+
+.content .tag,
+.content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
+
+.icon-link::before {
+  content: "#";
+  margin-right: 0.5rem;
+}
+
+.content blockquote {
+  color: #2160c4;
+  background-color: #eef3fc;
+  border-left: 5px solid #3273dc;
+  padding: 1.25em 1.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.cp_embed_wrapper {
+  overflow: hidden;
+  resize: both;
+  background: white;
+  padding-bottom: 10px;
+  height: 400px;
+}
+
+.cp_embed_wrapper iframe {
+  height: 100% !important;
+}
+
+.nuxt-content-highlight {
+  margin-bottom: 1em;
+}
