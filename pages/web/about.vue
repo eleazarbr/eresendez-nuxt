@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'welcome',
+  name: 'about',
   head() {
     return { title: this.$t('home') }
   },

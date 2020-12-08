@@ -1,7 +1,13 @@
 html {
   height: 100%;
-  background-image: linear-gradient(to bottom, #e6e6e6 0%, white 71%, white 100%);
-  background-repeat: repeat-x;
+}
+
+.content a {
+  color: #3273dc;
+}
+
+.content a:hover {
+  text-decoration: underline;
 }
 
 .image.is-256x256 {

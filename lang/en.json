@@ -55,6 +55,7 @@
     "toc_title": "Table of contents:"
   },
   "navbar": {
+    "home": "Home",
     "projects": "Side Projects"
   }
 }

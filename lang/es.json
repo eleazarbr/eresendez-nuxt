@@ -55,6 +55,7 @@
     "toc_title": "Tabla de contenido:"
   },
   "navbar": {
+    "home": "Inicio",
     "projects": "Side Projects"
   }
 }

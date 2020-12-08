@@ -167,14 +167,6 @@ export default {
 </script>
 
 <style lang="css">
-.content a {
-  color: #3273dc;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}
-
 .content img {
   display: block;
   margin-left: auto;

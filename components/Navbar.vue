@@ -1,11 +1,9 @@
 <template>
   <b-navbar wrapper-class="container">
     <template slot="brand">
-      <b-navbar-item
-        tag="router-link"
-        :to="{ name: user ? 'home' : 'welcome' }"
-        >{{ appName }}</b-navbar-item
-      >
+      <b-navbar-item tag="router-link" :to="{ name: 'web.home' }">{{
+        $t('navbar.home')
+      }}</b-navbar-item>
     </template>
     <template slot="start">
       <locale-dropdown />
@@ -46,8 +44,6 @@
 
 <script>
 import LocaleDropdown from './LocaleDropdown'
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'Navbar',
   components: {
