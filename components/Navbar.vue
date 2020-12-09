@@ -2,25 +2,21 @@
   <b-navbar wrapper-class="container">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ name: 'web.home' }">{{
-        $t('navbar.home')
+        $t("navbar.home")
       }}</b-navbar-item>
     </template>
     <template slot="start">
       <locale-dropdown />
     </template>
     <template slot="end">
-      <b-navbar-item
-        tag="router-link"
-        :to="{ name: 'web.ideas' }"
-      >
-        Ideas
-      </b-navbar-item>
+      <!-- <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }"> Wiki </b-navbar-item> -->
+      <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }"> Ideas </b-navbar-item>
       <b-navbar-item
         v-show="isProjectsActive"
         tag="router-link"
         :to="{ name: 'web.projects' }"
       >
-        {{ $t('navbar.projects') }}
+        {{ $t("navbar.projects") }}
       </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
@@ -49,9 +45,9 @@
 </template>
 
 <script>
-import LocaleDropdown from './LocaleDropdown'
+import LocaleDropdown from "./LocaleDropdown";
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   components: {
     LocaleDropdown,
   },
@@ -60,5 +56,5 @@ export default {
     appName: process.env.APP_NAME,
     isProjectsActive: false,
   }),
-}
+};
 </script>

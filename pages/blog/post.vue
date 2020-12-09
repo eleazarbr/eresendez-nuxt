@@ -7,6 +7,8 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-8">
+            <breadcrumbs></breadcrumbs>
+
             <!-- Old post warning -->
             <b-notification
               v-if="$moment(page.date).add(6, 'months').isBefore()"
@@ -108,16 +110,17 @@
 <script>
 import TableOfContents from '~/components/blog/TableOfContents.vue'
 import PostHeader from '~/components/blog/PostHeader.vue'
-import SubscribeForm from '~/components/blog/SubscribeForm'
 import AddToAny from '~/components/blog/AddToAny'
+import Breadcrumbs from "~/components/web/Breadcrumbs";
+
 export default {
   name: 'post',
   transition: 'slide',
   components: {
     AddToAny,
-    SubscribeForm,
     TableOfContents,
     PostHeader,
+    Breadcrumbs
   },
 
   head() {

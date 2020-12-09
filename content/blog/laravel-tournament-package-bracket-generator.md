@@ -103,7 +103,7 @@ El paquete nos proporciona las siguientes vistas:
 @include('laravel-tournaments::partials.fights')
 ```
 
-### Resultado
+## Resultado
 ![][image-1]
 
 [^1]:	Laravel Tournaments GitHub Package [https://github.com/xoco70/laravel-tournaments][1]
