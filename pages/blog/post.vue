@@ -14,7 +14,7 @@
               v-if="$moment(page.date).add(6, 'months').isBefore()"
               type="is-info"
               has-icon
-              >{{ $t('blog.old_post') }}</b-notification
+              >{{ $t("blog.old_post") }}</b-notification
             >
 
             <!-- Post body -->
@@ -39,7 +39,7 @@
                   :href="page.external_url['url']"
                   target="_blank"
                   icon-right="link-variant"
-                  >{{ $t('blog.read_more') }}</b-button
+                  >{{ $t("blog.read_more") }}</b-button
                 >
               </b-tooltip>
             </div>
@@ -108,63 +108,63 @@
   </div>
 </template>
 <script>
-import TableOfContents from '~/components/blog/TableOfContents.vue'
-import PostHeader from '~/components/blog/PostHeader.vue'
-import AddToAny from '~/components/blog/AddToAny'
+import TableOfContents from "~/components/blog/TableOfContents.vue";
+import PostHeader from "~/components/blog/PostHeader.vue";
+import AddToAny from "~/components/blog/AddToAny";
 import Breadcrumbs from "~/components/web/Breadcrumbs";
 
 export default {
-  name: 'post',
-  transition: 'slide',
+  name: "post",
+  transition: "slide",
   components: {
     AddToAny,
     TableOfContents,
     PostHeader,
-    Breadcrumbs
+    Breadcrumbs,
   },
 
   head() {
     return {
       title: this.page.title,
       meta: [
-        { hid: 'description', name: 'description', content: this.page.summary },
-        { hid: 'og:title', property: 'og:title', content: this.page.title },
+        { hid: "description", name: "description", content: this.page.summary },
+        { hid: "og:title", property: "og:title", content: this.page.title },
         {
-          hid: 'og:description',
-          property: 'og:description',
+          hid: "og:description",
+          property: "og:description",
           content: this.page.summary,
         },
         {
-          hid: 'twitter:title',
-          name: 'twitter:title',
+          hid: "twitter:title",
+          name: "twitter:title",
           content: this.page.title,
         },
         {
-          hid: 'twitter:description',
-          name: 'twitter:description',
+          hid: "twitter:description",
+          name: "twitter:description",
           content: this.page.summary,
         },
       ],
-    }
+    };
   },
 
   async asyncData({ $content, params }) {
-    let slug = params.slug
-    const page = await $content(`blog/${slug}`).fetch()
+    let slug = params.slug;
+    const page = await $content(`blog/${slug}`).fetch();
 
-    const [prev, next] = await $content('blog')
-      .only(['title', 'summary', 'slug'])
-      .sortBy('date', 'asc')
+    const [prev, next] = await $content("blog")
+      .only(["title", "summary", "slug"])
+      .sortBy("date", "asc")
       .surround(slug)
-      .fetch()
+      .fetch();
 
     return {
       page,
       prev,
       next,
-    }
+    };
   },
 
   data: () => ({}),
-}
+};
 </script>

@@ -1,35 +1,27 @@
 <template>
   <div>
-    <div class="section has-background-white">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content text-base sm:text-lg md:text-lg">
-              <nuxt-content :document="page"></nuxt-content>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="content text-sm sm:text-base md:text-base">
+      <!-- Article title -->
+      <h2 class="text-2xl sm:text-3xl leading-tight font-bold pb-5">
+        {{ page.title }}
+      </h2>
+
+      <!-- Content -->
+      <nuxt-content :document="page"></nuxt-content>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "article",
-  async asyncData({ $content, params }) {
-    let slug = params.slug;
-    const page = await $content(`wiki/sharing/${slug}`, { deep: true }).fetch();
 
-    // const [prev, next] = await $content("blog")
-    //   .only(["title", "summary", "slug"])
-    //   .sortBy("date", "asc")
-    //   .surround(slug)
-    //   .fetch();
+  async asyncData({ $content, params }) {
+    var slug = params.slug;
+    var category = params.category;
+    const page = await $content(`wiki/${category}/${slug}`).fetch();
 
     return {
       page,
-      // prev,
-      // next,
     };
   },
 };

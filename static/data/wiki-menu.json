@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Sharing",
+    "slug": "sharing",
+    "articles": [
+      {
+        "name": "My Workflowy",
+        "slug": "my-workflowy"
+      }
+    ]
+  },
+  {
+    "name": "Lenguajes de Programación",
+    "slug": "programming-languages",
+    "articles": [
+      {
+        "name": "JavaScript",
+        "slug": "javascript"
+      }
+    ]
+  }
+]

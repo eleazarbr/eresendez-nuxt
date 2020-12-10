@@ -12,9 +12,11 @@ const routes = [
   { path: '/blog', name: 'web.blog', component: page('web/blog.vue') },
   { path: '/blog/:slug', name: 'blog.post', component: page('blog/post.vue') },
   { path: '/ideas', name: 'web.ideas', component: page('web/ideas.vue') },
-  // { path: '/wiki', name: 'web.wiki', component: page('web/wiki.vue'), children: [
-  //   { path: '/wiki/:slug', name: 'wiki.article', component: page('web/wiki/article.vue') },
-  // ] },
+  {
+    path: '/wiki', name: 'web.wiki', component: page('web/wiki.vue'), children: [
+      { path: '/wiki/:slug', name: 'wiki.article', component: page('web/wiki/article.vue') },
+    ]
+  },
 
   // { path: '/about', name: 'web.about', component: page('web/about.vue') },
   // { path: '/side-projects', name: 'web.projects', component: page('web/projects.vue') },

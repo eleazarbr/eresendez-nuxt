@@ -2,11 +2,7 @@
   <div class="section">
     <div class="container">
       <div class="columns is-multiline is-centered">
-        <div
-          class="column is-half"
-          v-for="(project, index) in projects"
-          :key="index"
-        >
+        <div class="column is-half" v-for="(project, index) in projects" :key="index">
           <div class="card">
             <div class="card-image">
               <figure class="image is-3by1">
@@ -27,17 +23,17 @@
   </div>
 </template>
 <script>
-import projects from '~/static/data/projects.json'
+import projects from "~/static/data/projects.json";
 export default {
-  name: 'projects',
+  name: "projects",
   head() {
     return {
-      title: 'Side Projects',
-    }
+      title: "Side Projects",
+    };
   },
 
   asyncData({ params }) {
-    return { projects }
+    return { projects };
   },
-}
+};
 </script>

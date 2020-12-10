@@ -23,20 +23,20 @@
 
 <script>
 export default {
-  name: 'welcome',
+  name: "welcome",
   head() {
-    return { title: this.$t('home') }
+    return { title: this.$t("home") };
   },
 
   async asyncData({ $content }) {
-    const page = await $content('web/about').fetch()
+    const page = await $content("web/about").fetch();
     return {
       page,
-    }
+    };
   },
 
   mounted() {
-    console.log(this.page)
+    console.log(this.page);
   },
-}
+};
 </script>
