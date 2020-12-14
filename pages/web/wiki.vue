@@ -1,13 +1,20 @@
 <template>
   <div>
-    <div class="columns">
+    <div class="columns h-screen">
       <!-- Menu -->
       <div class="column is-narrow">
-        <b-menu class="p-3">
+        <b-menu class="text-sm p-3 bg-gray-100 h-full" :activable="false">
           <b-menu-list>
-            <b-menu-item v-for="(category, index) in menu" expanded :key="index">
+            <b-menu-item
+              v-for="(category, index) in menu"
+              expanded
+              :key="index"
+              v-show="show(category)"
+            >
               <template slot="label" slot-scope="props">
-                {{ category.name }}
+                <span class="font-bold">
+                  {{ category.name }}
+                </span>
                 <b-icon
                   class="is-pulled-right"
                   :icon="props.expanded ? 'menu-down' : 'menu-up'"
@@ -32,6 +39,9 @@
       <!-- Content -->
       <div class="column is-three-fifths">
         <div class="section">
+          <div v-if="currentRouteName === 'web.wiki'">
+            <nuxt-content class="content" :document="page" />
+          </div>
           <nuxt />
         </div>
       </div>
@@ -45,10 +55,34 @@ export default {
   name: "wiki",
   data: () => ({}),
 
-  asyncData({ params }) {
+  async asyncData({ params, $content }) {
+    const page = await $content("wiki/introduction").fetch();
     return {
-      menu: _.sortBy(menu, ["name"]),
+      page,
+      menu: _.orderBy(menu, ["name"], "asc"),
     };
+  },
+
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
+  },
+
+  methods: {
+    show(category) {
+      var show = true;
+      if (category.hasOwnProperty("active")) show = category.active;
+      return show;
+    },
+  },
+
+  mounted() {
+    // var firstCategory = this.menu[0];
+    // this.$router.push({
+    //   name: "wiki.article",
+    //   params: { category: firstCategory.slug, slug: firstCategory.articles[0]["slug"] },
+    // });
   },
 };
 </script>

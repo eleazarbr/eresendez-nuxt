@@ -16,6 +16,21 @@
       {
         "name": "JavaScript",
         "slug": "javascript"
+      },
+      {
+        "name": "PHP",
+        "slug": "php"
+      }
+    ]
+  },
+  {
+    "name": "Web",
+    "slug": "web",
+    "active": false,
+    "articles": [
+      {
+        "name": "SEO",
+        "slug": "seo"
       }
     ]
   }

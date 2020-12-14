@@ -14,7 +14,7 @@ const routes = [
   { path: '/ideas', name: 'web.ideas', component: page('web/ideas.vue') },
   {
     path: '/wiki', name: 'web.wiki', component: page('web/wiki.vue'), children: [
-      { path: '/wiki/:slug', name: 'wiki.article', component: page('web/wiki/article.vue') },
+      { path: '/wiki/:category/:slug', name: 'wiki.article', component: page('web/wiki/article.vue') },
     ]
   },
 

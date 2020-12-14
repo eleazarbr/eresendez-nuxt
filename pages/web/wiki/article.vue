@@ -14,6 +14,7 @@
 <script>
 export default {
   name: "article",
+  transition: "slide",
 
   async asyncData({ $content, params }) {
     var slug = params.slug;
