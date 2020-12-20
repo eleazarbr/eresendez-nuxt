@@ -21,14 +21,14 @@
     "dotenv": "^8.2.0",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
-    "nuxt": "^2.14.11",
+    "nuxt": "^2.14.12",
     "nuxt-buefy": "^0.3.31",
     "prism-themes": "^1.5.0",
     "reading-time": "^1.2.1",
     "remark-emoji": "^2.1.0",
     "remark-footnotes": "^3.0.0",
     "vue-i18n": "^8.22.2",
-    "vue2-filters": "^0.11.0"
+    "vue2-filters": "^0.11.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

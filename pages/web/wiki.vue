@@ -7,8 +7,8 @@
           <b-menu-list>
             <b-menu-item
               v-for="(category, index) in menu"
-              expanded
               :key="index"
+              expanded
               v-show="show(category)"
             >
               <template slot="label" slot-scope="props">
@@ -50,7 +50,12 @@
 </template>
 
 <script>
-import menu from "~/static/data/wiki-menu.json"; // todo, remove this static way later
+/**
+ * TODO
+ * - Load menu items dynamically
+ * - Support sub-categories
+ */
+import menu from "~/static/data/wiki-menu.json";
 export default {
   name: "wiki",
   data: () => ({}),

@@ -33,5 +33,36 @@
         "slug": "seo"
       }
     ]
+  },
+  {
+    "name": "UNIX",
+    "slug": "unix",
+    "active": false,
+    "articles": [
+      {
+        "name": "Zsh",
+        "slug": "zsh"
+      }
+    ]
+  },
+  {
+    "name": "Package Managers",
+    "slug": "package-managers",
+    "articles": [
+      {
+        "name": "Composer",
+        "slug": "composer"
+      }
+    ]
+  },
+  {
+    "name": "Looking back",
+    "slug": "looking-back",
+    "articles": [
+      {
+        "name": "December 2020",
+        "slug": "12-2020"
+      }
+    ]
   }
 ]
