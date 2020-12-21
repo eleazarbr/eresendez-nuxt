@@ -10,7 +10,7 @@
     ]
   },
   {
-    "name": "Lenguajes de Programación",
+    "name": "Programming Languages",
     "slug": "programming-languages",
     "articles": [
       {
@@ -62,6 +62,30 @@
       {
         "name": "December 2020",
         "slug": "12-2020"
+      }
+    ]
+  },
+  {
+    "name": "Frameworks",
+    "slug": "frameworks",
+    "articles": [
+      {
+        "name": "Nuxt.js",
+        "slug": "nuxt"
+      },
+      {
+        "name": "Vue",
+        "slug": "vue"
+      }
+    ]
+  },
+  {
+    "name": "Business",
+    "slug": "business",
+    "articles": [
+      {
+        "name": "Pricing",
+        "slug": "pricing"
       }
     ]
   }

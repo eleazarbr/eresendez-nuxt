@@ -78,7 +78,7 @@
                 <p class="title is-6">
                   <nuxt-link
                     class="has-text-white"
-                    :to="{ name: 'blog.post', params: { slug: next.slug } }"
+                    :to="{ name: 'post.show', params: { slug: next.slug } }"
                   >
                     <b-icon icon="arrow-left" size="is-small"></b-icon>
                     <span>{{ next.title }}</span>
@@ -92,7 +92,7 @@
                 <p class="title is-6">
                   <nuxt-link
                     class="has-text-white"
-                    :to="{ name: 'blog.post', params: { slug: prev.slug } }"
+                    :to="{ name: 'post.show', params: { slug: prev.slug } }"
                   >
                     <span>{{ prev.title }}</span>
                     <b-icon icon="arrow-right" size="is-small"></b-icon>
@@ -149,8 +149,8 @@ export default {
   },
 
   async asyncData({ $content, params }) {
-    let slug = params.slug;
-    const page = await $content(`blog/${slug}`).fetch();
+    var slug = params.slug;
+    const page = await $content("blog", slug).fetch();
 
     const [prev, next] = await $content("blog")
       .only(["title", "summary", "slug"])

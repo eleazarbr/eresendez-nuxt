@@ -17,7 +17,7 @@ Comparto en Workflowy las ideas de cosas que quiero construir, así como tambié
 - [Find a problem. Tell a story. Sell a service. Deliver a result. Build a product.][8]
 - [If your idea already exists it's validation that there's a market for it. If your execution of the same idea is 1) better, or 2) cheaper, you can reach customers in that market.][9]
 
-## Enlaces
+## Links
 - [Project based learning][10] - Curated list of project-based tutorials.
 - [Build Your Own X][11]
 - [Mega Project List][12]

@@ -7,7 +7,7 @@
           <div class="level-left">
             <div class="level-item">
               <h2 class="text-3xl font-bold has-text-black">
-                {{ $t('blog.posts') }}
+                {{ $t("blog.posts") }}
                 <span>&#9997;&#65039;</span>
               </h2>
             </div>
@@ -54,7 +54,7 @@
               <nuxt-link
                 class="hover:underline"
                 :to="{
-                  name: 'blog.post',
+                  name: 'post.show',
                   params: { slug: props.row.slug },
                 }"
                 >{{ props.row.title }}</nuxt-link
@@ -74,9 +74,7 @@
               </b-taglist>
             </b-table-column>
             <b-table-column :label="$t('blog.date')" sortable field="date">{{
-              $moment(props.row.date)
-                .locale($store.getters['lang/locale'])
-                .format('LL')
+              $moment(props.row.date).locale($store.getters["lang/locale"]).format("LL")
             }}</b-table-column>
           </template>
           <template slot="detail" slot-scope="props">
@@ -108,79 +106,71 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import SubscribeForm from '~/components/blog/SubscribeForm'
+import { mapGetters } from "vuex";
+import SubscribeForm from "~/components/blog/SubscribeForm";
 
 export default {
-  name: 'blog',
+  name: "blog",
   components: {
     SubscribeForm,
   },
 
   head() {
-    return { title: this.$t('home') }
+    return { title: this.$t("home") };
   },
 
   data: () => ({
     table: { loading: false },
     posts: [],
-    searchQuery: '',
+    searchQuery: "",
     tag: null,
     isSubscribeActive: false,
   }),
 
   mounted() {
-    this.getPosts()
+    this.getPosts();
   },
 
   methods: {
     search: _.debounce(function () {
-      this.searchQuery ? this.searchPost() : this.getPosts()
+      this.searchQuery ? this.searchPost() : this.getPosts();
     }, 1000),
 
     clearSearch() {
-      this.tag = null
-      this.getPosts()
+      this.tag = null;
+      this.getPosts();
     },
 
     async filterByTag(tag) {
-      this.table.loading = true
-      this.tag = tag
+      this.table.loading = true;
+      this.tag = tag;
       this.posts = await this.queryPosts()
         .where({ tags: { $contains: tag } })
-        .fetch()
-      this.table.loading = false
+        .fetch();
+      this.table.loading = false;
     },
 
     async searchPost() {
-      this.table.loading = true
-      this.posts = await this.queryPosts()
-        .search('title', this.searchQuery)
-        .fetch()
-      this.table.loading = false
+      this.table.loading = true;
+      this.posts = await this.queryPosts().search("title", this.searchQuery).fetch();
+      this.table.loading = false;
     },
 
     async getPosts() {
-      this.table.loading = true
-      this.posts = await this.queryPosts().fetch()
-      this.table.loading = false
+      this.table.loading = true;
+      this.posts = await this.queryPosts().fetch();
+      this.table.loading = false;
     },
 
     getTags() {
-      var tags = this.posts.map((post) => post.tags)
-      tags = _.sortBy(_.uniq(_.flatten(tags)))
-      this.tags = tags
+      var tags = this.posts.map((post) => post.tags);
+      tags = _.sortBy(_.uniq(_.flatten(tags)));
+      this.tags = tags;
     },
 
     queryPosts() {
-      return this.$content('blog').only([
-        'title',
-        'summary',
-        'slug',
-        'date',
-        'tags',
-      ])
+      return this.$content("blog").only(["title", "summary", "slug", "date", "tags"]);
     },
   },
-}
+};
 </script>
