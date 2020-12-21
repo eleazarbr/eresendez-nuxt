@@ -40,7 +40,7 @@
   "blog": {
     "bio": "Mi objetivo es compartir continuamente el conocimiento que adquiero a través de mi trabajo diario. Si te interesa Laravel y Vue ¡adelante, regístrate!",
     "posts": "Entradas",
-    "posted_on": "Publicado el {date}",
+    "posted_on": "Publicado el {date} por <a target='_blank' href='https://twitter.com/eleazarbr'>@eleazarbr</a>",
     "read_more": "Leer más",
     "post_by": "{date} por {author}",
     "old_post": "Esta publicación tiene más de seis meses. No siempre actualizo publicaciones con nueva información, por lo que puede estar desactualizada.",
@@ -57,5 +57,13 @@
   "navbar": {
     "home": "Inicio",
     "projects": "Side Projects"
+  },
+  "welcome": {
+    "title": "Hey, I'm Eleazar 👋",
+    "subtitle": "Full Stack Developer based in MX.",
+    "description": "Laravel & Vue. Powered by ☕️"
+  },
+  "buttons": {
+    "view_more": "Ver más"
   }
 }

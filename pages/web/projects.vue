@@ -2,10 +2,14 @@
   <div class="section">
     <div class="container">
       <div class="columns is-multiline is-centered">
-        <div class="column is-half" v-for="(project, index) in projects" :key="index">
+        <div
+          class="column is-one-third-desktop is-half-tablet"
+          v-for="(project, index) in projects"
+          :key="index"
+        >
           <div class="card">
             <div class="card-image">
-              <figure class="image is-3by1">
+              <figure class="image is-2by1">
                 <img
                   class="has-bg-cover"
                   :src="`https://source.unsplash.com/${project.image}`"

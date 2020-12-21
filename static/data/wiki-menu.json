@@ -88,5 +88,15 @@
         "slug": "pricing"
       }
     ]
+  },
+  {
+    "name": "Design",
+    "slug": "design",
+    "articles": [
+      {
+        "name": "Inspiration",
+        "slug": "design-inspiration"
+      }
+    ]
   }
 ]

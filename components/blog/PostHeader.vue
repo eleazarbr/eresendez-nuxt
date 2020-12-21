@@ -22,19 +22,22 @@
             <div class="text-sm sm:text-base mt-2">
               <p>
                 <b-icon icon="calendar-month" size="is-small"></b-icon>
-                {{
-                  $t('blog.posted_on', {
-                    date: $moment(page.date)
-                      .locale($store.getters['lang/locale'])
-                      .format('LL'),
-                  })
-                }}
+                <span
+                  v-html="
+                    $t('blog.posted_on', {
+                      date: $moment(page.date)
+                        .locale($store.getters['lang/locale'])
+                        .format('ll'),
+                    })
+                  "
+                >
+                </span>
               </p>
               <p v-if="page.updated_at" class="italic">
                 {{
-                  $t('blog.last_update', {
+                  $t("blog.last_update", {
                     date: $moment(page.updated_at)
-                      .locale($store.getters['lang/locale'])
+                      .locale($store.getters["lang/locale"])
                       .fromNow(),
                   })
                 }}
@@ -45,7 +48,7 @@
               </p>
               <p>
                 <b-icon icon="tag-multiple-outline" size="is-small"></b-icon>
-                {{ page.tags.join(', ') }}
+                {{ page.tags.join(", ") }}
               </p>
             </div>
           </div>
@@ -57,7 +60,7 @@
 
 <script>
 export default {
-  name: 'PostHeader',
-  props: ['page'],
-}
+  name: "PostHeader",
+  props: ["page"],
+};
 </script>

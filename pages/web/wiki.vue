@@ -8,7 +8,6 @@
             <b-menu-item
               v-for="(category, index) in menu"
               :key="index"
-              expanded
               v-show="show(category)"
             >
               <template slot="label" slot-scope="props">
@@ -58,6 +57,7 @@
 import menu from "~/static/data/wiki-menu.json";
 export default {
   name: "wiki",
+  transition: "slide",
   data: () => ({}),
 
   async asyncData({ params, $content }) {

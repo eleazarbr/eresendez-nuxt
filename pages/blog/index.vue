@@ -111,6 +111,7 @@ import SubscribeForm from "~/components/blog/SubscribeForm";
 
 export default {
   name: "blog",
+  transition: "slide",
   components: {
     SubscribeForm,
   },
