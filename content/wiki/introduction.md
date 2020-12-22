@@ -4,9 +4,9 @@ slug: introduction
 ---
 
 # Introducción 🌱
-Este es el comienzo de una wiki donde compartiré información de temas en general.
+Esta wiki es un [digital garden][1]. Un compendio de cosas que voy aprendiendo o he creado a lo largo de los años.
 
-Estas wikis también son llamadas [jardines digitales][1]. Existe una [comunidad de DigitalGardens en Reddit][2] que analiza las herramientas para mantener y crear estos wikis. Además de cómo utilizarlos para desarrollar [nuevas herramientas transformadoras para el pensamiento][3].
+Existe una [comunidad de DigitalGardens en Reddit][2] que analiza las herramientas para mantener y crear estos wikis. Además de cómo utilizarlos para desarrollar [nuevas herramientas transformadoras para el pensamiento][3].
 
 Aquí encontrarás (próximamente) una [lista de wikis]() que me gustaron como inspiración.
 
