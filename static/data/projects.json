@@ -1,19 +1,64 @@
 [
   {
-    "title": "Isabyte",
-    "link": "https://isabyte.com",
-    "description": "",
-    "image": "Px3iBXV-4TU"
-  },
-  {
     "title": "Escuela Sabática Digital",
-    "link": "https://escuelasabatica.digital",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://escuelasabatica.digital",
+        "target": "_blank"
+      },
+      {
+        "label": "Write-up",
+        "to": "/side-projects/escuela-sabatica-digital",
+        "target": "_self"
+      }
+    ],
     "description": "",
     "image": "X9GHkHbJIaU"
   },
   {
+    "title": "eresendez.com",
+    "description": "El código fuente de este website",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://eresendez.com",
+        "target": "_blank"
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/eleazarbr/eresendez",
+        "target": "_blank"
+      }
+    ],
+    "image": "X9GHkHbJIaU"
+  },
+  {
+    "title": "Isabyte",
+    "description": "Un ecommerce de productos electrónicos",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://isabyte.com",
+        "target": "_blank"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.isabyte.com",
+        "target": "_blank"
+      }
+    ],
+    "image": "Px3iBXV-4TU"
+  },
+  {
     "title": "Preventus",
-    "link": "https://preventus.semt.com.mx",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://preventus.semt.com.mx",
+        "target": "_blank"
+      }
+    ],
     "description": "",
     "image": "NFvdKIhxYlU"
   }

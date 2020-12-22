@@ -40,7 +40,7 @@
   "blog": {
     "bio": "Mi objetivo es compartir continuamente el conocimiento que adquiero a través de mi trabajo diario. Si te interesa Laravel y Vue ¡adelante, regístrate!",
     "posts": "Entradas",
-    "posted_on": "Publicado el {date} por <a target='_blank' href='https://twitter.com/eleazarbr'>@eleazarbr</a>",
+    "posted_on": "Por <a class='font-bold' target='_blank' href='https://twitter.com/eleazarbr'>@eleazarbr</a> el {date}",
     "read_more": "Leer más",
     "post_by": "{date} por {author}",
     "old_post": "Esta publicación tiene más de seis meses. No siempre actualizo publicaciones con nueva información, por lo que puede estar desactualizada.",

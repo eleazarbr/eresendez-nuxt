@@ -1,27 +1,32 @@
 <template>
   <div class="section">
     <div class="container">
-      <div class="columns is-multiline is-centered">
-        <div
-          class="column is-one-third-desktop is-half-tablet"
-          v-for="(project, index) in projects"
-          :key="index"
-        >
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-2by1">
-                <img
-                  class="has-bg-cover"
-                  :src="`https://source.unsplash.com/${project.image}`"
-                  :alt="project.title"
-                />
-              </figure>
-            </div>
-            <div class="card-content">
+      <div class="content">
+        <!-- Title -->
+        <h2 class="title">Projects</h2>
+        <p class="subtitle">Weekend hacks for fun and learning.</p>
+
+        <!-- Projects -->
+        <ul>
+          <li v-for="(project, index) in projects" :key="index">
+            <span class="font-bold">
               {{ project.title }}
-            </div>
-          </div>
-        </div>
+            </span>
+            <span v-if="project.description"> - {{ project.description }} </span>
+            <ul>
+              <li class="font-bold" v-for="(link, index) in project.links" :key="index">
+                <nuxt-link
+                  class="underline-blue"
+                  :href="link.url"
+                  :to="link.hasOwnProperty('to') ? link.to : ''"
+                  :target="link.target"
+                >
+                  {{ link.label }}
+                </nuxt-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -30,6 +35,7 @@
 import projects from "~/static/data/projects.json";
 export default {
   name: "projects",
+  transition: "slide",
   head() {
     return {
       title: "Side Projects",

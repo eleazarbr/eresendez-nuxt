@@ -27,6 +27,7 @@ const routes = [
   },
 
   { path: '/side-projects', name: 'web.projects', component: page('web/projects.vue') },
+  { path: "/side-projects/:slug", name: "project.show", component: page("blog/_slug.vue") },
   // { path: '/about', name: 'web.about', component: page('web/about.vue') },
   // { path: '/curriculum', name: 'curriculum', component: page('web/curriculum.vue') },
 ];

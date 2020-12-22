@@ -12,6 +12,9 @@
       <b-navbar-item tag="router-link" :to="{ name: 'blog.index' }"> Blog </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }"> Wiki </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }"> Ideas </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.projects' }">
+        Projects
+      </b-navbar-item>
       <b-navbar-item
         v-show="isProjectsActive"
         tag="router-link"

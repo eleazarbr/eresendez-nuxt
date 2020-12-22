@@ -48,8 +48,18 @@
               </p>
               <p>
                 <b-icon icon="tag-multiple-outline" size="is-small"></b-icon>
-                {{ page.tags.join(", ") }}
               </p>
+              <b-taglist>
+                <b-tag
+                  v-for="(tag, index) in page.tags"
+                  :key="index"
+                  :class="{ 'is-danger': tag === 'Draft' }"
+                >
+                  <span class="font-bold">
+                    {{ tag }}
+                  </span>
+                </b-tag>
+              </b-taglist>
             </div>
           </div>
         </div>

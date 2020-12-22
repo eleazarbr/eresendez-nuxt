@@ -4,10 +4,10 @@
       <div class="container">
         <!-- Title -->
         <div class="has-text-black has-text-centered">
-          <p class="text-4xl font-bold">
+          <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
             {{ $t("welcome.title") }}
           </p>
-          <p class="text-2xl font-bold mt-2">
+          <p class="text-xl sm:text-xl md:text-2xl font-bold mt-2">
             {{ $t("welcome.subtitle") }}
           </p>
           <p class="text-lg">
@@ -19,13 +19,13 @@
     <div class="section has-text-black">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-8">
+          <div class="column is-12-tablet is-8-desktop">
             <!-- Latest blog posts -->
-            <div class="columns is-mobile" v-for="(post, index) in posts" :key="index">
-              <div class="column is-narrow">
-                <figure class="image is-128x128 flex items-center">
+            <div class="columns is-vcentered" v-for="(post, index) in posts" :key="index">
+              <div class="column is-3">
+                <figure class="image is-3by1">
                   <img
-                    class="rounded"
+                    class="rounded has-bg-cover"
                     :src="`https://source.unsplash.com/${post.image}`"
                   />
                 </figure>
@@ -46,7 +46,7 @@
                   <b-tag
                     v-for="(tag, index) in post.tags"
                     :key="index"
-                    :type="{ 'is-danger': tag === 'Draft' }"
+                    :class="{ 'is-danger': tag === 'Draft' }"
                   >
                     <span class="font-bold">
                       {{ tag }}
