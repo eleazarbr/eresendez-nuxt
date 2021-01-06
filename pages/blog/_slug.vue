@@ -72,33 +72,33 @@
     <div class="hero is-black is-bold">
       <div class="hero-body">
         <div class="container">
-          <div class="columns is-mobile">
+          <div class="columns is-mobile content">
             <div class="column is-6">
               <div v-if="next" class="text-left">
-                <p class="title is-6">
+                <b-icon icon="arrow-left" size="is-small"></b-icon>
+                <p class="text-base font-bold leading-5">
                   <nuxt-link
                     class="has-text-white"
                     :to="{ name: 'post.show', params: { slug: next.slug } }"
                   >
-                    <b-icon icon="arrow-left" size="is-small"></b-icon>
                     <span>{{ next.title }}</span>
                   </nuxt-link>
                 </p>
-                <p class="subtitle is-6">{{ next.summary | truncate(100) }}</p>
+                <p class="text-sm">{{ next.summary | truncate(100) }}</p>
               </div>
             </div>
             <div class="column is-6">
               <div v-if="prev" class="text-right">
-                <p class="title is-6">
+                <b-icon icon="arrow-right" size="is-small"></b-icon>
+                <p class="text-base font-bold leading-5">
                   <nuxt-link
                     class="has-text-white"
                     :to="{ name: 'post.show', params: { slug: prev.slug } }"
                   >
                     <span>{{ prev.title }}</span>
-                    <b-icon icon="arrow-right" size="is-small"></b-icon>
                   </nuxt-link>
                 </p>
-                <p class="subtitle is-6">{{ prev.summary | truncate(100) }}</p>
+                <p class="text-sm">{{ prev.summary | truncate(100) }}</p>
               </div>
             </div>
           </div>

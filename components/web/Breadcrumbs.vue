@@ -16,7 +16,9 @@
       >
         <nuxt-link property="item" typeof="WebPage" :to="crumb.path">
           <span property="name">{{
-            $route.fullPath === crumb.path && title !== null ? title : crumb.title
+            $route.fullPath === crumb.path && title !== null
+              ? title
+              : crumb.title | truncate(30)
           }}</span>
         </nuxt-link>
         <meta property="position" :content="index + 2" />

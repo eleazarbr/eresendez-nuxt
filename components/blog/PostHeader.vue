@@ -11,14 +11,14 @@
     <!-- Hero content -->
     <div class="hero-body flex items-center">
       <div class="container">
-        <div class="columns is-mobile is-centered is-vcentered">
+        <div class="columns">
           <div class="column is-auto">
             <!-- Post title -->
             <h2 class="text-2xl sm:text-3xl leading-tight font-bold">
               {{ page.title }}
             </h2>
 
-            <!-- Metada -->
+            <!-- Metadata -->
             <div class="text-sm sm:text-base mt-2">
               <p>
                 <b-icon icon="calendar-month" size="is-small"></b-icon>
@@ -46,10 +46,7 @@
                 <b-icon icon="clock-outline" size="is-small"></b-icon>
                 {{ page.readingTime }}
               </p>
-              <p>
-                <b-icon icon="tag-multiple-outline" size="is-small"></b-icon>
-              </p>
-              <b-taglist>
+              <b-taglist class="mt-1">
                 <b-tag
                   v-for="(tag, index) in page.tags"
                   :key="index"

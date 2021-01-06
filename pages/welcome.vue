@@ -21,14 +21,20 @@
         <div class="columns is-centered">
           <div class="column is-12-tablet is-8-desktop">
             <!-- Latest blog posts -->
-            <div class="columns is-vcentered" v-for="(post, index) in posts" :key="index">
+            <div
+              class="columns is-vcentered pb-3"
+              v-for="(post, index) in posts"
+              :key="index"
+            >
               <div class="column is-3">
-                <figure class="image is-3by1">
-                  <img
-                    class="rounded has-bg-cover"
-                    :src="`https://source.unsplash.com/${post.image}`"
-                  />
-                </figure>
+                <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
+                  <figure class="image is-3by1">
+                    <img
+                      class="rounded has-bg-cover"
+                      :src="`https://source.unsplash.com/${post.image}`"
+                    />
+                  </figure>
+                </nuxt-link>
               </div>
               <div class="column is-auto">
                 <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">

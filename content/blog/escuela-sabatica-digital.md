@@ -3,7 +3,7 @@ title: Building Escuela Sabática Digital
 summary:
 date: 2020-12-21 10:00:00
 image: x_jAYPjskYI
-tags: [Life, Projects, Laravel, Vue, Draft]
+tags: [Life, Projects, Draft]
 ---
 
 ## Lo que quería que hiciera
