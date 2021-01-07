@@ -5,10 +5,13 @@
     <!-- Main Content -->
     <div class="section has-background-white">
       <div class="container">
-        <div class="columns is-centered">
+        <div class="columns is-variable is-8">
+          <div class="column is-one-fifth is-hidden-mobile sticky top-0 z-10">
+            <div class="content text-xs sm:text-sm md:text-sm sticky top-0 z-10 pt-3">
+              <table-of-contents :document="page"></table-of-contents>
+            </div>
+          </div>
           <div class="column is-8">
-            <breadcrumbs></breadcrumbs>
-
             <!-- Old post warning -->
             <b-notification
               v-if="$moment(page.date).add(6, 'months').isBefore()"
@@ -19,7 +22,6 @@
 
             <!-- Post body -->
             <div class="content text-base sm:text-lg md:text-lg">
-              <table-of-contents :document="page"></table-of-contents>
               <nuxt-content :document="page"></nuxt-content>
             </div>
 
@@ -111,7 +113,6 @@
 import TableOfContents from "~/components/blog/TableOfContents.vue";
 import PostHeader from "~/components/blog/PostHeader.vue";
 import AddToAny from "~/components/blog/AddToAny";
-import Breadcrumbs from "~/components/web/Breadcrumbs";
 
 export default {
   name: "post",
@@ -120,7 +121,6 @@ export default {
     AddToAny,
     TableOfContents,
     PostHeader,
-    Breadcrumbs,
   },
 
   head() {

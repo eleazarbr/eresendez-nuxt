@@ -8,6 +8,7 @@
           background-image: url('https://source.unsplash.com/${page.image}');
         `"
     ></div>
+
     <!-- Hero content -->
     <div class="hero-body flex items-center">
       <div class="container">
@@ -62,12 +63,21 @@
         </div>
       </div>
     </div>
+    <div class="hero-body">
+      <div class="container">
+        <breadcrumbs></breadcrumbs>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Breadcrumbs from "~/components/web/Breadcrumbs";
 export default {
   name: "PostHeader",
   props: ["page"],
+  components: {
+    Breadcrumbs,
+  },
 };
 </script>

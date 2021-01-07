@@ -43,7 +43,9 @@
                   </h3>
                 </nuxt-link>
                 <p class="text-sm mb-1 has-text-dark">
-                  {{ $moment(post.date).format("LL") }}
+                  {{
+                    $moment(post.date).locale($store.getters["lang/locale"]).format("LL")
+                  }}
                 </p>
                 <p class="text-base">
                   {{ post.summary }}
