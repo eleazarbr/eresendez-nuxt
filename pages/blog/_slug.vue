@@ -7,11 +7,11 @@
       <div class="container">
         <div class="columns is-variable is-8">
           <div class="column is-one-fifth is-hidden-mobile sticky top-0 z-10">
-            <div class="content text-xs sm:text-sm md:text-sm sticky top-0 z-10 pt-3">
+            <div class="content text-base sticky top-0 z-10 pt-3">
               <table-of-contents :document="page"></table-of-contents>
             </div>
           </div>
-          <div class="column is-8">
+          <div class="column is-8-desktop is-9-tablet is-auto-mobile">
             <!-- Old post warning -->
             <b-notification
               v-if="$moment(page.date).add(6, 'months').isBefore()"
@@ -21,7 +21,7 @@
             >
 
             <!-- Post body -->
-            <div class="content text-base sm:text-lg md:text-lg">
+            <div class="content text-sm sm:text-base md:text-base">
               <nuxt-content :document="page"></nuxt-content>
             </div>
 
@@ -63,7 +63,7 @@
 
             <!-- Share this -->
             <b-field :label="$t('blog.share')">
-              <add-to-any />
+              <add-to-any></add-to-any>
             </b-field>
           </div>
         </div>

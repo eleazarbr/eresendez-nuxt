@@ -1,23 +1,23 @@
 <template>
   <div v-if="document.toc.length" class="field pb-5">
-    <p>{{ $t('blog.toc_title') }}</p>
-    <ul>
+    <p>{{ $t("blog.toc_title") }}</p>
+    <ol class="is-lower-roman">
       <li
-        v-for="link of document.toc"
-        :key="link.id"
-        :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
+        v-for="item of document.toc"
+        :key="item.id"
+        :class="{ toc2: item.depth === 2, toc3: item.depth === 3 }"
       >
-        <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+        <nuxt-link :to="`#${item.id}`">{{ item.text }}</nuxt-link>
       </li>
-    </ul>
+    </ol>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TableOfContents',
-  props: ['document'],
-}
+  name: "TableOfContents",
+  props: ["document"],
+};
 </script>
 
 <style lang="css" scoped>

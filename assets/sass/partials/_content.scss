@@ -57,17 +57,10 @@ samp {
 
 .icon-link::before {
   content: "#";
+  font-weight: bold;
+  font-size: 1.25rem;
   margin-right: 0.5rem;
 }
-
-// TODO add icon later
-// .icon.icon-link {
-//   background-image: url('~assets/svg/icon-hashtag.svg');
-//   display: inline-block;
-//   width: 20px;
-//   height: 20px;
-//   background-size: 20px 20px;
-// }
 
 .content blockquote {
   color: #2160c4;

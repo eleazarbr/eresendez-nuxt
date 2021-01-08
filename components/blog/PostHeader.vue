@@ -51,6 +51,7 @@
                 <b-tag
                   v-for="(tag, index) in page.tags"
                   :key="index"
+                  type="is-primary"
                   :class="{ 'is-danger': tag === 'Draft' }"
                 >
                   <span class="font-bold">
@@ -63,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class="hero-body">
+    <div class="hero-foot">
       <div class="container">
         <breadcrumbs></breadcrumbs>
       </div>
