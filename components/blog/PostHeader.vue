@@ -2,7 +2,7 @@
   <div class="hero is-black is-bold h-80">
     <!-- Blurred image -->
     <div
-      class="has-bg-image is-parallax absolute w-full h-80"
+      class="has-bg-image absolute w-full h-80"
       :style="`
           filter: blur(5px);
           background-image: url('https://source.unsplash.com/${page.image}');
@@ -64,21 +64,11 @@
         </div>
       </div>
     </div>
-    <div class="hero-foot">
-      <div class="container">
-        <breadcrumbs></breadcrumbs>
-      </div>
-    </div>
   </div>
 </template>
-
 <script>
-import Breadcrumbs from "~/components/web/Breadcrumbs";
 export default {
   name: "PostHeader",
   props: ["page"],
-  components: {
-    Breadcrumbs,
-  },
 };
 </script>

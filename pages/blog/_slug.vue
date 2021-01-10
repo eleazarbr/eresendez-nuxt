@@ -3,15 +3,17 @@
     <post-header :page="page"></post-header>
 
     <!-- Main Content -->
-    <div class="section has-background-white">
+    <div class="section">
       <div class="container">
         <div class="columns is-variable is-8">
-          <div class="column is-one-fifth is-hidden-mobile sticky top-0 z-10">
+          <div class="column is-one-fifth is-hidden-mobile">
             <div class="content text-base sticky top-0 z-10 pt-3">
               <table-of-contents :document="page"></table-of-contents>
             </div>
           </div>
           <div class="column is-8-desktop is-9-tablet is-auto-mobile">
+            <breadcrumbs></breadcrumbs>
+
             <!-- Old post warning -->
             <b-notification
               v-if="$moment(page.date).add(6, 'months').isBefore()"
@@ -113,6 +115,7 @@
 import TableOfContents from "~/components/blog/TableOfContents.vue";
 import PostHeader from "~/components/blog/PostHeader.vue";
 import AddToAny from "~/components/blog/AddToAny";
+import Breadcrumbs from "~/components/web/Breadcrumbs";
 
 export default {
   name: "post",
@@ -121,6 +124,7 @@ export default {
     AddToAny,
     TableOfContents,
     PostHeader,
+    Breadcrumbs,
   },
 
   head() {

@@ -6,7 +6,7 @@
           <!-- Mobile menu -->
           <div class="is-hidden-tablet">
             <div class="flex justify-between items-center">
-              <p class="font-bold">Eleazar Reséndez</p>
+              <p class="font-bold"></p>
               <b-button icon-left="menu" @click="sidebar.open = !sidebar.open">
               </b-button>
             </div>
