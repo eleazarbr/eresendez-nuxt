@@ -110,6 +110,10 @@
       {
         "name": "Git",
         "slug": "git"
+      },
+      {
+        "name": "HTML5 Games",
+        "slug": "html5-games"
       }
     ]
   },
@@ -120,6 +124,20 @@
       {
         "name": "Reference",
         "slug": "reference"
+      }
+    ]
+  },
+   {
+    "name": "Courses",
+    "slug": "courses",
+    "articles": [
+      {
+        "name": "Reference",
+        "slug": "reference"
+      },
+      {
+        "name": "SCORM",
+        "slug": "scorm"
       }
     ]
   }

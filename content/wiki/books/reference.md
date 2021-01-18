@@ -11,7 +11,7 @@ Mantengo listas de [Goodreads][1] de los [libros que estoy leyendo][2], los [lib
 A continuación se muestran libros que he leído ordenados por año. Los libros con enlaces adjuntos llevarán a notas que tomé al leer el libro. Los libros con 🌟 son mis favoritos.
 
 ### 2021
-- Cómo escribir tu libro (238 páginas) (Spanish Edition) - Review / [Notas][5] 
+- Cómo escribir tu libro - Álvaro Parra (238 páginas) - Review / [Notas][5] 
 
 
 [1]:	https://www.goodreads.com/user/show/34679674-eleazar-resendez

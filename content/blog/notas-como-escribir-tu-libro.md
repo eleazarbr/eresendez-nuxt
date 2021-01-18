@@ -24,3 +24,4 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - **Apéndice 2**. La Imaginación es el taller de la mente humana en el cual viejas ideas y hechos conocidos son reorganizados a fin de formar nuevas combinaciones capaces de presentar nuevos usos.
 
 ## Secreto #3 Las ideas embrionarias siguen pasos específicos
+- 
