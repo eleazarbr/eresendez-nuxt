@@ -22,28 +22,6 @@
       >
         {{ $t("navbar.projects") }}
       </b-navbar-item>
-      <b-navbar-item tag="div">
-        <div class="buttons">
-          <b-button
-            tag="a"
-            href="https://twitter.com/eleazarbr"
-            target="_blank"
-            type="is-white"
-          >
-            <b-icon icon="twitter"></b-icon>
-            <span class="is-hidden-desktop"> Twitter </span>
-          </b-button>
-          <b-button
-            tag="a"
-            href="https://github.com/eleazarbr"
-            target="_blank"
-            type="is-white"
-          >
-            <b-icon icon="github"></b-icon>
-            <span class="is-hidden-desktop"> GitHub </span>
-          </b-button>
-        </div>
-      </b-navbar-item>
     </template>
   </b-navbar>
 </template>

@@ -73,12 +73,17 @@
         </div>
       </div>
     </div>
+    <the-footer></the-footer>
   </div>
 </template>
 
 <script>
+import TheFooter from "~/components/TheFooter";
 export default {
   name: "welcome",
+  components: {
+    TheFooter,
+  },
   transition: "slide",
   head() {
     return { title: this.$t("home") };

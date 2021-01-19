@@ -128,8 +128,8 @@
     ]
   },
    {
-    "name": "Courses",
-    "slug": "courses",
+    "name": "E-Learning",
+    "slug": "e-learning",
     "articles": [
       {
         "name": "Reference",
@@ -138,6 +138,10 @@
       {
         "name": "SCORM",
         "slug": "scorm"
+      },
+      {
+        "name": "Screencasting",
+        "slug": "screencasting"
       }
     ]
   }

@@ -1,7 +1,7 @@
 ---
 title: SCORM
 slug: scorm
-category: courses
+category: e-learning
 ---
 
 ## Notes
