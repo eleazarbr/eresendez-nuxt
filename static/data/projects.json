@@ -11,13 +11,18 @@
         "label": "Write-up",
         "to": "/side-projects/escuela-sabatica-digital",
         "target": "_self"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/escuelasabaticadigit/XYQdOuS2WjgeXTYi",
+        "target": "_blank"
       }
     ],
     "description": "",
     "image": "X9GHkHbJIaU"
   },
   {
-    "title": "eresendez.com",
+    "title": "Eleazar Reséndez",
     "description": "El código fuente de este website",
     "links": [
       {
@@ -28,6 +33,11 @@
       {
         "label": "Source",
         "url": "https://github.com/eleazarbr/eresendez",
+        "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/eresendezcom/xO5Co4k1tMe0PJ9g",
         "target": "_blank"
       }
     ],
@@ -46,6 +56,11 @@
         "label": "Docs",
         "url": "https://docs.isabyte.com",
         "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/isabyte/od67P4ld1oLkD2JS",
+        "target": "_blank"
       }
     ],
     "image": "Px3iBXV-4TU"
@@ -56,6 +71,11 @@
       {
         "label": "Site",
         "url": "https://preventus.semt.com.mx",
+        "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/preventus/VtOHbjremCY52veX",
         "target": "_blank"
       }
     ],

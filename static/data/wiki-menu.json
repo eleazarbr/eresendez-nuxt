@@ -26,11 +26,14 @@
   {
     "name": "Web",
     "slug": "web",
-    "active": false,
     "articles": [
-      {
-        "name": "SEO",
-        "slug": "seo"
+       {
+        "name": "HTML",
+        "slug": "html"
+      },
+       {
+        "name": "CSS",
+        "slug": "css"
       }
     ]
   },
@@ -58,6 +61,7 @@
   {
     "name": "Looking back",
     "slug": "looking-back",
+    "active": false,
     "articles": [
       {
         "name": "January 2021",
@@ -136,12 +140,16 @@
         "slug": "reference"
       },
       {
+        "name": "Screencasting",
+        "slug": "screencasting"
+      },
+      {
         "name": "SCORM",
         "slug": "scorm"
       },
       {
-        "name": "Screencasting",
-        "slug": "screencasting"
+        "name": "LMS",
+        "slug": "lms"
       }
     ]
   }
