@@ -20,6 +20,10 @@
       {
         "name": "PHP",
         "slug": "php"
+      },
+      {
+        "name": "Kotlin",
+        "slug": "kotlin"
       }
     ]
   },
@@ -27,11 +31,11 @@
     "name": "Web",
     "slug": "web",
     "articles": [
-       {
+      {
         "name": "HTML",
         "slug": "html"
       },
-       {
+      {
         "name": "CSS",
         "slug": "css"
       }
@@ -131,7 +135,7 @@
       }
     ]
   },
-   {
+  {
     "name": "E-Learning",
     "slug": "e-learning",
     "articles": [
@@ -150,6 +154,16 @@
       {
         "name": "LMS",
         "slug": "lms"
+      }
+    ]
+  },
+  {
+    "name": "Mobile",
+    "slug": "mobile",
+    "articles": [
+      {
+        "name": "Android Development",
+        "slug": "android-development"
       }
     ]
   }
