@@ -65,5 +65,11 @@
   },
   "buttons": {
     "view_more": "View more"
+  },
+  "seo": {
+    "home": {
+      "title": "Eleazar Reséndez",
+      "description": "I'm Eleazar Reséndez. Full Stack Web Developer based in Mx (Laravel + Vue), currently learning Android Development."
+    }
   }
 }

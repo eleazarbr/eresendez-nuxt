@@ -86,7 +86,37 @@ export default {
   },
   transition: "slide",
   head() {
-    return { title: this.$t("home") };
+    return {
+      title: this.$t("home"),
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: this.$t("seo.home.title"),
+        },
+        { hid: "og:title", property: "og:title", content: this.$t("seo.home.title") },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.$t("seo.home.title"),
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("seo.home.description"),
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$t("seo.home.description"),
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.$t("seo.home.description"),
+        },
+      ],
+    };
   },
 
   async asyncData({ $content }) {
