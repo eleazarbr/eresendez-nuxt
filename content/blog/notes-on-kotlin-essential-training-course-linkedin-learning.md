@@ -15,16 +15,16 @@ Para declarar variables:
 
 ```kt
 var count: Int = 0 // this is a mutable variable
-val number: Int = 42 // this is a inmutable variable
+val number: Int = 42 // this is an immutable variable
 
 // El tipo de la variable puede ser omitido ya que puede ser inferido.
 var otherNumber = 43;
 ```
 
 **Integers**
-- Int - 32 bits 1234
-- Long 64 bits 1234L
-- Byte - 8 bits 127
+- Int - 32 bits - 1234
+- Long 64 bits - 1234L
+- Byte - 8 bits - 127
 - Short - 16 bits - 32767
 
 ```kt
@@ -38,7 +38,7 @@ val myByte: Byte 127
 
 ```kt
 val myDouble: Double = 98.6
-val myFloat: float = 12.2F
+val myFloat: Float = 12.2F
 val alsoDouble = 101.5
 ```
 
@@ -50,7 +50,7 @@ val asFloat = myLong.toFloat()
 
 ### Boolean and char data types
 - Char `var letter: Char = 'A'`
-	- Recordar que strings no son números. Es necesario hacer casting.
+	- Recordar que los números-strings no son números, es necesario hacer casting.
 - ASCII `var tab = '\t'`
 - Unicode `var infinity = '\u221E'` 
 
@@ -68,6 +68,7 @@ println("is big bigger = ${bigNumber > smallNumber}")
 ```
 
 ### String tricks and traps
+
 
 ## Links
 - [Curso Kotlin Essential Training][1] 

@@ -1,16 +1,16 @@
 require('dotenv').config()
 import webpack from 'webpack'
 
-let posts = [];
+let posts = []
 const createSitemapRoutes = async () => {
-  let routes = [];
+  let routes = []
   const { $content } = require('@nuxt/content')
   if (posts === null || posts.length === 0)
-    posts = await $content('blog').fetch();
+    posts = await $content('blog').fetch()
   for (const post of posts) {
-    routes.push(`blog/${post.slug}`);
+    routes.push(`blog/${post.slug}`)
   }
-  return routes;
+  return routes
 }
 
 export default {
@@ -35,7 +35,8 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'
+        href:
+          'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'
       }
     ]
   },
@@ -47,15 +48,9 @@ export default {
     linkActiveClass: 'is-active'
   },
 
-  css: [
-    { src: '~assets/sass/app.scss', lang: 'scss' }
-  ],
+  css: [{ src: '~assets/sass/app.scss', lang: 'scss' }],
 
-  plugins: [
-    '~components/global',
-    '~plugins/i18n',
-    '~/plugins/vue2-filters'
-  ],
+  plugins: ['~components/global', '~plugins/i18n', '~/plugins/vue2-filters'],
 
   buildModules: [
     '@nuxtjs/tailwindcss',
@@ -104,10 +99,7 @@ export default {
       prism: {
         theme: 'prism-themes/themes/prism-dracula.css'
       },
-      remarkPlugins: [
-        'remark-emoji',
-        'remark-footnotes'
-      ]
+      remarkPlugins: ['remark-emoji', 'remark-footnotes']
     }
   },
 
@@ -127,15 +119,15 @@ export default {
       preset: {
         features: {
           // Fixes: https://github.com/tailwindcss/tailwindcss/issues/1190#issuecomment-546621554
-          "focus-within-pseudo-class": false
+          'focus-within-pseudo-class': false
         }
       }
     },
     plugins: [
       new webpack.ProvidePlugin({
-        '_': 'lodash'
+        _: 'lodash'
       })
     ],
-    extend(config, ctx) { }
+    extend (config, ctx) {}
   }
 }
