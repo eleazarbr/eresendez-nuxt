@@ -12,6 +12,6 @@ Me gusta Git para el control de versiones. Uso el control de versiones en cualqu
 - Prefix branch names with `fix/` or `feature/` appropriately.
 
 ## Links
-- [How to Clean Up Git Branches][1]
+- [How to Clean Up Git Branches][1] `$ git remote prune <remote>`
 
 [1]:	https://devconnected.com/how-to-clean-up-git-branches/

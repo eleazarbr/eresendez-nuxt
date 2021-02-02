@@ -21,6 +21,7 @@
 
             <!-- Metadata -->
             <div class="text-sm sm:text-base mt-2">
+              <!-- Published at and author -->
               <p>
                 <b-icon icon="calendar-month" size="is-small"></b-icon>
                 <span
@@ -34,10 +35,12 @@
                 >
                 </span>
               </p>
-              <p v-if="page.updated_at" class="italic">
+
+              <!-- Updated at for every post -->
+              <p>
                 {{
                   $t("blog.last_update", {
-                    date: $moment(page.updated_at)
+                    date: $moment(page.updatedAt)
                       .locale($store.getters["lang/locale"])
                       .fromNow(),
                   })

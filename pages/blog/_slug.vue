@@ -168,7 +168,5 @@ export default {
       next,
     };
   },
-
-  data: () => ({}),
 };
 </script>
