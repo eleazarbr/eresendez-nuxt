@@ -82,6 +82,10 @@
     "slug": "frameworks",
     "articles": [
       {
+        "name": "Laravel",
+        "slug": "laravel"
+      },
+      {
         "name": "Nuxt.js",
         "slug": "nuxt"
       },
