@@ -130,9 +130,5 @@ export default {
       posts,
     };
   },
-
-  mounted() {
-    console.log(this.page);
-  },
 };
 </script>
