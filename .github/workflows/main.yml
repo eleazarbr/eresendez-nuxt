@@ -26,9 +26,9 @@ jobs:
           git commit -m "Build front-end assets"
           git push -f origin deploy
       - name: Deploy to production
-        uses: fifsky/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
-          command: 'cd /var/www/eresendez.com/html && ./server_deploy.sh'
           host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: 'cd /var/www/eresendez.com/html && ./server_deploy.sh'
