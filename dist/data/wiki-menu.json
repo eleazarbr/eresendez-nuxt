@@ -1,0 +1,174 @@
+[
+  {
+    "name": "Sharing",
+    "slug": "sharing",
+    "articles": [
+      {
+        "name": "My Workflowy",
+        "slug": "my-workflowy"
+      }
+    ]
+  },
+  {
+    "name": "Programming Languages",
+    "slug": "programming-languages",
+    "articles": [
+      {
+        "name": "JavaScript",
+        "slug": "javascript"
+      },
+      {
+        "name": "PHP",
+        "slug": "php"
+      },
+      {
+        "name": "Kotlin",
+        "slug": "kotlin"
+      }
+    ]
+  },
+  {
+    "name": "Web",
+    "slug": "web",
+    "articles": [
+      {
+        "name": "HTML",
+        "slug": "html"
+      },
+      {
+        "name": "CSS",
+        "slug": "css"
+      }
+    ]
+  },
+  {
+    "name": "UNIX",
+    "slug": "unix",
+    "active": false,
+    "articles": [
+      {
+        "name": "Zsh",
+        "slug": "zsh"
+      }
+    ]
+  },
+  {
+    "name": "Package Managers",
+    "slug": "package-managers",
+    "articles": [
+      {
+        "name": "Composer",
+        "slug": "composer"
+      }
+    ]
+  },
+  {
+    "name": "Looking back",
+    "slug": "looking-back",
+    "active": false,
+    "articles": [
+      {
+        "name": "January 2021",
+        "slug": "01-2021"
+      },
+      {
+        "name": "December 2020",
+        "slug": "12-2020"
+      }
+    ]
+  },
+  {
+    "name": "Frameworks",
+    "slug": "frameworks",
+    "articles": [
+      {
+        "name": "Laravel",
+        "slug": "laravel"
+      },
+      {
+        "name": "Nuxt.js",
+        "slug": "nuxt"
+      },
+      {
+        "name": "Vue",
+        "slug": "vue"
+      }
+    ]
+  },
+  {
+    "name": "Business",
+    "slug": "business",
+    "articles": [
+      {
+        "name": "Pricing",
+        "slug": "pricing"
+      }
+    ]
+  },
+  {
+    "name": "Design",
+    "slug": "design",
+    "articles": [
+      {
+        "name": "Inspiration",
+        "slug": "design-inspiration"
+      }
+    ]
+  },
+  {
+    "name": "Programming",
+    "slug": "programming",
+    "articles": [
+      {
+        "name": "Git",
+        "slug": "git"
+      },
+      {
+        "name": "HTML5 Games",
+        "slug": "html5-games"
+      }
+    ]
+  },
+  {
+    "name": "Books",
+    "slug": "books",
+    "articles": [
+      {
+        "name": "Reference",
+        "slug": "reference"
+      }
+    ]
+  },
+  {
+    "name": "E-Learning",
+    "slug": "e-learning",
+    "articles": [
+      {
+        "name": "Reference",
+        "slug": "reference"
+      },
+      {
+        "name": "Screencasting",
+        "slug": "screencasting"
+      },
+      {
+        "name": "SCORM",
+        "slug": "scorm"
+      },
+      {
+        "name": "LMS",
+        "slug": "lms"
+      }
+    ]
+  },
+  {
+    "name": "Mobile",
+    "slug": "mobile",
+    "articles": [
+      {
+        "name": "Android Development",
+        "slug": "android-development"
+      }
+    ]
+  }
+]

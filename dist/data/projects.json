@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Escuela Sabática Digital",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://escuelasabatica.digital",
+        "target": "_blank"
+      },
+      {
+        "label": "Write-up",
+        "to": "/side-projects/escuela-sabatica-digital",
+        "target": "_self"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/escuelasabaticadigit/XYQdOuS2WjgeXTYi",
+        "target": "_blank"
+      }
+    ],
+    "description": "",
+    "image": "X9GHkHbJIaU"
+  },
+  {
+    "title": "Eleazar Reséndez",
+    "description": "El código fuente de este website",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://eresendez.com",
+        "target": "_blank"
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/eleazarbr/eresendez",
+        "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/eresendezcom/xO5Co4k1tMe0PJ9g",
+        "target": "_blank"
+      }
+    ],
+    "image": "X9GHkHbJIaU"
+  },
+  {
+    "title": "Isabyte",
+    "description": "Un ecommerce de productos electrónicos",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://isabyte.com",
+        "target": "_blank"
+      },
+      {
+        "label": "Docs",
+        "url": "https://docs.isabyte.com",
+        "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/isabyte/od67P4ld1oLkD2JS",
+        "target": "_blank"
+      }
+    ],
+    "image": "Px3iBXV-4TU"
+  },
+  {
+    "title": "Preventus",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://preventus.semt.com.mx",
+        "target": "_blank"
+      },
+      {
+        "label": "Workflowy",
+        "url": "https://workflowy.com/s/preventus/VtOHbjremCY52veX",
+        "target": "_blank"
+      }
+    ],
+    "description": "",
+    "image": "NFvdKIhxYlU"
+  }
+]
