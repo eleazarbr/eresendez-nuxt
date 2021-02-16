@@ -106,8 +106,17 @@ El paquete nos proporciona las siguientes vistas:
 ## Resultado
 ![][image-1]
 
+## Enlaces de interes
+
+- [ESPN Tournament Challenge 2019][2]
+- [Need to make a Tournament Bracket?][3] - una lista con muchas ideas para realizar un bracket o el March Madness Bracket.
+- [NCAA-Bracket][4] - Just some simple css & html that provides a clean looking bracket. 
+
 [^1]:	Laravel Tournaments GitHub Package [https://github.com/xoco70/laravel-tournaments][1]
 
 [1]:	https://github.com/xoco70/laravel-tournaments
+[2]:	http://fantasy.espn.com/tournament-challenge-bracket/2019/en/nationalBracket
+[3]:	https://blog.codepen.io/2018/02/16/need-make-tournament-bracket/
+[4]:	https://github.com/jasonmelgoza/NCAA-Bracket
 
 [image-1]:	/blog/post/1607039247.png

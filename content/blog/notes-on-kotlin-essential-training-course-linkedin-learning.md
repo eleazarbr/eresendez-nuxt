@@ -268,12 +268,12 @@ fun main() {
 
 ```
 
-## Collections and sequences
-
 
 ## Links
-- [Curso Kotlin Essential Training][1] 
-- [What is the history of Kotlin][2]
+- [Curso Kotlin Essential Training][1] - Enlace al curso. Al final no termine el curso porque se me hace más practico desarrollar una aplicación móvil utilizando [Vue-Native][2] o [React-Native][3] tomando en cuenta mi experiencia web.
+- [What is the history of Kotlin][4]
 
 [1]:	https://www.linkedin.com/learning/kotlin-essential-training/numeric-data-types
-[2]:	https://www.quora.com/What-is-the-history-of-Kotlin
+[2]:	https://vue-native.io/
+[3]:	https://reactnative.dev/
+[4]:	https://www.quora.com/What-is-the-history-of-Kotlin
