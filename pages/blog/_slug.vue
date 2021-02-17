@@ -5,7 +5,7 @@
     <!-- Main Content -->
     <div class="section">
       <div class="container">
-        <div class="columns is-variable is-8">
+        <div class="columns">
           <div class="column is-one-fifth is-hidden-mobile">
             <div class="content text-base sticky top-0 z-10 pt-3">
               <table-of-contents :document="page"></table-of-contents>
