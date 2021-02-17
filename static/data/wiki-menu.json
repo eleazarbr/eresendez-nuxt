@@ -170,5 +170,15 @@
         "slug": "android-development"
       }
     ]
+  },
+  {
+    "name": "Continuous Deployment",
+    "slug": "continuous-deployment",
+    "articles": [
+      {
+        "name": "GitHub Actions",
+        "slug": "github-actions"
+      }
+    ]
   }
 ]

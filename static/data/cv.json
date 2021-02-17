@@ -1,0 +1,25 @@
+{
+  "display_name": "Eleazar Reséndez",
+  "current_position": {
+    "en": "Web developer (full-stack) at XML Team, LLC",
+    "es": "Desarrollador web (full-stack) en XML Team, LLC"
+  },
+  "websites": [
+    {
+      "name": "eresendez.com",
+      "url": "https://eresendez.com",
+      "icon": "earth"
+    },
+    {
+      "name": "github.com/eleazarbr",
+      "url": "https://github.com/eleazarbr",
+      "icon": "github"
+    },
+    {
+      "name": "linkedin.com/in/eleazarbr",
+      "url": "https://linkedin.com/in/eleazarbr",
+      "icon": "linkedin"
+    }
+  ],
+  "avatar": "https://avatars.githubusercontent.com/u/4369018?s=460&u=ba480c33288b1aab1e0f7905b6b9146e3a26b0c5&v=4"
+}
