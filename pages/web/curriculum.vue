@@ -3,14 +3,16 @@
     <div class="container">
       <!-- download button -->
       <div class="buttons is-right">
-        <b-button icon-left="file-pdf" type="is-danger">Download PDF</b-button>
+        <b-button icon-left="file-pdf" type="is-danger" @click="generatePdf"
+          >Download PDF</b-button
+        >
       </div>
 
       <!-- CV -->
       <div id="curriculum">
         <!-- Heading -->
         <div class="columns is-centered">
-          <div class="column is-half">
+          <div class="column is-6-desktop is-8-tablet">
             <div class="columns is-vcentered is-mobile">
               <div class="column is-narrow">
                 <figure class="image is-96x96">
@@ -18,10 +20,10 @@
                 </figure>
               </div>
               <div class="column">
-                <p class="text-lg">
+                <p class="text-base sm:text-lg">
                   {{ cv.display_name }}
                 </p>
-                <div class="text-sm">
+                <div class="text-xs sm:text-sm">
                   <p>
                     {{ cv.current_position[locale] }}
                   </p>
@@ -58,6 +60,12 @@ export default {
     return {
       cv,
     };
+  },
+
+  methods: {
+    generatePdf() {
+      //
+    },
   },
 
   computed: {
