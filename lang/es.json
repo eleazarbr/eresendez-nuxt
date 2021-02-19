@@ -64,7 +64,8 @@
     "description": "Laravel & Vue. Powered by ☕️"
   },
   "buttons": {
-    "view_more": "Ver más"
+    "view_more": "Ver más",
+    "download_pdf": "Descargar PDF"
   },
   "seo": {
     "home": {

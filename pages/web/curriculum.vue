@@ -2,22 +2,30 @@
   <div class="section">
     <div class="container">
       <!-- download button -->
-      <!-- <div class="buttons is-right">
-        <b-button icon-left="file-pdf" type="is-danger" @click="generatePdf"
-          >Download PDF</b-button
+      <div class="buttons is-right mt-1">
+        <b-button
+          size="is-small"
+          type="is-danger"
+          rounded
+          :loading="isGeneratingPdf"
+          @click="generatePdf"
+          >{{ $t("buttons.download_pdf") }}</b-button
         >
-      </div> -->
+      </div>
 
       <!-- CV -->
       <div id="curriculum">
         <div class="columns is-centered">
-          <div class="column is-6-desktop is-8-tablet">
+          <div class="column" :class="{ 'is-6-desktop is-8-tablet': !isGeneratingPdf }">
             <!-- Heading -->
             <div class="columns is-vcentered is-mobile">
               <div class="column is-narrow">
-                <figure class="image is-96x96">
-                  <img class="is-rounded" :src="cv.avatar" alt="Image" />
-                </figure>
+                <!-- Avatar -->
+                <div class="flex justify-center">
+                  <figure class="image is-96x96">
+                    <img class="is-rounded" :src="cv.avatar" alt="Image" />
+                  </figure>
+                </div>
               </div>
               <div class="column is-auto">
                 <div class="content text-sm">
@@ -60,7 +68,7 @@
             >
               <h3>{{ section.title[locale] }}</h3>
               <div
-                class="columns"
+                class="columns is-mobile"
                 v-for="(content, contentIndex) in section.content"
                 :key="contentIndex"
               >
@@ -95,6 +103,7 @@
 </template>
 <script>
 import cv from "~/static/data/cv.json";
+import html2pdf from "html2pdf.js";
 export default {
   name: "curriculum",
   head() {
@@ -103,7 +112,11 @@ export default {
     };
   },
 
-  async asyncData({ params, $content }) {
+  data: () => ({
+    isGeneratingPdf: false,
+  }),
+
+  async asyncData() {
     return {
       cv,
     };
@@ -112,6 +125,27 @@ export default {
   methods: {
     join(array) {
       return _.join(_.sortBy(array), ", ");
+    },
+
+    generatePdf() {
+      this.isGeneratingPdf = true;
+      const element = document.getElementById("curriculum");
+      var options = {
+        margin: 1,
+        filename: "eleazar-resendez-cv.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      };
+
+      var worker = html2pdf().set(options).from(element).save();
+      worker
+        .then((r) => {
+          this.isGeneratingPdf = false;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
 
