@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Hero section -->
     <div class="section">
       <div class="container">
         <!-- Title -->
@@ -16,11 +17,12 @@
         </div>
       </div>
     </div>
+
+    <!-- Latest blog posts section -->
     <div class="section has-text-black">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-12-tablet is-8-desktop">
-            <!-- Latest blog posts -->
             <div
               class="columns is-vcentered pb-3"
               v-for="(post, index) in posts"

@@ -1,8 +1,9 @@
 {
-  "display_name": "Eleazar Reséndez",
-  "current_position": {
-    "en": "Web developer (full-stack) at XML Team, LLC",
-    "es": "Desarrollador web (full-stack) en XML Team, LLC"
+  "title": "Eleazar Reséndez",
+  "avatar": "/avatar.jpg",
+  "subtitle": {
+    "en": "Web developer",
+    "es": "Desarrollador web"
   },
   "websites": [
     {
@@ -21,5 +22,149 @@
       "icon": "linkedin"
     }
   ],
-  "avatar": "/avatar.jpg"
+  "about": {
+    "title": {
+      "en": "Abstract",
+      "es": "Resumen"
+    },
+    "description": {
+      "en": "",
+      "es": ""
+    }
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "Side Projects",
+        "es": "Side Projects"
+      },
+      "content": [
+        {
+          "dates": "2020",
+          "title": {
+            "en": "Isabyte",
+            "es": "Isabyte"
+          },
+          "subtitle": "",
+          "description": {
+            "en": "Ecommerce solution for computer hardware.",
+            "es": "Ecommerce solution for computer hardware."
+          },
+          "url": "https://isabyte.com",
+          "tags": ["Laravel 8", "Vue 2", "PHP 7.4"]
+        },
+        {
+          "dates": "2019",
+          "title": {
+            "en": "Eleazar Resendez Website",
+            "es": "Eleazar Reséndez Website"
+          },
+          "subtitle": "",
+          "description": null,
+          "url": "https://eresendez.com"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Work Experience",
+        "es": "Work Experience"
+      },
+      "content": [
+        {
+          "dates": "09/2018 - present",
+          "title": {
+            "en": "Web developer at XML Team, LLC",
+            "es": "Web developer at XML Team, LLC"
+          },
+          "subtitle": "Remote",
+          "description": {
+            "en": "Development of a fantasy gaming platform",
+            "es": "Desarrollo de una plataforma de juegos de fantasía"
+          },
+          "url": "https://xmlteam.com",
+          "tags": [
+            "Laravel 7",
+            "Vue 2",
+            "PHP 7.4",
+            "PayPal",
+            "Google Analytics API",
+            "Multilanguage",
+            "Mailchimp API",
+            "Bulma",
+            "Buefy",
+            "Tailwind",
+            "MySQL 8",
+            "Insomnia"
+          ]
+        },
+        {
+          "dates": "03/2017 - 09/2018",
+          "title": {
+            "en": "Backend developer at Kuantics IT",
+            "es": "Backend developer at Kuantics IT"
+          },
+          "subtitle": "Tampico, MX",
+          "description": {
+            "en": "Development of a SaaS for the management of information related to international certifications",
+            "es": "Participé en el desarrollo de un SaaS para la gestión de información relacionada con las certificaciones internacionales"
+          },
+          "url": "",
+          "tags": [
+            "Laravel 5",
+            "PHP 7.0",
+            "MySQL 7",
+            "Postman",
+            "Multilanguage"
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Education",
+        "es": "Formación Académica"
+      },
+      "content": [
+        {
+          "dates": "2014 - 2017",
+          "title": {
+            "en": "Master in Administrative Management",
+            "es": "Maestría en Gestión Administrativa"
+          },
+          "subtitle": "Instituto Tecnológico de Ciudad Madero",
+          "description": null,
+          "url": "https://www.itcm.edu.mx/"
+        },
+        {
+          "dates": "2009 - 2014",
+          "title": {
+            "en": "Computer Systems Engineering",
+            "es": "Ingeniería en Sistemas Computacionales"
+          },
+          "subtitle": "Instituto Tecnológico de Ciudad Madero",
+          "description": null,
+          "url": "https://www.itcm.edu.mx/"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Contact",
+        "es": "Contacto"
+      },
+      "content": [
+        {
+          "dates": "Email",
+          "title": {
+            "en": "eleazar@eresendez.com",
+            "es": "eleazar@eresendez.com"
+          },
+          "subtitle": "",
+          "description": null,
+          "url": "mailto:eleazar@eresendez.com"
+        }
+      ]
+    }
+  ]
 }

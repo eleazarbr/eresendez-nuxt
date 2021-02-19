@@ -3,9 +3,9 @@
     <div class="hero-body">
       <div class="container">
         <div class="content text-center">
-          <!-- Social -->
           <!-- Copy -->
           <p class="text-sm">Eleazar Reséndez - {{ $moment().year() }}</p>
+          <!-- Social -->
           <div class="block">
             <a target="_blank" href="https://twitter.com/eleazarbr"
               ><b-icon size="is-medium" icon="twitter"></b-icon

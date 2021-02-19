@@ -15,13 +15,7 @@
       <b-navbar-item tag="router-link" :to="{ name: 'web.projects' }">
         Projects
       </b-navbar-item>
-      <b-navbar-item
-        v-show="isProjectsActive"
-        tag="router-link"
-        :to="{ name: 'web.projects' }"
-      >
-        {{ $t("navbar.projects") }}
-      </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.cv' }"> CV </b-navbar-item>
     </template>
   </b-navbar>
 </template>
@@ -36,7 +30,6 @@ export default {
 
   data: () => ({
     appName: process.env.APP_NAME,
-    isProjectsActive: false,
   }),
 };
 </script>
