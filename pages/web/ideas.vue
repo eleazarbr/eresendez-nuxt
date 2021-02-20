@@ -17,6 +17,7 @@
 import Breadcrumbs from "~/components/web/Breadcrumbs";
 export default {
   name: "ideas",
+  transition: "slide",
   components: {
     Breadcrumbs,
   },

@@ -45,9 +45,25 @@
                   </h3>
                 </nuxt-link>
                 <p class="text-sm mb-1 has-text-dark">
-                  {{
-                    $moment(post.date).locale($store.getters["lang/locale"]).format("LL")
-                  }}
+                  <span>
+                    {{
+                      $t("blog.last_update", {
+                        date: $moment(post.updatedAt)
+                          .locale($store.getters["lang/locale"])
+                          .fromNow(),
+                      })
+                    }}
+                  </span>
+                  <br />
+                  <span>
+                    {{
+                      $t("blog.published_at", {
+                        date: $moment(post.date)
+                          .locale($store.getters["lang/locale"])
+                          .format("LL"),
+                      })
+                    }}
+                  </span>
                 </p>
                 <p class="text-base">
                   {{ post.summary }}
@@ -66,7 +82,7 @@
               </div>
             </div>
 
-            <div class="buttons">
+            <div class="buttons is-centered">
               <b-button type="is-text" tag="router-link" :to="{ name: 'blog.index' }">
                 {{ $t("buttons.view_more") }}
               </b-button>
@@ -123,9 +139,9 @@ export default {
 
   async asyncData({ $content }) {
     const posts = await $content("blog")
-      .only(["title", "summary", "slug", "date", "tags", "image"])
-      .sortBy("date", "desc")
-      .limit(5)
+      .only(["title", "summary", "slug", "date", "tags", "image", "updatedAt"])
+      .sortBy("updatedAt", "desc")
+      .limit(10)
       .fetch();
 
     return {

@@ -35,11 +35,11 @@
                   <p class="subtitle is-size-6">
                     {{ cv.subtitle[locale] }}
                   </p>
-                  <div v-for="(website, i) in cv.websites" :key="i">
-                    <a class="leading-3" :href="website.url" target="_blank">
-                      <b-icon size="is-small" :icon="website.icon"></b-icon>
+                  <div v-for="(link, i) in cv.links" :key="i">
+                    <a class="leading-3" :href="link.url" target="_blank">
+                      <b-icon size="is-small" :icon="link.icon"></b-icon>
                       <span>
-                        {{ website.name }}
+                        {{ link.name }}
                       </span>
                     </a>
                   </div>
@@ -106,6 +106,7 @@ import cv from "~/static/data/cv.json";
 import html2pdf from "html2pdf.js";
 export default {
   name: "curriculum",
+  transition: "slide",
   head() {
     return {
       title: "Curriculum",
@@ -144,7 +145,7 @@ export default {
           this.isGeneratingPdf = false;
         })
         .catch((e) => {
-          console.log(e);
+          this.isGeneratingPdf = false;
         });
     },
   },

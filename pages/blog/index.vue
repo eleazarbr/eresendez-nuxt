@@ -40,7 +40,7 @@
         <!-- Blog posts -->
         <b-table
           detailed
-          default-sort="date"
+          default-sort="updatedAt"
           default-sort-direction="desc"
           :loading="table.loading"
           :hoverable="true"
@@ -73,8 +73,10 @@
                 >
               </b-taglist>
             </b-table-column>
-            <b-table-column :label="$t('blog.date')" sortable field="date">{{
-              $moment(props.row.date).locale($store.getters["lang/locale"]).format("LL")
+            <b-table-column :label="$t('blog.updated_at')" sortable field="updatedAt">{{
+              $moment(props.row.updatedAt)
+                .locale($store.getters["lang/locale"])
+                .format("LL")
             }}</b-table-column>
           </template>
           <template slot="detail" slot-scope="props">
@@ -106,9 +108,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import SubscribeForm from "~/components/blog/SubscribeForm";
-
 export default {
   name: "blog",
   transition: "slide",
@@ -170,7 +170,14 @@ export default {
     },
 
     queryPosts() {
-      return this.$content("blog").only(["title", "summary", "slug", "date", "tags"]);
+      return this.$content("blog").only([
+        "title",
+        "summary",
+        "slug",
+        "date",
+        "tags",
+        "updatedAt",
+      ]);
     },
   },
 };

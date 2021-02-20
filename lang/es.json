@@ -49,9 +49,11 @@
     "tags": "Etiquetas",
     "share": "Compartir con amigos:",
     "last_update": "Última actualización {date}",
+    "published_at": "Publicado el {date}",
     "thanks": "Gracias @eleazarbr. {title} {url}",
     "title": "Título",
     "date": "Fecha",
+    "updated_at": "Última actualización",
     "toc_title": "Tabla de contenido:"
   },
   "navbar": {
