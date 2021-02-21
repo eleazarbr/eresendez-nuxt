@@ -5,6 +5,7 @@
       <li
         v-for="item of document.toc"
         :key="item.id"
+        class="text-sm"
         :class="{ toc2: item.depth === 2, toc3: item.depth === 3 }"
       >
         <nuxt-link :to="`#${item.id}`">{{ item.text }}</nuxt-link>

@@ -16,7 +16,7 @@
 
             <!-- Old post warning -->
             <b-notification
-              v-if="$moment(page.date).add(6, 'months').isBefore()"
+              v-if="$moment(page.updatedAt).add(6, 'months').isBefore()"
               type="is-info"
               has-icon
               >{{ $t("blog.old_post") }}</b-notification
@@ -24,6 +24,7 @@
 
             <!-- Post body -->
             <div class="content text-sm sm:text-base md:text-base">
+              <!-- Main Content -->
               <nuxt-content :document="page"></nuxt-content>
             </div>
 
@@ -49,6 +50,17 @@
             </div>
 
             <hr />
+
+            <!-- Edit this page link -->
+            <div class="content">
+              <p>
+                {{ $t("blog.edit_page") }}
+                <a :href="`${githubRepo}${page.path}${page.extension}`" target="_blank">
+                  <span> GitHub </span>
+                  <b-icon size="is-small" icon="link"></b-icon>
+                </a>
+              </p>
+            </div>
 
             <!-- GitHub Comments -->
             <div>
@@ -126,6 +138,10 @@ export default {
     PostHeader,
     Breadcrumbs,
   },
+
+  data: () => ({
+    githubRepo: "https://github.com/eleazarbr/eresendez/tree/master/content",
+  }),
 
   head() {
     return {

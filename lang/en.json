@@ -54,7 +54,8 @@
     "title": "Title",
     "date": "Date",
     "updated_at": "Updated At",
-    "toc_title": "Table of contents:"
+    "toc_title": "Table of contents:",
+    "edit_page": "Edit this page on"
   },
   "navbar": {
     "home": "Home",
