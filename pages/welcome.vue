@@ -28,6 +28,7 @@
               v-for="(post, index) in posts"
               :key="index"
             >
+              <!-- Blog image -->
               <div class="column is-3">
                 <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
                   <figure class="image is-3by1">
@@ -38,13 +39,14 @@
                   </figure>
                 </nuxt-link>
               </div>
+              <!-- Blog meta -->
               <div class="column is-auto">
                 <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
-                  <h3 class="text-2xl font-bold">
+                  <h3 class="text-2xl font-bold leading-tight">
                     {{ post.title }}
                   </h3>
                 </nuxt-link>
-                <p class="text-sm mb-1 has-text-dark">
+                <p class="text-sm has-text-dark my-1">
                   <span>
                     {{
                       $t("blog.last_update", {

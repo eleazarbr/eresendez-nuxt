@@ -50,7 +50,7 @@
             <!-- About -->
             <div class="content text-sm">
               <h3>{{ cv.about.title[locale] }}</h3>
-              <p>
+              <p class="has-text-dark">
                 {{ cv.about.description[locale] }}
               </p>
 
@@ -85,7 +85,7 @@
                     <br />
                     <span v-if="content.subtitle">{{ content.subtitle }}</span>
                   </p>
-                  <p v-if="content.description">
+                  <p v-if="content.description" class="has-text-dark">
                     {{ content.description[locale] }}
                   </p>
                   <!-- Tags -->

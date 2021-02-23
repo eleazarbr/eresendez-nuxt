@@ -29,7 +29,7 @@
     },
     "description": {
       "en": "I'm a very passionate web developer, constantly experimenting with new technologies and striving to better everyday as a whole. The next paragraph contains a list of tools that I have used throughout my projects:",
-      "es": "Soy un desarrollador de software apasionado, experimento constantemente con nuevas tecnologías y me esfuerzo para mejorar cada día en general. El siguiente parrafo contiene una lista de herramientas que he utilizado a lo largo de todos mis proyectos:"
+      "es": "Soy un desarrollador web apasionado, experimento constantemente con nuevas tecnologías y me esfuerzo por mejorar cada día en general. El siguiente párrafo contiene una lista de herramientas que he utilizado a lo largo de todos mis proyectos:"
     }
   },
   "sections": [
@@ -40,6 +40,28 @@
       },
       "content": [
         {
+          "dates": "2021",
+          "title": {
+            "en": "Escuela Sabática Digital",
+            "es": "Escuela Sabática Digital"
+          },
+          "subtitle": "",
+          "description": {
+            "en": " Es una pequeña aplicación que me ayuda a estudiar diariamente las lecciones de la Escuela Sabática. Con esta aplicación he logrado sustituir el estudio en papel por una experiencia digital.",
+            "es": " Es una pequeña aplicación que me ayuda a estudiar diariamente las lecciones de la Escuela Sabática. Con esta aplicación he logrado sustituir el estudio en papel por una experiencia digital."
+          },
+          "url": "https://escuelasabatica.digital",
+          "tags": [
+            "Laravel 8",
+            "SQLite",
+            "Markdown",
+            "Laravel Jetstream",
+            "Tailwind",
+            "Vue 2",
+            "Buefy"
+          ]
+        },
+        {
           "dates": "2020",
           "title": {
             "en": "Isabyte",
@@ -47,8 +69,8 @@
           },
           "subtitle": "",
           "description": {
-            "en": "",
-            "es": "Es un ecommerce simple de productos electrónicos. Espero en el futuro se convierta en un proyecto que brinde más servicios relacionados con el desarrollo web y móvil."
+            "en": "Es un simple ecommerce de productos electrónicos. Espero en el futuro se convierta en un proyecto que brinde mas servicios relacionados con el desarrollo web y móvil",
+            "es": "Es un simple ecommerce de productos electrónicos. Espero en el futuro se convierta en un proyecto que brinde mas servicios relacionados con el desarrollo web y móvil"
           },
           "url": "https://isabyte.com",
           "tags": [
@@ -70,8 +92,12 @@
             "es": "Eleazar Reséndez Website"
           },
           "subtitle": "",
-          "description": null,
-          "url": "https://eresendez.com"
+          "description": {
+            "en": "Es mi sitio web personal, no espero nada de este proyecto, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos.",
+            "es": "Es mi sitio web personal, no espero nada de este proyecto, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos."
+          },
+          "url": "https://eresendez.com",
+          "tags": ["Nuxt.js", "Buefy", "Tailwind", "Markdown", "HTML2Pdf"]
         }
       ]
     },
@@ -90,7 +116,7 @@
           "subtitle": "Remote",
           "description": {
             "en": "Development of a fantasy gaming platform",
-            "es": "Desarrollo de una plataforma de juegos de fantasía"
+            "es": "Participé en el desarrollo de una plataforma de juegos de fantasía con temas desde deportes hasta shows de entretenimiento."
           },
           "url": "https://xmlteam.com",
           "tags": [
@@ -127,6 +153,20 @@
             "Postman",
             "Multi Language (i18n)"
           ]
+        },
+        {
+          "dates": "06/2016 - 02/2017",
+          "title": {
+            "en": "Web developer at SEMT",
+            "es": "Desarrollador Web en SEMT"
+          },
+          "subtitle": "Remote",
+          "description": {
+            "en": "Desarrollo de la aplicación Preventus, una herramienta administrativa para el area de la Salud Ocupacional.",
+            "es": "Desarrollo de la aplicación Preventus, una herramienta administrativa para el area de la Salud Ocupacional."
+          },
+          "url": "https://preventus.semt.com.mx",
+          "tags": ["Laravel 7", "PHP 7.4", "MySQL 8", "Bootstrap 3"]
         }
       ]
     },
@@ -136,6 +176,16 @@
         "es": "Formación Académica"
       },
       "content": [
+        {
+          "dates": "2021 - present",
+          "title": {
+            "en": "Web Certifications",
+            "es": "Web Certifications"
+          },
+          "subtitle": "FreeCodeCamp",
+          "description": null,
+          "url": "https://www.freecodecamp.org/"
+        },
         {
           "dates": "2014 - 2017",
           "title": {
