@@ -123,20 +123,23 @@ export default {
         }
       }
     },
-    // Fixes: https://github.com/babel/babel-loader/issues/616
+
+    // Fixes: https://github.com/nuxt/nuxt.js/issues/8882
     babel: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            modules: 'commonjs',
-            targets: {
-              node: 'current'
+      presets () {
+        return [
+          [
+            '@nuxt/babel-preset-app',
+            {
+              corejs: {
+                version: 3
+              }
             }
-          }
+          ]
         ]
-      ]
+      }
     },
+
     plugins: [
       new webpack.ProvidePlugin({
         _: 'lodash'
