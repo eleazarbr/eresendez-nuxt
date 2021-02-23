@@ -123,6 +123,20 @@ export default {
         }
       }
     },
+    // Fixes: https://github.com/babel/babel-loader/issues/616
+    babel: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            modules: 'commonjs',
+            targets: {
+              node: 'current'
+            }
+          }
+        ]
+      ]
+    },
     plugins: [
       new webpack.ProvidePlugin({
         _: 'lodash'
