@@ -97,7 +97,14 @@
             "es": "Es mi sitio web personal, no espero nada de este proyecto, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos."
           },
           "url": "https://eresendez.com",
-          "tags": ["Nuxt.js", "Buefy", "Tailwind", "Markdown", "HTML2Pdf"]
+          "tags": [
+            "Nuxt.js",
+            "Buefy",
+            "Tailwind",
+            "Markdown",
+            "Multi Language (i18n)"
+          ],
+          "dependencies": ["Html2Pdf.js"]
         }
       ]
     },

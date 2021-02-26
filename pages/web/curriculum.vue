@@ -92,6 +92,13 @@
                   <p v-if="content.tags">
                     {{ join(content.tags) }}
                   </p>
+
+                  <!-- Dependencies -->
+                  <p v-if="content.dependencies">
+                    {{
+                      $t("cv.dependencies", { dependencies: join(content.dependencies) })
+                    }}
+                  </p>
                 </div>
               </div>
             </div>

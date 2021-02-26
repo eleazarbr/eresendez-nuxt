@@ -6,16 +6,24 @@
       }}</b-navbar-item>
     </template>
     <template slot="start">
-      <locale-dropdown />
+      <locale-dropdown></locale-dropdown>
     </template>
     <template slot="end">
-      <b-navbar-item tag="router-link" :to="{ name: 'blog.index' }"> Blog </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }"> Wiki </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }"> Ideas </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'web.projects' }">
-        Projects
+      <b-navbar-item tag="router-link" :to="{ name: 'blog.index' }">
+        {{ $t("navbar.blog") }}
       </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'web.cv' }"> CV </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }">
+        {{ $t("navbar.wiki") }}
+      </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }">
+        {{ $t("navbar.ideas") }}
+      </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.projects' }">
+        {{ $t("navbar.projects") }}
+      </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'web.cv' }">
+        {{ $t("navbar.resume") }}
+      </b-navbar-item>
     </template>
   </b-navbar>
 </template>
@@ -27,9 +35,5 @@ export default {
   components: {
     LocaleDropdown,
   },
-
-  data: () => ({
-    appName: process.env.APP_NAME,
-  }),
 };
 </script>

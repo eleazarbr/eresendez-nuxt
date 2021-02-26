@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-				 
+					 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -50,8 +50,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - **Apéndice 4**: Julio Verne convirtió la recopilación de datos dispersos en un _modus vivendi_.
 
 ## Secreto #5 Lee de todo y lo más que puedas
-WIP
-
+- 
 
 
 [^1]:	Cómo escribir tu libro (238 páginas) (Serie Publica tu libro en Amazon Vol. 1) (Spanish Edition) [https://www.goodreads.com/book/show/19301923-c-mo-escribir-tu-libro-238-p-ginas-serie-publica-tu-libro-en-amazon-v][1]
