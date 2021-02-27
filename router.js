@@ -37,7 +37,7 @@ const routes = [
     name: 'project.show',
     component: page('blog/_slug.vue')
   },
-  { path: '/cv', name: 'web.cv', component: page('web/curriculum.vue') }
+  { path: '/resume', name: 'web.cv', component: page('web/curriculum.vue') }
   // { path: '/about', name: 'web.about', component: page('web/about.vue') },
 ]
 

@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-					 
+							 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -50,7 +50,38 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - **Apéndice 4**: Julio Verne convirtió la recopilación de datos dispersos en un _modus vivendi_.
 
 ## Secreto #5 Lee de todo y lo más que puedas
-- 
+Como parte del proceso de recaudación de los datos dispersos es importante leer de todo y lo más que se pueda.
+
+## Secreto #6 Combina, contrasta y sopesa los datos recopilados
+**Una vez completado el primer paso**, una vez que ha reunido todos los datos necesarios para resolver al menos una fase de su problema y siente que no necesita por el momento acumular más datos, avanza al siguiente paso del **método para la creación de ideas**.
+
+En este segundo paso (imaginación sintética e imaginación creativa):
+- Se dedica a revisar los datos recopilados, uno a uno, e intenta relacionarlos unos con otros, combinándolos de cualquier modo, aunque luzcan completamente extraños, incoherentes y sin relación alguna
+
+> **Imaginación sintética**: uno puede valerse de viejos conceptos, ideas o planes para hacer nuevas combinaciones. Pero esta facultad no crea nada, simplemente trabaja con el material de la experiencia, de la educación y de la observación, con que se la alimenta.
+
+> **Imaginación creativa**: la mente finita del hombre (consciente) tiene comunicación directa con la inteligencia infinita (subconsciente o inconsciente) se reciben todas las ideas básicas o nuevas, trabaja de forma automática, esta facultad funciona solo cuando la mente consciente esta trabajando a un ritmo rápido, por ejemplo cuando el consciente esta estimulado por la emoción de un fuerte deseo.
+
+Las dos facultades de imaginación se agudizan cada vez mas con el uso, de la misma forma que cualquier músculo u órgano del cuerpo se desarrolla mediante su empleo.
+
+**Importancia de la imaginación sintética en este paso**
+
+- El objetivo de este segundo paso, **no** consiste en obtener o alcanzar una conclusion definitiva en torno a la eleccion del tema central del nuevo proyecto.
+- En este momento cualquier cosa sigue siendo posible.
+
+**Herramientas básicas**
+
+- El laboratorio: donde procedes a examinar en detalle cada dato recopilado
+- El cuaderno de notas: para anotar cualquier ocurrencia 
+
+Durante esta fase de generación de ideas creativas debemos estudiar todos los aspectos del problema **hasta saturarse**. Solo así se logra volcar el problema al inconsciente, activando la imaginación creativa.
+
+1. Examina toda la información recopilada “con lupa” y microscopio
+2. Anota todo lo que se te ocurra mientras combinas, contrastas y sopesas las informaciones
+3. Plantéate todas las alternativas posibles por más inverosímiles que luzcan, sin pretender alcanzar soluciones o conclusiones definitivas
+4. Lanza todas las ideas que se te ocurran, combinando las informaciones recopiladas de todas las maneras posibles hasta el cansancio o saturarte
+5. Si en esta etapa llegas a la conclusion de que necesitas conseguir información adicional, entonces regresa al primer paso hasta que sientas “que no necesitas por el momento acumular mas datos”
+6. De ser necesario repite este paso cuantas veces sea necesario y sopesa los nuevos datos antes de crear nuevas combinaciones
 
 
 [^1]:	Cómo escribir tu libro (238 páginas) (Serie Publica tu libro en Amazon Vol. 1) (Spanish Edition) [https://www.goodreads.com/book/show/19301923-c-mo-escribir-tu-libro-238-p-ginas-serie-publica-tu-libro-en-amazon-v][1]

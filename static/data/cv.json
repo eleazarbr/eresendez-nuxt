@@ -7,8 +7,8 @@
   "avatar": "/avatar.jpg",
   "links": [
     {
-      "name": "eresendez.com",
-      "url": "https://eresendez.com",
+      "name": "eresendez.com/resume",
+      "url": "https://eresendez.com/resume",
       "icon": "earth"
     },
     {
@@ -59,7 +59,8 @@
             "Tailwind",
             "Vue 2",
             "Buefy"
-          ]
+          ],
+          "dependencies": ["vue-quill-editor"]
         },
         {
           "dates": "2020",
@@ -78,11 +79,16 @@
             "Vue 2",
             "PHP 7.4",
             "OpenPay",
-            "Social Login",
             "Twitter API",
             "Google reCAPTCHA v3",
             "YouTube API",
             "Buefy"
+          ],
+          "dependencies": [
+            "laravel/socialite",
+            "spatie/browsershot",
+            "teamtnt/tntsearch",
+            "bumbummen99/shoppingcart"
           ]
         },
         {
@@ -104,7 +110,7 @@
             "Markdown",
             "Multi Language (i18n)"
           ],
-          "dependencies": ["Html2Pdf.js"]
+          "dependencies": ["html2pdf.js"]
         }
       ]
     },
@@ -212,6 +218,28 @@
           "subtitle": "Instituto Tecnológico de Ciudad Madero",
           "description": null,
           "url": "https://www.itcm.edu.mx/"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Languages",
+        "es": "Idiomas"
+      },
+      "content": [
+        {
+          "dates": "Jul. 2018",
+          "title": null,
+          "subtitle": "EF SET Certificate 54/100 (B2) Upper Intermediate",
+          "description": null,
+          "url": null
+        },
+        {
+          "dates": "Jun. 2008",
+          "title": null,
+          "subtitle": "University of Cambridge ESOL (PET B1)",
+          "description": null,
+          "url": null
         }
       ]
     },

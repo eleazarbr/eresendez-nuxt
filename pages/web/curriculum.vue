@@ -77,12 +77,17 @@
                 </div>
                 <div class="column is-auto">
                   <p>
-                    <a v-if="content.url" :href="content.url" target="_blank">
-                      <span>{{ content.title[locale] }}</span>
-                      <b-icon icon="link" size="is-small"></b-icon>
-                    </a>
-                    <span v-else class="font-bold">{{ content.title[locale] }}</span>
-                    <br />
+                    <!-- Section content title -->
+                    <span v-if="content.title">
+                      <a v-if="content.url" :href="content.url" target="_blank">
+                        <span>{{ content.title[locale] }}</span>
+                        <b-icon icon="link" size="is-small"></b-icon>
+                      </a>
+                      <span v-else class="font-bold">{{ content.title[locale] }}</span>
+                      <br />
+                    </span>
+
+                    <!-- Section content subtitle -->
                     <span v-if="content.subtitle">{{ content.subtitle }}</span>
                   </p>
                   <p v-if="content.description" class="has-text-dark">
