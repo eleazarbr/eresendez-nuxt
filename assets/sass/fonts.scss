@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: local("SourceSansPro-Regular"), url(~assets/fonts/source-sans-pro/SourceSansPro-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: local("SourceSerifPro-Regular"),
+    url(~assets/fonts/source-serif-pro/SourceSerifPro-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+}

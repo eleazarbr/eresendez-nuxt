@@ -23,7 +23,7 @@
             >
 
             <!-- Post body -->
-            <div class="content text-sm sm:text-base md:text-base">
+            <div class="content text-sm sm:text-base md:text-lg">
               <!-- Main Content -->
               <nuxt-content :document="page"></nuxt-content>
             </div>

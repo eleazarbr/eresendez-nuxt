@@ -48,7 +48,10 @@ export default {
     linkActiveClass: 'is-active'
   },
 
-  css: [{ src: '~assets/sass/app.scss', lang: 'scss' }],
+  css: [
+    { src: '~assets/sass/app.scss', lang: 'scss' },
+    { src: '~assets/sass/fonts.scss', lang: 'scss' }
+  ],
 
   plugins: ['~components/global', '~plugins/i18n', '~/plugins/vue2-filters'],
 
