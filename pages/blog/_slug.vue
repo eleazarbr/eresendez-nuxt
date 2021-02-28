@@ -52,15 +52,17 @@
             <hr />
 
             <!-- Edit this page link -->
-            <div class="content">
-              <p>
-                {{ $t("blog.edit_page") }}
-                <a :href="`${githubRepo}${page.path}${page.extension}`" target="_blank">
-                  <span> GitHub </span>
-                  <b-icon size="is-small" icon="link"></b-icon>
-                </a>
-              </p>
-            </div>
+            <b-field :label="$t('blog.edit_page')">
+              <b-button
+                icon-left="github"
+                type="is-info"
+                tag="a"
+                :href="`${githubRepo}${page.path}${page.extension}`"
+                target="_blank"
+              >
+                <span class="font-bold">Editar</span>
+              </b-button>
+            </b-field>
 
             <!-- GitHub Comments -->
             <div>

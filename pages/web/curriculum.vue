@@ -2,9 +2,8 @@
   <div class="section">
     <div class="container">
       <!-- download button -->
-      <div class="buttons is-right mt-1">
+      <div class="buttons is-right mt-1 is-hidden-mobile">
         <b-button
-          size="is-small"
           type="is-danger"
           rounded
           :loading="isGeneratingPdf"
@@ -29,7 +28,7 @@
               </div>
               <div class="column is-auto">
                 <div class="content text-sm">
-                  <h3 class="title">
+                  <h3 class="title is-size-5-desktop is-size-6-mobile truncate">
                     {{ cv.title }}
                   </h3>
                   <p class="subtitle is-size-6">
