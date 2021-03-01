@@ -55,7 +55,7 @@
             <b-field :label="$t('blog.edit_page')">
               <b-button
                 icon-left="github"
-                type="is-info"
+                type="is-dark"
                 tag="a"
                 :href="`${githubRepo}${page.path}${page.extension}`"
                 target="_blank"

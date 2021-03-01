@@ -38,6 +38,7 @@
 
               <!-- Updated at for every post -->
               <p>
+                <b-icon icon="update" size="is-small"></b-icon>
                 {{
                   $t("blog.last_update", {
                     date: $moment(page.updatedAt)
@@ -47,7 +48,7 @@
                 }}
               </p>
               <p>
-                <b-icon icon="clock-outline" size="is-small"></b-icon>
+                <b-icon icon="alarm" size="is-small"></b-icon>
                 {{ page.readingTime }}
               </p>
               <b-taglist class="mt-1">

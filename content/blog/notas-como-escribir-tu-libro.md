@@ -3,7 +3,7 @@ title: Cómo escribir tu libro (Notas)
 summary: Notes on things I've read and learned. 
 date: 2021-01-08 17:00:00
 image: 6tCiSN8LX7w
-tags: [Books]
+tags: [Books, Draft]
 ---
 
 El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no es un resumen, solamente son los puntos que más me llamaron la atención. [^1]
@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-							 
+								 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
