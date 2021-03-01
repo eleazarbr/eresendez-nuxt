@@ -21,7 +21,16 @@
 
             <!-- Metadata -->
             <div class="text-sm sm:text-base mt-2">
-              <!-- Published at and author -->
+              <!-- Author -->
+              <p>
+                <b-icon icon="face" size="is-small"></b-icon>
+                <span> Eleazar Reséndez </span>
+                <a class="font-bold" target="_blank" href="https://twitter.com/eleazarbr"
+                  >@eleazarbr</a
+                >
+              </p>
+
+              <!-- Published at -->
               <p>
                 <b-icon icon="calendar-month" size="is-small"></b-icon>
                 <span

@@ -35,8 +35,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href:
-          'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
       }
     ]
   },

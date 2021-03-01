@@ -4,7 +4,7 @@
   "blog": {
     "bio": "My goal is to continuously share the knowledge I acquire through my daily work. If you like Laravel and Vue go ahead and sign up!",
     "posts": "Posts",
-    "posted_on": "Posted on {date} by <a target='_blank' href='https://twitter.com/eleazarbr'>@eleazarbr</a>",
+    "posted_on": "Posted on {date}",
     "read_more": "Read more",
     "post_by": "{date} by {author}",
     "old_post": "Warning: This post is over a six months old. I don't always update old posts with new information, so some of this information may be out of date.",

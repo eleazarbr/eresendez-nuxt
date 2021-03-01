@@ -146,7 +146,11 @@ export default {
         margin: 1,
         filename: "eleazar-resendez-cv.pdf",
         image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2 },
+        html2canvas: {
+          scale: 2,
+          scrollX: 0,
+          scrollY: 0,
+        },
         jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
       };
 
