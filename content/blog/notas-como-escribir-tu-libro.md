@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-								 
+										 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -83,6 +83,53 @@ Durante esta fase de generación de ideas creativas debemos estudiar todos los a
 5. Si en esta etapa llegas a la conclusion de que necesitas conseguir información adicional, entonces regresa al primer paso hasta que sientas “que no necesitas por el momento acumular mas datos”
 6. De ser necesario repite este paso cuantas veces sea necesario y sopesa los nuevos datos antes de crear nuevas combinaciones
 
+## Secreto # 7 Olvida el asunto cuando estes saturado
+“Cuando estamos en un periodo de descanso, de la memoria y la opinion se produce el conocimiento…” — Platon. 
+
+Las mejores ideas suelen aparecer cuando menos las esperamos, al descansar o mientras pensamos en otra cosa.
+
+1. **Saturación**: fase inicial cuando estudias todos los aspectos hasta saturarse
+2. **Incubación**: fase media cuando descansa auténticamente y deja de pensar en el problema
+3. **Iluminación**: fase final cuando las ideas llegan inesperadamente, sin proponérselo y _como por_ inspiración.
+4. **Verificación**: lleva su nueva idea a la practica y verifica sus resultados
+
+**Nunca estas inspiraciones súbitas se producen aisladas**, sino despues de algunos días de esfuerzo voluntario que han parecido absolutamente infructuosos, donde nada bueno se ha creado hacer, donde se puedo haber errado de camino.
+
+## Secreto #8 Las grandes ideas surgen inesperadamente
+## Secreto #9 Toda idea embrionaria atraviesa tres etapas de gestación
+Tras cumplir los pasos antes descritos y contamos con una _idea embrionaria_, tan solo habrás completado la primera fase del proceso del producción de ideas o **fase de concepción**. Toda idea embrionaria **atraviesa tres etapas** de gestación.
+
+**La gestación comienza con una idea embrionaria**.
+
+1. **Multiplicación**: La idea se instala y se multiplica.
+2. **Crecimiento**: La idea crece y se desarrolla.
+3. **Definición**: La idea define sus partes
+
+Ejemplo: Asimov creó tanto la idea embrionaria como un primer bosquejo general de su exitosa serie “Fundación” atravesando todos los diferentes estadios del proceso creativo en escasas horas. 
+
+## Secreto #10 Una vez gestadas, las ideas pujan por salir al mundo
+Una vez gestada y enriquecida nuestra idea embrionaria, ésta se instala cada vez más en nuestra mente y sentimos una creciente necesidad de plasmar por escrito nuestra obra. Entonces nos sentamos a escribir las primeras lineas y “comienza a romperse el cascaron”.
+
+Da inicio a la ultima fase del proceso creativo: **la fase del nacimiento**.
+
+**Primera etapa: Preparación del primer borrador**
+- Etapa inicial, desde hoja en blanco hasta la redacción final del primer borrador. No te detengas hasta tener tu primer borrador. Aplica las técnicas del método universal para “idear” cada capitulo, cada detalle importante, mientras trabajas en tu borrador. Escribe todo lo que se ocurra, revisa, completa y ensambla **todo en base a tu esquema**.
+
+**Preparación del manuscrito final**
+- Leer el borrador de principio a fin, iniciando un trabajo de corrección y modificación que se repite varias veces. Mejorarlo hasta dejar listo la version final.
+
+**Publicación y lanzamiento al mundo**
+- Una vez listo, se proceso a elegir el titulo final y la portada, se proceso a su publicación, distribución y venta.
+
+## Secreto #11 Inconsciente e inspiración
+La inspiración según Sigmund Freud, procede de la psiquis humana y no de factores externos, surge de las profundidades de la mente como respuesta a “un conflicto psicológico no resuelto” alojado en el subconsciente.
+
+Según García Marquez, cuando se requiere escribir algo se establece una especie de tension reciproca entre uno y el tema, de modo que uno atiza al tema y el tema lo atiza a uno. Hay un momento en que esa relación alcanza un punto ardiente y entonces no hay en la vida nada mejor que escribir.
+
+Esto se le conoce como inspiración. Los románticos desprestigiaron la palabra, pero la situación es real, no cómo gracia ni como soplo divino, sino por una reconciliación con el tema a fuerza de tenacidad y dominio.
+
+## Secreto #12 Tu primera meta debe ser tu primer borrador
+- wip
 
 [^1]:	Cómo escribir tu libro (238 páginas) (Serie Publica tu libro en Amazon Vol. 1) (Spanish Edition) [https://www.goodreads.com/book/show/19301923-c-mo-escribir-tu-libro-238-p-ginas-serie-publica-tu-libro-en-amazon-v][1]
 
