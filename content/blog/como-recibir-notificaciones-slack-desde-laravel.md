@@ -1,57 +1,74 @@
 ---
-title: "¿Cómo recibir notificaciones en Slack desde Laravel? "
-summary: "Vamos a seguir un proceso rápido que permitirá publicar mensajes en Slack usando Incoming Webhooks y Laravel en unos minutos."
+title: Cómo recibir los mensajes del Log de Laravel en Slack
+summary: Cómo publicar mensajes en Slack usando Incoming Webhooks y Laravel en unos minutos.
 date: 2020-02-28 17:08:00
-image: 9.jpeg
+image: XU1L22IUKnc
 tags: [Laravel, Slack]
 ---
 
-Un poco de teoría:
+Necesito una manera rápida de enterarme cuando surge un critical error y en lugar de acceder voluntariamente a `/admin/logs` (o algo parecido) para cerciorarme que “todo este bien”, creo que recibir una notificación en Slack es lo más rápido.
+
+Vamos a comenzar en [https://laravel.com/docs/8.x/logging][1].
+
+## Configurar el nombre del Canal
+Por default Laravel utiliza el canal `stack` (ver el archivo `logging.php`). Solo es necesario agregar `slack` a la lista de canales.
+
+```php
+'channels' => [
+  'stack' => [
+    'driver' => 'stack',
+    'channels' => ['daily', 'slack'],
+  ],
+]
+```
+
+Despues, de acuerdo a la documentación de Laravel [https://laravel.com/docs/8.x/logging#configuring-the-slack-channel][2] el siguiente proceso se realiza en el sitio web de Slack. 
+
+Usaremos webhooks:
 
 > Los webhooks son una forma sencilla de publicar mensajes de fuentes externas en Slack. Utilizan solicitudes HTTP normales con una carga útil JSON, que incluye el mensaje y algunos otros detalles opcionales. Puedes incluir archivos adjuntos para mostrar mensajes con formato enriquecido.
 
-Vamos a seguir un proceso rápido de 4 pasos, que permitirá publicar mensajes usando Webhooks en unos minutos.
+El siguiente proceso nos permitirá publicar mensajes usando Webhooks en unos minutos.
 
 ## Configurar "Incoming Webhooks"
-
 ### 1. Crear una Slack App
 
-Ingresa en el siguiente enlace: [https://api.slack.com/apps?new\_app=1][1] y elige:
+Ingresa en el siguiente enlace: [https://api.slack.com/apps?new\_app=1][3] y elige:
 
 - un nombre
-- un espacio de trabajo para asociar la aplicación (teniendo en cuenta que probablemente se publicarán algunos mensajes de prueba, por lo que es posible que desee crear un canal especial para pruebas)
+- un **espacio de trabajo** para asociar la aplicación (teniendo en cuenta que probablemente se publicarán algunos mensajes de prueba, por lo que es posible que desees crear un canal especial para pruebas)
 
-Después, haz clic en _Crear Aplicación_, si es que no has creado una aplicación anteriormente.
+Después, haz clic en **Crear App**.
 
 ### 2. Activar los Incoming Webhooks
 
-Con la nueva aplicación creada, serás re-dirigido a la página de configuración de su nueva aplicación (si está utilizando una aplicación existente, simplemente cargue su configuración a través del administrador de apps.
+Con la nueva aplicación creada, serás re-dirigido a la página de configuración de la nueva aplicación (si estás utilizando una aplicación existente, simplemente cargue su configuración a través del administrador de apps.
 
 En esa página, selecciona la función _Incoming Webhooks_ y haz clic en el switch _”Activar Incoming Webhooks”_.
 
 ### 3. Crear un Incoming Webhook
 
-Una vez que los Incoming Webhooks están habilitados, la página de configuración debería actualizarse y aparecerán algunas opciones adicionales.  Una de esas opciones será un botón llamado _”Agregar nuevo webhook”_ al espacio de trabajo. Haz click en el.
+Una vez que los “Incoming Webhooks” están habilitados, la página de configuración debería actualizarse y aparecerán algunas opciones adicionales.  Una de esas opciones será un botón llamado **”Agregar nuevo webhook”** al espacio de trabajo. Haz click en el.
 
-Lo que hace este botón es activar una versión corta del proceso de instalación de aplicaciones de Slack, una que es completamente autónoma para que no tengas qué escribir ningún código para generar una Webhook URL. Por ahora verá algo como la siguiente pantalla:
+Lo que hace este botón es activar una “versión corta” del proceso de instalación de aplicaciones de Slack. Por ahora verás algo como la siguiente pantalla:
 
 ![Screenshoot image][image-1]
 
-Continúe y elija un canal en el que la aplicación publicará los mensajes y luego haga click para Autorizar su aplicación.
+Elige un canal en el cual la aplicación publicará los mensajes.
 
-Volverá a la configuración de su aplicación y ahora debería ver una nueva entrada en la sección URL de Webhook para su área de trabajo, con una URL de Webhook que se verá así:
+Volverá a la configuración de su aplicación y ahora debería ver una nueva entrada en la sección URL de Webhook para su área de trabajo, con una **URL de Webhook** que se verá así:
 
 ```
 https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Esa URL es su nuevo Incoming Webhook, uno que es específico para un solo usuario y un solo canal.
+Esa URL es el nuevo “Incoming Webhook”, uno que es específico para un solo usuario y un solo canal.
 
 > Mantenlo en secreto y a salvo, la URL del webhook es secreta. No lo comparta en línea, incluso a través de repositorios públicos de control de versiones.
 
 ### 4. Use su Incoming Webhook URL para publicar un mensaje
 
-Ahora, simplemente haga una solicitud HTTP POST como:
+Ahora, simplemente podemos hacer cualquier solicitud `POST` como:
 
 ```json
 POST https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
@@ -61,13 +78,26 @@ Content-type: application/json
 }
 ```
 
-El _endpoint_ al que está haciendo la solicitud POST debe ser la misma URL que generó en el paso anterior.
+_El endpoint al que está haciendo la solicitud POST debe ser la misma URL que generó en el paso anterior._
 
-¡Listo! Vaya y verifique el canal en el que se instaló su aplicación y verá que su aplicación ha publicado el mensaje "Hola, Mundo".
+**¡Listo!** Verifique el canal en el que se instaló su aplicación y verá que su aplicación ha publicado el mensaje "Hola, Mundo".
 
 Vayamos a nuestra Laravel App.
 
-## En Laravel
+## Uso del webhook para logging
+Ahora en nuestro archivo `.env` solamente debemos actualizar la siguiente key con nuestra Webhook URL.
+
+```json
+LOG_SLACK_WEBHOOK_URL=""
+```
+
+Para probar que todos los critical errors se envíen a nuestro canal en Slack podemos hacer lo siguiente desde Tinker:
+
+```json
+Log::emergency('The system is down!');
+```
+
+## Uso del webhook para email notifications
 
 Es necesario instalar el siguiente paquete: `composer require laravel/slack-notification-channel`.
 
@@ -131,13 +161,8 @@ public function toSlack($notifiable)
 }
 ```
 
-## Más información
-
-- Notifications: Slack. https://laravel.com/docs/5.8/notifications#slack-notifications
-- Routing Slack Notifications. https://laravel.com/docs/5.8/notifications#routing-slack-notifications
-- Slack Incoming Webhooks. https://api.slack.com/messaging/webhooks
-
-
-[1]:	https://api.slack.com/apps?new%5C_app=1
+[1]:	https://laravel.com/docs/8.x/logging
+[2]:	https://laravel.com/docs/8.x/logging#configuring-the-slack-channel
+[3]:	https://api.slack.com/apps?new%5C_app=1
 
 [image-1]:	/blog/post/9-1.png

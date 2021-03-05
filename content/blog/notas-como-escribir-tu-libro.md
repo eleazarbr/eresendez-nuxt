@@ -129,6 +129,13 @@ Según García Marquez, cuando se requiere escribir algo se establece una especi
 Esto se le conoce como inspiración. Los románticos desprestigiaron la palabra, pero la situación es real, no cómo gracia ni como soplo divino, sino por una reconciliación con el tema a fuerza de tenacidad y dominio.
 
 ## Secreto #12 Tu primera meta debe ser tu primer borrador
+Escribe todo lo que se te ocurra, aunque luego lo deseches. Si lo haces, tarde o temprano lograras recopilar suficiente material para armar un primer borrador.
+
+Trabaja en base a tu esquema o bosquejo, Mario Benedetti trabajaba sus libros por partes y sin seguir un orden especifico para despues armarlo basado en un bosquejo elaborado previamente.
+
+**Aplica el método universal en cada parte del libro**.
+
+## Secreto #13 Separa la labro del escritor de la del editor
 - wip
 
 [^1]:	Cómo escribir tu libro (238 páginas) (Serie Publica tu libro en Amazon Vol. 1) (Spanish Edition) [https://www.goodreads.com/book/show/19301923-c-mo-escribir-tu-libro-238-p-ginas-serie-publica-tu-libro-en-amazon-v][1]
