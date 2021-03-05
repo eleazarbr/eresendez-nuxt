@@ -51,6 +51,25 @@
 
             <hr />
 
+            <!-- Say thanks button -->
+            <div class="columns is-variable is-1 is-vcentered is-mobile">
+              <div class="column is-narrow">
+                <p class="font-bold">{{ $t("blog.say_thanks") }}</p>
+              </div>
+              <div class="column is-narrow">
+                <b-button
+                  type="is-info"
+                  icon-left="twitter"
+                  tag="a"
+                  target="_blank"
+                  expanded
+                  :href="twitterShareUrl"
+                >
+                  <b> Tweet it </b>
+                </b-button>
+              </div>
+            </div>
+
             <!-- Edit this page link -->
             <b-field :label="$t('blog.edit_page')">
               <b-button
@@ -144,6 +163,14 @@ export default {
   data: () => ({
     githubRepo: "https://github.com/eleazarbr/eresendez/tree/master/content",
   }),
+
+  computed: {
+    twitterShareUrl() {
+      var pageURL = document.URL;
+      var text = "Thanks @eleazarbr!";
+      return encodeURI(`http://twitter.com/share?url=${pageURL}&text=${text}`);
+    },
+  },
 
   head() {
     return {

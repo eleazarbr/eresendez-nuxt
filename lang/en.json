@@ -19,7 +19,8 @@
     "date": "Date",
     "updated_at": "Updated At",
     "toc_title": "Table of contents:",
-    "edit_page": "Edit this page on GitHub:"
+    "edit_page": "Edit this page on GitHub:",
+    "say_thanks": "If this article was helpful,"
   },
   "navbar": {
     "home": "Home",

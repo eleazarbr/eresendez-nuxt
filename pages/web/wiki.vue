@@ -1,42 +1,39 @@
 <template>
-  <div>
-    <div class="columns h-screen">
-      <div class="column is-narrow">
-        <div class="p-3 bg-gray-100 h-full">
-          <!-- Mobile menu -->
-          <div class="is-hidden-tablet">
-            <div class="flex justify-between items-center">
-              <p class="font-bold"></p>
-              <b-button icon-left="menu" @click="sidebar.open = !sidebar.open">
-              </b-button>
+  <div class="columns h-screen">
+    <div class="column is-narrow">
+      <div class="p-3 bg-gray-100 h-full">
+        <!-- Mobile menu -->
+        <div class="is-hidden-tablet">
+          <div class="flex justify-between items-center">
+            <p class="font-bold"></p>
+            <b-button icon-left="menu" @click="sidebar.open = !sidebar.open"> </b-button>
+          </div>
+
+          <b-sidebar
+            :type="sidebar.type"
+            :fullheight="sidebar.fullheight"
+            :open.sync="sidebar.open"
+          >
+            <div class="p-1">
+              <wiki-menu :menu="menu" @clicked="sidebar.open = false"></wiki-menu>
             </div>
+          </b-sidebar>
+        </div>
 
-            <b-sidebar
-              :type="sidebar.type"
-              :fullheight="sidebar.fullheight"
-              :open.sync="sidebar.open"
-            >
-              <div class="p-1">
-                <wiki-menu :menu="menu" @clicked="sidebar.open = false"></wiki-menu>
-              </div>
-            </b-sidebar>
-          </div>
-
-          <!-- Desktop Menu -->
-          <div class="is-hidden-mobile">
-            <wiki-menu :menu="menu"></wiki-menu>
-          </div>
+        <!-- Desktop Menu -->
+        <div class="is-hidden-mobile">
+          <wiki-menu :menu="menu"></wiki-menu>
         </div>
       </div>
+    </div>
 
-      <!-- Content -->
-      <div class="column is-three-fifths">
-        <div class="section">
-          <div v-if="currentRouteName === 'web.wiki'">
-            <nuxt-content class="content" :document="page" />
-          </div>
-          <nuxt />
+    <!-- Content -->
+    <div class="column is-three-fifths">
+      <div class="section">
+        <div v-if="currentRouteName === 'web.wiki'">
+          <nuxt-content class="content" :document="page" />
         </div>
+        <nuxt />
       </div>
     </div>
   </div>
@@ -75,3 +72,9 @@ export default {
   },
 };
 </script>
+
+<style lang="css" scoped>
+.columns {
+  margin-right: 0;
+}
+</style>
