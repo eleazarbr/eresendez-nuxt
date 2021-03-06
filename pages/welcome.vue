@@ -56,8 +56,8 @@
                       })
                     }}
                   </span>
-                  <br />
-                  <span>
+                  <!-- <br /> -->
+                  <!-- <span>
                     {{
                       $t("blog.published_at", {
                         date: $moment(post.date)
@@ -65,7 +65,7 @@
                           .format("LL"),
                       })
                     }}
-                  </span>
+                  </span> -->
                 </p>
                 <p class="text-base">
                   {{ post.summary }}

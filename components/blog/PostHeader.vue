@@ -24,7 +24,7 @@
               <!-- Author -->
               <p>
                 <b-icon icon="face" size="is-small"></b-icon>
-                <span> Eleazar Reséndez </span>
+                <span> Eleazar Reséndez – </span>
                 <a class="font-bold" target="_blank" href="https://twitter.com/eleazarbr"
                   >@eleazarbr</a
                 >
