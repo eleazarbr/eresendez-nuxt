@@ -143,7 +143,6 @@ export default {
     const posts = await $content("blog")
       .only(["title", "summary", "slug", "date", "tags", "image", "updatedAt"])
       .sortBy("updatedAt", "desc")
-      .where({ date: { $lt: Date.now() } })
       .limit(10)
       .fetch();
 

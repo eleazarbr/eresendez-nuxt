@@ -170,9 +170,14 @@ export default {
     },
 
     queryPosts() {
-      return this.$content("blog")
-        .only(["title", "summary", "slug", "date", "tags", "updatedAt"])
-        .where({ date: { $lt: Date.now() } });
+      return this.$content("blog").only([
+        "title",
+        "summary",
+        "slug",
+        "date",
+        "tags",
+        "updatedAt",
+      ]);
     },
   },
 };
