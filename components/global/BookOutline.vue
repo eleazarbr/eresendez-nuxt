@@ -16,7 +16,7 @@
       </div>
       <div class="card-content">
         <div>
-          <ol class="is-lower-roman" style="margin-top: 0;">
+          <ol class="is-lower-roman" style="margin-top: 0">
             <li v-for="(item, index) in collapse.list" :key="index">{{ item }}</li>
           </ol>
         </div>
@@ -27,65 +27,34 @@
 
 <script>
 export default {
-	name: 'BookOutline',
+  name: "BookOutline",
 
-	data() {
-		return {
-			isOpen: 0,
-			collapses: [
-				{
-					title: 'Capítulo 1 - Introducción',
-					list: [
-						'PHP en la actualidad',
-						'¿Por qué Laravel y Bulma?',
-						'¡Hola, Mundo!',
-						'Bulma CSS',
-						'Conclusión'
-					]
-				},
-				{
-					title: 'Capítulo 2 - Cómo configurar tu primer proyecto',
-					list: [
-						'Los requerimientos del sistema',
-						'Composer',
-						'Instalación de Laravel y Bulma',
-						'Conclusión'
-					]
-				},
-				{
-					title: 'Capítulo 3 - La estructura de archivos en Laravel y Bulma',
-					list: [
-						'Los directorios principales',
-						'Los archivos más importantes',
-						'La Configuración de Laravel',
-						'Cómo personalizar Bulma',
-						'Conclusión '
-					]
-				},
-				{
-					title: 'Capítulo 4 - El camino con Laravel y Bulma',
-					list: [
-						'Introducción al proyecto del libro',
-						'El patrón de diseño MVC',
-						'Enrutamiento (definición de rutas, grupos, namespaces, prefijos, rutas firmadas)',
-						'Controladores (inyección de dependencias, resource, api resource)',
-						'Vistas (Laravel Blade, Laravel Mix, paginación, Lozalication)',
-						'Bases de datos y Eloquent (configuración, seeders, migrations, query builder)',
-						'Artisan y Tinker',
-						'Collections'
-					]
-				},
-				{
-					title: 'Bonos',
-					list: [
-						'TailwindCSS',
-						'Laravel Livewire',
-						'Jigsaw - Static Sites',
-						'AlpineJS'
-					]
-				}
-			]
-		}
-	}
-}
+  data() {
+    return {
+      isOpen: 0,
+      collapses: [
+        {
+          title: "Capítulo 1",
+          list: [],
+        },
+        {
+          title: "Capítulo 2",
+          list: [],
+        },
+        {
+          title: "Capítulo 3",
+          list: [],
+        },
+        {
+          title: "Capítulo 4",
+          list: [],
+        },
+        {
+          title: "Bonos",
+          list: [],
+        },
+      ],
+    };
+  },
+};
 </script>

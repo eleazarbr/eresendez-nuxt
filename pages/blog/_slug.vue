@@ -7,7 +7,7 @@
       <div class="container">
         <div class="columns">
           <div class="column is-one-fifth is-hidden-mobile">
-            <div class="content text-base sticky top-0 z-10 pt-3">
+            <div class="content text-base sticky top-0 z-10">
               <table-of-contents :document="page"></table-of-contents>
             </div>
           </div>

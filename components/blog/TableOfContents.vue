@@ -1,5 +1,5 @@
 <template>
-  <div v-if="document.toc.length" class="field pb-5">
+  <div v-if="document.toc.length" class="box field overflow-y-auto max-h-96">
     <p>{{ $t("blog.toc_title") }}</p>
     <ol class="is-lower-roman">
       <li

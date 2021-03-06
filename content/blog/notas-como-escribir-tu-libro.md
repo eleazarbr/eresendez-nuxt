@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-										 
+											 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -135,8 +135,22 @@ Trabaja en base a tu esquema o bosquejo, Mario Benedetti trabajaba sus libros po
 
 **Aplica el método universal en cada parte del libro**.
 
-## Secreto #13 Separa la labro del escritor de la del editor
-- wip
+## Secreto #13 Separa la labor del escritor de la del editor
+Tendrás dos roles, uno primero y otro despues.
+1. Rol de escritor: dedicate a escribir tu primer borrador a rienda suelta y sin parar, sin barreras ni limitaciones
+2. Rol de editor: una vez terminado el borrador de un capitulo o del libro entero, detente a leer el borrador que acabas de escribir adoptando el rol de editor, este es el momento de leer y revisar con lupa lo que antes escribiste.
+
+El objetivo de la revision consiste en llevar tu texto de borrador a version corregida y finalmente a manuscrito final. 
+
+**La revision implica re-escritura**. Debemos estar preparados para re-escribir el manuscrito parcial o totalmente.
+
+## Secreto #14 Intenta escribir a diario y hazlo con dedicación
+Traza un plan definido, así como un horario. Entonces, hasta que no termines tu libro, dedicate a cumplir con tu plan tenazmente y a escribir con disciplina hasta culminarlo, escribiendo a diario y con dedicación.
+
+## Secreto #15 Decide de último el título de tu nuevo libro
+## Secreto #16 Todo libro nace con el manuscrito final
+## Secreto #17 Una buena portada vale más que mil palabras
+## Secreto #18 Una vez publicado, el libro cobra vida propia
 
 [^1]:	Cómo escribir tu libro (238 páginas) (Serie Publica tu libro en Amazon Vol. 1) (Spanish Edition) [https://www.goodreads.com/book/show/19301923-c-mo-escribir-tu-libro-238-p-ginas-serie-publica-tu-libro-en-amazon-v][1]
 
