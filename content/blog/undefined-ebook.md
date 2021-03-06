@@ -1,7 +1,7 @@
 ---
 title: Undefined
 summary: Mi intención de escribir un ebook :)
-date: 2020-05-25 10:13:00
+date: 2031-05-25 10:13:00
 image: "L5HG3CH\_pgc"
 tags: [Bulma, Books]
 ---

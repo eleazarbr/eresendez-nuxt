@@ -199,7 +199,9 @@ export default {
 
   async asyncData({ $content, params }) {
     var slug = params.slug;
-    const page = await $content("blog", slug).fetch();
+    const page = await $content("blog", slug)
+      .where({ date: { $lt: Date.now() } })
+      .fetch();
 
     const [prev, next] = await $content("blog")
       .only(["title", "summary", "slug"])
