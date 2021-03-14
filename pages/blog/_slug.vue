@@ -199,8 +199,7 @@ export default {
 
   async asyncData({ $content, params }) {
     var slug = params.slug;
-    const page = await $content("blog", slug)
-      .fetch();
+    const page = await $content("blog", slug).fetch();
 
     const [prev, next] = await $content("blog")
       .only(["title", "summary", "slug"])

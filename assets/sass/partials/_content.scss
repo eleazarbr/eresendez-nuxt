@@ -1,9 +1,19 @@
 .content a {
-  color: #3273dc;
+  color: #00c;
 }
 
-.content a:hover {
-  text-decoration: underline;
+.content a:hover,
+.content a:focus {
+  color: #ff3860;
+  transition: all 0.5s ease;
+}
+
+.nuxt-content p:first-of-type:first-letter {
+  display: block;
+  float: left;
+  margin: 5px;
+  color: #000000;
+  font-size: 60px;
 }
 
 .content img {

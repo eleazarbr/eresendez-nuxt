@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-											 
+												 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -43,9 +43,11 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 2. Dedícate a recopilar la mayor cantidad de información disponible sobre el tema o temas que te interesen. Aunque ya te consideres un experto en la materia y aunque algunos datos te parezcan completamente extraños e incoherentes y sin relación alguna entre sí.
 3. Anota y archiva todo lo que consigas sobre el tema tentativo (note: puedo usar mi wiki). **Nunca pienses que ya sabes todo sobre el tema**.
 
-- Lo más aconsejable es que escribas sobre temas capaces de mover tu alma, _por así decirlo_. Que el tema te inspire lo suficiente como para que escribas con entusiasmo.
-- No pares hasta haber investigado exhaustivamente.
-- Al final, además de aumentar tu experticia en el tema, terminarás contando con el mayor número de ideas, imágenes mentales y elementos preexistentes, lo cual te ayudará a tener la mayor cantidad de combinaciones nuevas y originales.
+Lo más aconsejable es que escribas sobre temas capaces de mover tu alma, _por así decirlo_. Que el tema te inspire lo suficiente como para que escribas con entusiasmo.
+
+No pares hasta haber investigado exhaustivamente.
+
+Al final, además de aumentar tu experticia en el tema, terminarás contando con el mayor número de ideas, imágenes mentales y elementos preexistentes, lo cual te ayudará a tener la mayor cantidad de combinaciones nuevas y originales.
 
 - **Apéndice 4**: Julio Verne convirtió la recopilación de datos dispersos en un _modus vivendi_.
 
