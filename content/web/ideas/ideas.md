@@ -5,8 +5,8 @@ title: Ideas
 ## Workflowy
 Comparto en Workflowy las ideas de cosas que quiero construir, así como también los proyectos en los que estoy trabajando o he terminado.
 
-> **Nota**:  Las siguientes listas enumeran tareas que son _importantes_ y _no urgentes_.  
->  
+Las siguientes listas enumeran tareas que **son _importantes_ y _no urgentes_**.  
+ 
 - [Ideas][1] - Ideas que quiero traer a la existencia
 - [Learn][2] - Cosas que estoy aprendiendo o quiero aprender
 - [Cursos][3] - Cursos que estoy llevando a cabo o quiero tomar

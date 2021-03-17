@@ -94,6 +94,7 @@ export default {
   },
 
   content: {
+    liveEdit: false,
     markdown: {
       footnotes: {
         inlineNotes: true
