@@ -3,7 +3,7 @@ title: Cómo escribir tu libro (Notas)
 summary: Notes on things I've read and learned. 
 date: 2021-01-08 17:00:00
 image: 6tCiSN8LX7w
-tags: [Books, Draft]
+tags: [Books]
 ---
 
 El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no es un resumen, solamente son los puntos que más me llamaron la atención. [^1]
@@ -16,7 +16,7 @@ El libro esta dividido en 18 “secretos” y 18 apéndices. Este documento no e
 - Todos los grandes fueron aprendices. Solo hace falta escribir. Nunca es tarde para comenzar
 - _Ninguna persona jamas es derrotada hasta que renuncia en su propia mente_
 - **Apéndice 1**. **Paulo Coelho: Orígenes truncados del autor**. El brasileño decidió convertirse en escritor a los quince años, pero presionado por su familia se vio obligado a cambiar de parecer. Y no fue sino después de cumplir los 40 cuando publicó su primer libro.
-												 
+													 
 ## Secreto #2 Todo comienza con una idea embrionaria
 - (Concepción, gestación y parto)
 - Dean Keith Simonton: “los llamados genios creativos radica en qué constantemente relacionan y yuxtaponen diferentes ideas, imágenes y pensamientos preexistentes a fin de formar nuevas y originales combinaciones. Los genios son genios porque forman más combinaciones que los demás.
@@ -150,6 +150,15 @@ El objetivo de la revision consiste en llevar tu texto de borrador a version cor
 Traza un plan definido, así como un horario. Entonces, hasta que no termines tu libro, dedicate a cumplir con tu plan tenazmente y a escribir con disciplina hasta culminarlo, escribiendo a diario y con dedicación.
 
 ## Secreto #15 Decide de último el título de tu nuevo libro
+Características:
+- Llamar y atrapar la atención
+- Despertar interés
+- Disparar la imaginación
+- Incitar a la acción de comprar y leer el libro
+- Ser fácil de recordar
+
+De no obtener las características anteriores, sigue buscando hasta que tarde o temprano lo encuentres. 
+
 ## Secreto #16 Todo libro nace con el manuscrito final
 ## Secreto #17 Una buena portada vale más que mil palabras
 ## Secreto #18 Una vez publicado, el libro cobra vida propia
