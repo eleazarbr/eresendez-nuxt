@@ -1,19 +1,21 @@
 <template>
   <div>
     <!-- Hero section -->
-    <div class="section">
-      <div class="container">
-        <!-- Title -->
-        <div class="has-text-black has-text-centered">
-          <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
-            {{ $t("welcome.title") }}
-          </p>
-          <p class="text-xl sm:text-xl md:text-2xl font-bold mt-2">
-            {{ $t("welcome.subtitle") }}
-          </p>
-          <p class="text-lg">
-            {{ $t("welcome.description") }}
-          </p>
+    <div class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <!-- Title -->
+          <div class="has-text-black has-text-centered">
+            <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
+              {{ $t("welcome.title") }}
+            </p>
+            <p class="text-xl sm:text-xl md:text-2xl font-bold mt-2">
+              {{ $t("welcome.subtitle") }}
+            </p>
+            <p class="text-lg">
+              {{ $t("welcome.description") }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -21,75 +23,68 @@
     <!-- Latest blog posts section -->
     <div class="section has-text-black">
       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-12-tablet is-8-desktop">
-            <div
-              class="columns is-vcentered pb-3"
-              v-for="(post, index) in posts"
-              :key="index"
-            >
-              <!-- Blog image -->
-              <div class="column is-3">
+        <!-- Posts -->
+        <div class="columns is-multiline is-centered">
+          <div
+            class="column is-6-desktop is-12-tablet"
+            v-for="(post, index) in posts"
+            :key="index"
+          >
+            <div class="card h-full">
+              <div class="card-image">
+                <!-- Blog image -->
                 <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
                   <figure class="image is-3by1">
                     <img
-                      class="rounded has-bg-cover"
+                      class="has-bg-cover"
                       :src="`https://source.unsplash.com/${post.image}`"
                     />
                   </figure>
                 </nuxt-link>
               </div>
-              <!-- Blog meta -->
-              <div class="column is-auto">
+              <div class="card-content">
+                <!-- Blog meta -->
                 <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
                   <h3 class="text-2xl font-bold leading-tight">
                     {{ post.title }}
                   </h3>
                 </nuxt-link>
-                <p class="text-sm has-text-dark my-1">
-                  <span>
-                    {{
-                      $t("blog.last_update", {
-                        date: $moment(post.updatedAt)
-                          .locale($store.getters["lang/locale"])
-                          .fromNow(),
-                      })
-                    }}
-                  </span>
-                  <!-- <br /> -->
-                  <!-- <span>
-                    {{
-                      $t("blog.published_at", {
-                        date: $moment(post.date)
-                          .locale($store.getters["lang/locale"])
-                          .format("LL"),
-                      })
-                    }}
-                  </span> -->
-                </p>
-                <p class="text-base">
+                <div class="flex justify-between items-center mt-1">
+                  <p class="text-sm has-text-dark my-1">
+                    <span>
+                      {{
+                        $t("blog.last_update", {
+                          date: $moment(post.updatedAt)
+                            .locale($store.getters["lang/locale"])
+                            .fromNow(),
+                        })
+                      }}
+                    </span>
+                  </p>
+                  <b-taglist>
+                    <b-tag
+                      v-for="(tag, index) in post.tags"
+                      :key="index"
+                      :class="{ 'is-danger': tag === 'Draft' }"
+                    >
+                      <span class="font-bold">
+                        {{ tag }}
+                      </span>
+                    </b-tag>
+                  </b-taglist>
+                </div>
+                <p class="text-base mt-3">
                   {{ post.summary }}
                 </p>
-                <b-taglist class="mt-2">
-                  <b-tag
-                    v-for="(tag, index) in post.tags"
-                    :key="index"
-                    :class="{ 'is-danger': tag === 'Draft' }"
-                  >
-                    <span class="font-bold">
-                      {{ tag }}
-                    </span>
-                  </b-tag>
-                </b-taglist>
               </div>
             </div>
-
-            <div class="buttons is-centered">
-              <b-button type="is-text" tag="router-link" :to="{ name: 'blog.index' }">
-                {{ $t("buttons.view_more") }}
-              </b-button>
-            </div>
           </div>
+        </div>
+
+        <div class="buttons is-centered">
+          <b-button type="is-text" tag="router-link" :to="{ name: 'blog.index' }">
+            {{ $t("buttons.view_more") }}
+          </b-button>
         </div>
       </div>
     </div>
