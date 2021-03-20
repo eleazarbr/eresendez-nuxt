@@ -21,7 +21,7 @@
     </div>
 
     <!-- Latest blog posts section -->
-    <div class="section has-text-black">
+    <div class="section">
       <div class="container">
         <!-- Posts -->
         <div class="columns is-multiline is-centered">
@@ -30,54 +30,7 @@
             v-for="(post, index) in posts"
             :key="index"
           >
-            <div class="card h-full">
-              <div class="card-image">
-                <!-- Blog image -->
-                <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
-                  <figure class="image is-3by1">
-                    <img
-                      class="has-bg-cover"
-                      :src="`https://source.unsplash.com/${post.image}`"
-                    />
-                  </figure>
-                </nuxt-link>
-              </div>
-              <div class="card-content">
-                <!-- Blog meta -->
-                <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
-                  <h3 class="text-2xl font-bold leading-tight">
-                    {{ post.title }}
-                  </h3>
-                </nuxt-link>
-                <div class="flex justify-between items-center mt-1">
-                  <p class="text-sm has-text-dark my-1">
-                    <span>
-                      {{
-                        $t("blog.last_update", {
-                          date: $moment(post.updatedAt)
-                            .locale($store.getters["lang/locale"])
-                            .fromNow(),
-                        })
-                      }}
-                    </span>
-                  </p>
-                  <b-taglist>
-                    <b-tag
-                      v-for="(tag, index) in post.tags"
-                      :key="index"
-                      :class="{ 'is-danger': tag === 'Draft' }"
-                    >
-                      <span class="font-bold">
-                        {{ tag }}
-                      </span>
-                    </b-tag>
-                  </b-taglist>
-                </div>
-                <p class="text-base mt-3">
-                  {{ post.summary }}
-                </p>
-              </div>
-            </div>
+            <post-card :post="post"></post-card>
           </div>
         </div>
 
@@ -94,12 +47,16 @@
 
 <script>
 import TheFooter from "~/components/TheFooter";
+import PostCard from "../components/blog/PostCard.vue";
 export default {
   name: "welcome",
+  transition: "slide",
+
   components: {
     TheFooter,
+    PostCard,
   },
-  transition: "slide",
+
   head() {
     return {
       title: this.$t("home"),

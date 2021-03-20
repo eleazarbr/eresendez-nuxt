@@ -1,46 +1,47 @@
 <template>
-  <div class="box post-card h-full px-3 py-2 sm:px-6 sm:py-4">
-    <div class="columns is-vcentered">
-      <div class="column">
-        <div class="text-xl sm:text-2xl font-bold has-text-black pb-2 leading-tight">
-          <nuxt-link
-            class="hover:underline"
-            :to="{ name: 'post.show', params: { slug: post.slug } }"
-            >{{ post.title }}</nuxt-link
-          >
-        </div>
-        <div class="text-base pb-2 leading-normal">{{ post.summary }}</div>
-        <div class="buttons text-sm sm:text-base mb-5">
-          <b-button
-            type="is-text"
-            tag="nuxt-link"
-            :to="{ name: 'post.show', params: { slug: post.slug } }"
-            >{{ $t("blog.read_more") }}</b-button
-          >
-        </div>
-        <div class="text-sm" style="opacity: 0.8">
-          <p>
+  <div class="card flex flex-col justify-between h-full">
+    <div class="card-image">
+      <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
+        <figure class="image is-3by1">
+          <img class="has-bg-cover" :src="`https://source.unsplash.com/${post.image}`" />
+        </figure>
+      </nuxt-link>
+    </div>
+    <div class="card-content">
+      <h3 class="title is-size-4">
+        <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
+          {{ post.title }}
+        </nuxt-link>
+      </h3>
+
+      <p class="subtitle is-size-6">
+        {{ post.summary }}
+      </p>
+    </div>
+    <div class="card-foot p-3">
+      <div class="flex justify-between items-center">
+        <p class="text-sm has-text-dark my-1">
+          <span>
             {{
-              $t("blog.posted_on", {
-                date: $moment(post.date)
+              $t("blog.last_update", {
+                date: $moment(post.updatedAt)
                   .locale($store.getters["lang/locale"])
-                  .format("LL"),
+                  .fromNow(),
               })
             }}
-          </p>
-        </div>
-
-        <!-- Tags -->
-        <div class="tags are-small mt-4">
-          <b-tag type="is-primary" v-for="(tag, index) in post.tags" :key="index">{{
-            tag
-          }}</b-tag>
-        </div>
-      </div>
-      <div class="column is-3" v-if="post.image">
-        <figure class="image is-128xauto">
-          <img :src="imagesDir + post.image" />
-        </figure>
+          </span>
+        </p>
+        <b-taglist>
+          <b-tag
+            v-for="(tag, index) in post.tags"
+            :key="index"
+            :class="{ 'is-danger': tag === 'Draft' }"
+          >
+            <span class="font-bold">
+              {{ tag }}
+            </span>
+          </b-tag>
+        </b-taglist>
       </div>
     </div>
   </div>
@@ -50,20 +51,12 @@
 export default {
   name: "PostCard",
   props: ["post"],
-  data: () => ({
-    imagesDir: "blog/",
-  }),
 };
 </script>
 
 <style lang="css" scoped>
-.post-card {
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
-}
-
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
+.card-foot {
+  background-color: transparent;
+  border-top: 1px solid #dbdbdb;
 }
 </style>

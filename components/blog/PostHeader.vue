@@ -1,13 +1,11 @@
 <template>
   <div class="hero is-black is-bold h-80">
-    <!-- Blurred image -->
+    <!-- Background image -->
     <div
       class="has-bg-image absolute w-full h-80"
-      :style="`
-          filter: blur(5px);
-          background-image: url('https://source.unsplash.com/${page.image}');
-        `"
+      :style="`background-image: url('https://source.unsplash.com/${page.image}');`"
     ></div>
+    <div class="absolute w-full h-80" style="background-color: rgba(0, 0, 0, 0.5)"></div>
 
     <!-- Hero content -->
     <div class="hero-body flex items-center">
