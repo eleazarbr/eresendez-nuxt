@@ -4,7 +4,6 @@
     <div class="hero is-small">
       <div class="hero-body">
         <div class="container">
-          <!-- Title -->
           <div class="has-text-black has-text-centered">
             <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
               {{ $t("welcome.title") }}
@@ -20,7 +19,22 @@
       </div>
     </div>
 
-    <!-- Latest blog posts section -->
+    <!-- Micro posts section -->
+    <div class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half-desktop">
+            <micro-post
+              v-for="(microPost, index) in microPosts"
+              :key="index"
+              :post="microPost"
+            ></micro-post>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog posts section -->
     <div class="section">
       <div class="container">
         <!-- Posts -->
@@ -41,6 +55,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
     <the-footer></the-footer>
   </div>
 </template>
@@ -48,6 +64,8 @@
 <script>
 import TheFooter from "~/components/TheFooter";
 import PostCard from "../components/blog/PostCard.vue";
+import MicroPost from "../components/microblog/MicroPost.vue";
+
 export default {
   name: "welcome",
   transition: "slide",
@@ -55,6 +73,7 @@ export default {
   components: {
     TheFooter,
     PostCard,
+    MicroPost,
   },
 
   head() {
@@ -98,8 +117,15 @@ export default {
       .limit(10)
       .fetch();
 
+    const microPosts = await $content("microblog")
+      .only(["title", "slug", "summary", "tags", "createdAt", "updatedAt"])
+      .sortBy("updatedAt", "desc")
+      .limit(5)
+      .fetch();
+
     return {
       posts,
+      microPosts,
     };
   },
 };
