@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { scrollBehavior } from '~/utils'
 import VueAnalytics from 'vue-analytics'
+import { scrollBehavior } from '~/utils'
 
 Vue.use(Router)
-
 const page = (path) => () =>
   import(`~/pages/${path}`).then((m) => m.default || m)
 
@@ -12,6 +11,16 @@ const routes = [
   { path: '/', name: 'web.home', component: page('welcome.vue') },
   { path: '/blog', name: 'blog.index', component: page('blog/index.vue') },
   { path: '/blog/:slug', name: 'post.show', component: page('blog/_slug.vue') },
+  {
+    path: '/microblog',
+    name: 'microblog.index',
+    redirect: { name: 'web.home' }
+  },
+  {
+    path: '/microblog/:slug',
+    name: 'micropost.show',
+    component: page('microblog/_slug.vue')
+  },
 
   { path: '/ideas', name: 'web.ideas', component: page('web/ideas.vue') },
   {

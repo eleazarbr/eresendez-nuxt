@@ -12,7 +12,16 @@
           <br />
           {{ post.summary }}
           <br />
-          <small> <a>View</a> · <a>Reply</a> · <a>Bookmark</a> · {{ createdAt }}</small>
+          <small>
+            <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">
+              View
+            </router-link>
+            ·
+            <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">
+              Reply
+            </router-link>
+            · {{ createdAt }}</small
+          >
         </p>
       </div>
     </div>
