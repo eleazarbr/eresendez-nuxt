@@ -14,13 +14,9 @@
           <br />
           <small>
             <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">
-              View
+              {{ $t("buttons.view_more") }}
             </router-link>
-            ·
-            <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">
-              Reply
-            </router-link>
-            · {{ createdAt }}</small
+            · {{ date }}</small
           >
         </p>
       </div>
@@ -32,7 +28,7 @@ export default {
   name: "MicroPost",
   props: ["post"],
   computed: {
-    createdAt() {
+    date() {
       return this.$moment(this.post.createdAt)
         .locale(this.$store.getters["lang/locale"])
         .format("lll");

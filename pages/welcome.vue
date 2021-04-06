@@ -119,7 +119,7 @@ export default {
 
     const microPosts = await $content("microblog")
       .only(["title", "slug", "summary", "tags", "createdAt", "updatedAt"])
-      .sortBy("updatedAt", "desc")
+      .sortBy("createdAt", "desc")
       .limit(5)
       .fetch();
 

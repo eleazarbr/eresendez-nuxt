@@ -6,10 +6,10 @@ tags:
 ---
 
 Sobre el estilo de las barras de desplazamiento: 
-- Los motores de navegadores basados en WebKit incorporaron cosas como `::-webkit-scrollbar`. Funciona en el panorama actual de Safari, Chrome. [^1]
-- Los estándares finalmente se han involucrado y esas opciones de estilo están cubiertas por propiedades sin prefijo como: `scrollbar-color` y `scrollbar-width`. [^2]
+- Los motores de navegadores basados en **WebKit** incorporaron cosas como `::-webkit-scrollbar`. Lo anterior funciona para Safari, Chrome, etc. [^1]
+- Los estándares finalmente se han involucrado y esas opciones de estilo están cubiertas por propiedades _sin prefijo_ como: `scrollbar-color` y `scrollbar-width`. [^2]
 
-Actualmente, las barras de desplazamiento pueden personalizarse en Chrome, Edge y Safari mediante el prefijo pseudo-element `-webkit-scrollbar`: [^3]
+Actualmente, las barras de desplazamiento **pueden personalizarse en Chrome, Edge y Safari** mediante el prefijo pseudo-element `-webkit-scrollbar`: [^3]
 
 ```css
 body::-webkit-scrollbar {
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 ```
 
-Finalmente, esta [entrada en medium][4] aporta algunas ideas, _que no he probado del todo_ y unas librerías en JavaScript que pueden ser una opción mas viable en temas de compatibilidad.
+El siguiente [artículo][4] presenta algunas librerías, en caso de querer utilizar un scrollbar independiente, con algunas opciones extra para personalizarlo:
 - [perfect-scrollbar][5]
 - [simplebar][6]
 

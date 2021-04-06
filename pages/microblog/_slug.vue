@@ -2,17 +2,15 @@
   <div class="section">
     <div class="container">
       <div class="columns is-centered">
-        <div class="column is-narrow">
-          <p class="has-text-dark is-size-7">
-            {{ createdAt }}
-          </p>
-        </div>
         <div class="column is-half-desktop">
           <!-- Micro post -->
           <div class="content has-text-black">
             <h1 class="title">
               {{ page.title }}
             </h1>
+            <p class="has-text-dark is-size-6">
+              {{ createdAt }}
+            </p>
             <nuxt-content :document="page"></nuxt-content>
           </div>
 
