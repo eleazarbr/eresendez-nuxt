@@ -74,7 +74,7 @@ export default {
     var slug = params.slug;
     const page = await $content("microblog", slug).fetch();
     const [prev, next] = await $content("microblog")
-      .only(["title", "summary", "slug"])
+      .only(["title", "summary", "slug", "tags", "updatedAt"])
       .sortBy("updatedAt", "asc")
       .surround(slug)
       .fetch();

@@ -48,7 +48,7 @@
                 v-for="(post, index) in posts"
                 :key="index"
               >
-                <post-card :post="post"></post-card>
+                <post-card :post="post" show-route="post.show"></post-card>
               </div>
             </div>
           </div>

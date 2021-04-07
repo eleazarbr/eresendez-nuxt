@@ -106,7 +106,7 @@ export default {
     var slug = params.slug;
     const page = await $content("blog", slug).fetch();
     const [prev, next] = await $content("blog")
-      .only(["title", "summary", "slug"])
+      .only(["title", "summary", "slug", "image", "tags", "updatedAt"])
       .sortBy("updatedAt", "asc")
       .surround(slug)
       .fetch();
