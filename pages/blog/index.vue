@@ -28,6 +28,7 @@
                     type="search"
                     autocomplete="off"
                     icon="search-web"
+                    :loading="isLoading"
                     :placeholder="$t('search')"
                     @input="search"
                   ></b-input>
@@ -37,62 +38,21 @@
           </div>
         </div>
 
-        <!-- Blog posts -->
-        <b-table
-          detailed
-          default-sort="updatedAt"
-          default-sort-direction="desc"
-          :loading="table.loading"
-          :hoverable="true"
-          :striped="true"
-          :narrowed="true"
-          :show-detail-icon="true"
-          :data="posts"
-        >
-          <template slot-scope="props">
-            <b-table-column :label="$t('blog.title')">
-              <nuxt-link
-                class="hover:underline"
-                :to="{
-                  name: 'post.show',
-                  params: { slug: props.row.slug },
-                }"
-                >{{ props.row.title }}</nuxt-link
+        <!-- Blog posts section -->
+        <div class="section">
+          <div class="container">
+            <!-- Posts -->
+            <div class="columns is-multiline is-centered">
+              <div
+                class="column is-4-desktop is-6-tablet"
+                v-for="(post, index) in posts"
+                :key="index"
               >
-            </b-table-column>
-            <b-table-column :label="$t('blog.tags')">
-              <b-taglist>
-                <b-tag
-                  v-for="(tag, index) in props.row.tags"
-                  :key="index"
-                  type="is-dark"
-                  class="is-light cursor-pointer"
-                  :class="{ 'is-danger': tag === 'Draft' }"
-                  @click.native="filterByTag(tag)"
-                  >{{ tag }}</b-tag
-                >
-              </b-taglist>
-            </b-table-column>
-            <b-table-column :label="$t('blog.updated_at')" sortable field="updatedAt">{{
-              $moment(props.row.updatedAt)
-                .locale($store.getters["lang/locale"])
-                .format("LL")
-            }}</b-table-column>
-          </template>
-          <template slot="detail" slot-scope="props">
-            <article class="media">
-              <div class="media-content">{{ props.row.summary }}</div>
-            </article>
-          </template>
-          <template slot="empty">
-            <div class="section has-text-centered">
-              <div v-if="!table.loading">
-                <b-icon icon="table"></b-icon>
-                <p class="font-bold">No se encontraron registros.</p>
+                <post-card :post="post"></post-card>
               </div>
             </div>
-          </template>
-        </b-table>
+          </div>
+        </div>
 
         <!-- Subscribe form -->
         <div v-if="isSubscribeActive" class="section">
@@ -109,11 +69,14 @@
 
 <script>
 import SubscribeForm from "~/components/blog/SubscribeForm";
+import PostCard from "~/components/blog/PostCard.vue";
+
 export default {
   name: "blog",
   transition: "slide",
   components: {
     SubscribeForm,
+    PostCard,
   },
 
   head() {
@@ -121,8 +84,8 @@ export default {
   },
 
   data: () => ({
-    table: { loading: false },
     posts: [],
+    isLoading: false,
     searchQuery: "",
     tag: null,
     isSubscribeActive: false,
@@ -142,42 +105,35 @@ export default {
       this.getPosts();
     },
 
-    async filterByTag(tag) {
-      this.table.loading = true;
-      this.tag = tag;
-      this.posts = await this.queryPosts()
-        .where({ tags: { $contains: tag } })
-        .fetch();
-      this.table.loading = false;
-    },
+    // async filterByTag(tag) {
+    //   this.tag = tag;
+    //   this.posts = await this.queryPosts()
+    //     .where({ tags: { $contains: tag } })
+    //     .fetch();
+    // },
+
+    // getTags() {
+    //   var tags = this.posts.map((post) => post.tags);
+    //   tags = _.sortBy(_.uniq(_.flatten(tags)));
+    //   this.tags = tags;
+    // },
 
     async searchPost() {
-      this.table.loading = true;
+      this.isLoading = true;
       this.posts = await this.queryPosts().search("title", this.searchQuery).fetch();
-      this.table.loading = false;
+      this.isLoading = false;
     },
 
     async getPosts() {
-      this.table.loading = true;
+      this.isLoading = true;
       this.posts = await this.queryPosts().fetch();
-      this.table.loading = false;
-    },
-
-    getTags() {
-      var tags = this.posts.map((post) => post.tags);
-      tags = _.sortBy(_.uniq(_.flatten(tags)));
-      this.tags = tags;
+      this.isLoading = false;
     },
 
     queryPosts() {
-      return this.$content("blog").only([
-        "title",
-        "summary",
-        "slug",
-        "date",
-        "tags",
-        "updatedAt",
-      ]);
+      return this.$content("blog")
+        .sortBy("updatedAt", "desc")
+        .only(["title", "summary", "image", "slug", "date", "tags", "updatedAt"]);
     },
   },
 };

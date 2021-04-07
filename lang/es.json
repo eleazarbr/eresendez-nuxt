@@ -12,7 +12,7 @@
     "tweet": "Soy @eleazarbr en Twitter",
     "tags": "Etiquetas",
     "share": "Compartir con amigos:",
-    "last_update": "Última actualización {date}",
+    "last_update": "Últ. actualización {date}",
     "published_at": "Publicado el {date}",
     "thanks": "Gracias @eleazarbr. {title} {url}",
     "title": "Título",

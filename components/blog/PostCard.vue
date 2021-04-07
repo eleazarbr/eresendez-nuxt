@@ -7,12 +7,14 @@
         </figure>
       </nuxt-link>
     </div>
-    <div class="card-content">
-      <h3 class="title is-size-4">
-        <nuxt-link :to="{ name: 'post.show', params: { slug: post.slug } }">
-          {{ post.title }}
-        </nuxt-link>
-      </h3>
+    <div class="card-content content h-full">
+      <nuxt-link
+        class="title is-size-4 cursor-pointer"
+        tag="h3"
+        :to="{ name: 'post.show', params: { slug: post.slug } }"
+      >
+        {{ post.title }}
+      </nuxt-link>
 
       <p class="subtitle is-size-6">
         {{ post.summary }}
@@ -31,7 +33,7 @@
             }}
           </span>
         </p>
-        <b-taglist>
+        <b-taglist class="is-centered">
           <b-tag
             v-for="(tag, index) in post.tags"
             :key="index"
