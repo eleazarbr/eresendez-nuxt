@@ -1,26 +1,32 @@
 <template>
-  <div class="section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-half-desktop">
-          <!-- Micro post -->
-          <div class="content has-text-black">
-            <h1 class="title">
-              {{ page.title }}
-            </h1>
-            <p class="has-text-dark is-size-6">
-              {{ createdAt }}
-            </p>
-            <nuxt-content :document="page"></nuxt-content>
-          </div>
+  <div>
+    <div class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half-desktop">
+            <!-- Micro post -->
+            <div class="content has-text-black">
+              <h1 class="title">
+                {{ page.title }}
+              </h1>
+              <p class="has-text-dark is-size-6">
+                {{ createdAt }}
+              </p>
+              <nuxt-content :document="page"></nuxt-content>
+            </div>
 
-          <post-footer :page="page"></post-footer>
+            <post-footer :page="page"></post-footer>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Surround posts -->
+    <post-surround :prev="prev" :next="next" show-route="micropost.show"></post-surround>
   </div>
 </template>
 <script>
+import PostSurround from "~/components/web/PostSurround.vue";
 import PostFooter from "~/components/web/PostFooter";
 export default {
   name: "micropost",
@@ -28,6 +34,7 @@ export default {
 
   components: {
     PostFooter,
+    PostSurround,
   },
 
   computed: {
@@ -66,9 +73,16 @@ export default {
   async asyncData({ $content, params }) {
     var slug = params.slug;
     const page = await $content("microblog", slug).fetch();
+    const [prev, next] = await $content("microblog")
+      .only(["title", "summary", "slug"])
+      .sortBy("updatedAt", "asc")
+      .surround(slug)
+      .fetch();
 
     return {
       page,
+      prev,
+      next,
     };
   },
 };

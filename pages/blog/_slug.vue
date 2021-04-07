@@ -56,42 +56,7 @@
     </div>
 
     <!-- Surround posts -->
-    <div class="hero is-black is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-mobile content">
-            <div class="column is-6">
-              <div v-if="next" class="text-left">
-                <b-icon icon="arrow-left" size="is-small"></b-icon>
-                <p class="text-base font-bold leading-5">
-                  <nuxt-link
-                    class="has-text-white"
-                    :to="{ name: 'post.show', params: { slug: next.slug } }"
-                  >
-                    <span>{{ next.title }}</span>
-                  </nuxt-link>
-                </p>
-                <p class="text-sm">{{ next.summary | truncate(100) }}</p>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div v-if="prev" class="text-right">
-                <b-icon icon="arrow-right" size="is-small"></b-icon>
-                <p class="text-base font-bold leading-5">
-                  <nuxt-link
-                    class="has-text-white"
-                    :to="{ name: 'post.show', params: { slug: prev.slug } }"
-                  >
-                    <span>{{ prev.title }}</span>
-                  </nuxt-link>
-                </p>
-                <p class="text-sm">{{ prev.summary | truncate(100) }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <post-surround :prev="prev" :next="next" show-route="post.show"></post-surround>
   </div>
 </template>
 <script>
@@ -99,12 +64,14 @@ import TableOfContents from "~/components/blog/TableOfContents.vue";
 import Breadcrumbs from "~/components/web/Breadcrumbs";
 import PostHeader from "~/components/blog/PostHeader.vue";
 import PostFooter from "~/components/web/PostFooter";
+import PostSurround from "~/components/web/PostSurround.vue";
 
 export default {
   name: "post",
   transition: "slide",
   components: {
     TableOfContents,
+    PostSurround,
     PostHeader,
     PostFooter,
     Breadcrumbs,
@@ -138,10 +105,9 @@ export default {
   async asyncData({ $content, params }) {
     var slug = params.slug;
     const page = await $content("blog", slug).fetch();
-
     const [prev, next] = await $content("blog")
       .only(["title", "summary", "slug"])
-      .sortBy("date", "asc")
+      .sortBy("updatedAt", "asc")
       .surround(slug)
       .fetch();
 
