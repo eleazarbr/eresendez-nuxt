@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="buttons is-centered">
-          <b-button type="is-primary" tag="router-link" :to="{ name: 'blog.index' }">
+          <b-button type="is-primary" tag="router-link" :to="{ name: 'microblog.index' }">
             {{ $t("microblog.see_all") }}
           </b-button>
         </div>

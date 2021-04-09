@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/microblog',
     name: 'microblog.index',
-    redirect: { name: 'web.home' }
+    component: page('microblog/index.vue')
   },
   {
     path: '/microblog/:slug',

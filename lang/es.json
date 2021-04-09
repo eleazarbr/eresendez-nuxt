@@ -26,6 +26,7 @@
   "navbar": {
     "home": "Inicio",
     "blog": "Blog",
+    "microblog": "Microblog",
     "wiki": "Wiki",
     "ideas": "Ideas",
     "projects": "Proyectos",

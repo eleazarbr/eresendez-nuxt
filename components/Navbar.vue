@@ -12,6 +12,9 @@
       <b-navbar-item tag="router-link" :to="{ name: 'blog.index' }">
         {{ $t("navbar.blog") }}
       </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'microblog.index' }">
+        {{ $t("navbar.microblog") }}
+      </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }">
         {{ $t("navbar.wiki") }}
       </b-navbar-item>
