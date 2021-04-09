@@ -65,6 +65,7 @@
               v-for="(section, sectionIndex) in cv.sections"
               :key="sectionIndex"
             >
+              <div v-if="section.has_break_page" style="break-before: always"></div>
               <h3>{{ section.title[locale] }}</h3>
               <div
                 class="columns is-mobile"
