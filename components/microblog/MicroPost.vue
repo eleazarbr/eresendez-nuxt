@@ -14,7 +14,7 @@
           <br />
           <small>
             <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">
-              {{ $t("buttons.view_more") }}
+              {{ $t("microblog.continue_reading") }}
             </router-link>
             · {{ date }}</small
           >

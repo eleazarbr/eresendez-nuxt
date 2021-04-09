@@ -1,11 +1,16 @@
 <template>
-  <b-navbar-dropdown :label="locales[locale]" arrowless :collapsible="true">
+  <b-navbar-dropdown
+    arrowless
+    :collapsible="true"
+    :label="$t(`navbar.languages.${locale}`)"
+  >
     <b-navbar-item
       v-for="(value, key) in locales"
-      :key="key"
+      v-show="key != locale"
       href="#"
+      :key="key"
       @click.prevent="setLocale(key)"
-      >{{ value }}</b-navbar-item
+      >{{ $t(`navbar.languages.${key}`) }}</b-navbar-item
     >
   </b-navbar-dropdown>
 </template>
@@ -24,7 +29,6 @@ export default {
     setLocale(locale) {
       if (this.$i18n.locale !== locale) {
         loadMessages(locale);
-
         this.$store.dispatch("lang/setLocale", { locale });
       }
     },

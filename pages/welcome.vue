@@ -1,17 +1,14 @@
 <template>
   <div>
     <!-- Hero section -->
-    <div class="hero is-small">
+    <div class="hero is-primary is-bold is-small">
       <div class="hero-body">
         <div class="container">
-          <div class="has-text-black has-text-centered">
-            <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
-              {{ $t("welcome.title") }}
-            </p>
-            <p class="text-xl sm:text-xl md:text-2xl font-bold mt-2">
+          <div class="content has-text-black has-text-centered">
+            <h1 class="title is-size-4">
               {{ $t("welcome.subtitle") }}
-            </p>
-            <p class="text-lg">
+            </h1>
+            <p class="subtitle">
               {{ $t("welcome.description") }}
             </p>
           </div>
@@ -31,6 +28,11 @@
             ></micro-post>
           </div>
         </div>
+        <div class="buttons is-centered">
+          <b-button type="is-primary" tag="router-link" :to="{ name: 'blog.index' }">
+            {{ $t("microblog.see_all") }}
+          </b-button>
+        </div>
       </div>
     </div>
 
@@ -40,7 +42,7 @@
         <!-- Posts -->
         <div class="columns is-multiline is-centered">
           <div
-            class="column is-6-desktop is-12-tablet"
+            class="column is-5-desktop is-12-tablet"
             v-for="(post, index) in posts"
             :key="index"
           >
@@ -49,8 +51,8 @@
         </div>
 
         <div class="buttons is-centered">
-          <b-button type="is-text" tag="router-link" :to="{ name: 'blog.index' }">
-            {{ $t("buttons.view_more") }}
+          <b-button type="is-primary" tag="router-link" :to="{ name: 'blog.index' }">
+            {{ $t("blog.see_all") }}
           </b-button>
         </div>
       </div>
@@ -114,13 +116,13 @@ export default {
     const posts = await $content("blog")
       .only(["title", "summary", "slug", "date", "tags", "image", "updatedAt"])
       .sortBy("updatedAt", "desc")
-      .limit(10)
+      .limit(5)
       .fetch();
 
     const microPosts = await $content("microblog")
       .only(["title", "slug", "summary", "tags", "createdAt", "updatedAt"])
       .sortBy("createdAt", "desc")
-      .limit(5)
+      .limit(3)
       .fetch();
 
     return {

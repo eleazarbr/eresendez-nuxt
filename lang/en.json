@@ -20,7 +20,8 @@
     "updated_at": "Updated At",
     "toc_title": "Table of contents:",
     "edit_page": "Edit this page on GitHub:",
-    "say_thanks": "If this article was helpful,"
+    "say_thanks": "If this article was helpful,",
+    "see_all": "View all blog posts"
   },
   "navbar": {
     "home": "Home",
@@ -28,11 +29,14 @@
     "wiki": "Wiki",
     "ideas": "Ideas",
     "projects": "Projects",
-    "resume": "Resume"
+    "resume": "Resume",
+    "languages": {
+      "en": "🇺🇸",
+      "es": "🇲🇽"
+    }
   },
   "welcome": {
-    "title": "I'm Eleazar 👋",
-    "subtitle": "Full Stack Developer based in Mexico",
+    "subtitle": "Full Stack Developer 👋",
     "description": "Laravel & Vue. Powered by ☕️"
   },
   "buttons": {
@@ -47,5 +51,9 @@
   },
   "cv": {
     "dependencies": "Dependencies: {dependencies}"
+  },
+  "microblog": {
+    "see_all": "View all microposts",
+    "continue_reading": "Continue reading"
   }
 }
