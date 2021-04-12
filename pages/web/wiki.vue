@@ -30,10 +30,7 @@
     <!-- Content -->
     <div class="column is-three-fifths">
       <div class="section">
-        <div v-if="currentRouteName === 'web.wiki'">
-          <nuxt-content class="content" :document="page" />
-        </div>
-        <nuxt />
+        <nuxt></nuxt>
       </div>
     </div>
   </div>
@@ -41,7 +38,6 @@
 
 <script>
 import WikiMenu from "~/components/web/WikiMenu";
-import menu from "~/static/data/wiki-menu.json";
 export default {
   name: "wiki",
   transition: "slide",
@@ -57,18 +53,15 @@ export default {
     },
   }),
 
-  async asyncData({ params, $content }) {
-    const page = await $content("wiki/introduction").fetch();
-    return {
-      menu: _.orderBy(menu, ["name"], "asc"),
-      page,
-    };
-  },
+  async asyncData({ $content }) {
+    var articles = await $content("wiki", { deep: true })
+      .only(["title", "category", "slug"])
+      .fetch();
+    var menu = _.groupBy(articles, "category");
 
-  computed: {
-    currentRouteName() {
-      return this.$route.name;
-    },
+    return {
+      menu: menu,
+    };
   },
 };
 </script>

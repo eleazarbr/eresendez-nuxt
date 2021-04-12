@@ -15,7 +15,13 @@
       <b-navbar-item tag="router-link" :to="{ name: 'microblog.index' }">
         {{ $t("navbar.microblog") }}
       </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'web.wiki' }">
+      <b-navbar-item
+        tag="router-link"
+        :to="{
+          name: 'wiki.article',
+          params: { category: 'introduction', slug: 'introduction' },
+        }"
+      >
         {{ $t("navbar.wiki") }}
       </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }">
