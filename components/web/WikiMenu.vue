@@ -4,19 +4,19 @@
       <b-menu-item v-for="(category, categoryKey) in menu" :key="categoryKey">
         <template slot="label">
           <span class="font-bold">
-            {{ categoryKey }}
+            {{ categoryKey | capitalize }}
           </span>
         </template>
         <b-menu-item
           v-for="(article, articleKey) in category"
           tag="nuxt-link"
           active-class="is-active"
-          :key="articleKey"
           :to="{
             name: 'wiki.article',
-            params: { category: categoryKey, slug: article.slug },
+            params: { category: article.dir, slug: article.slug },
           }"
           :label="article.title"
+          :key="articleKey"
           @click.native="$emit('clicked')"
         ></b-menu-item>
       </b-menu-item>
@@ -27,14 +27,5 @@
 export default {
   name: "WikiMenu",
   props: ["menu"],
-
-  mounted() {
-    // TODO: Support subcategories and load the menu dynamically
-    // var firstCategory = this.menu[0];
-    // this.$router.push({
-    //   name: "wiki.article",
-    //   params: { category: firstCategory.slug, slug: firstCategory.articles[0]["slug"] },
-    // });
-  },
 };
 </script>

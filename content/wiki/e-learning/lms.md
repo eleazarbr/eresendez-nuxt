@@ -1,7 +1,5 @@
 ---
 title: LMS
-slug: lms
-category: e-learning
 ---
 
 ## Choosing an LMS

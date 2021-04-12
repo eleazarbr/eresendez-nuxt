@@ -1,7 +1,5 @@
 ---
 title: Books
-slug: reference
-category: books
 ---
 
 Me encanta leer y tomar notas de lo que estoy leyendo.

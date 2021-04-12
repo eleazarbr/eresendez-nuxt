@@ -1,7 +1,5 @@
 ---
 title: Vue
-slug: vue
-category: frameworks
 ---
 
 ## Packages

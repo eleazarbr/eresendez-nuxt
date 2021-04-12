@@ -1,7 +1,5 @@
 ---
 title: HTML5
-slug: html
-category: web
 ---
 
 ## Links

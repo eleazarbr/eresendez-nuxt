@@ -1,7 +1,5 @@
 ---
 title: Design
-slug: design-inspiration
-category: design
 ---
 
 ## Websites

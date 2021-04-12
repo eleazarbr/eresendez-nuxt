@@ -1,7 +1,5 @@
 ---
 title: Pricing
-slug: pricing
-category: business
 ---
 
 ## Nice pricing pages

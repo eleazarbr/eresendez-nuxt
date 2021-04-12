@@ -1,7 +1,5 @@
 ---
 title: Introducción
-slug: introduction
-category: introduction
 ---
 
 # Introducción 🌱
@@ -12,6 +10,9 @@ Existe una [comunidad de DigitalGardens en Reddit][2] que analiza las herramient
 
 Aquí encontrarás (próximamente) una [lista de wikis]() que me gustaron como inspiración.
 
-[1]: https://joelhooks.com/digital-garden
-[2]: https://www.reddit.com/r/DigitalGardens/
-[3]: https://numinous.productions/ttft/
+Link a [content wiki][5]
+
+[1]:	https://joelhooks.com/digital-garden
+[2]:	https://www.reddit.com/r/DigitalGardens/
+[3]:	https://numinous.productions/ttft/
+[5]:	/wiki/programming/git

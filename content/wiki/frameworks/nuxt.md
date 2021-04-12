@@ -1,7 +1,5 @@
 ---
 title: Nuxt.js
-slug: nuxt
-category: frameworks
 ---
 
 ## Links

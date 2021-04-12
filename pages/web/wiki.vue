@@ -55,10 +55,15 @@ export default {
 
   async asyncData({ $content }) {
     var articles = await $content("wiki", { deep: true })
-      .only(["title", "category", "slug"])
+      .only(["category", "dir", "path", "slug", "title"])
       .fetch();
-    var menu = _.groupBy(articles, "category");
 
+    articles = articles.map((article) => {
+      article.dir = article.dir.replace("/wiki/", "");
+      return article;
+    });
+
+    var menu = _.groupBy(articles, "dir");
     return {
       menu: menu,
     };

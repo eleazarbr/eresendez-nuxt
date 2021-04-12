@@ -1,7 +1,5 @@
 ---
 title: SCORM
-slug: scorm
-category: e-learning
 ---
 
 ## Notes

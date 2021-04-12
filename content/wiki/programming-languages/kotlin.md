@@ -1,7 +1,5 @@
 ---
 title: Kotlin
-slug: kotlin
-category: programming-languages
 ---
 
 ## Recommended IDE

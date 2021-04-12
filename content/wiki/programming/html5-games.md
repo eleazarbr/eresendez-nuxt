@@ -1,7 +1,5 @@
 ---
 title: HTML5 Games Development
-slug: html5-games
-category: programming
 ---
 
 ## Links

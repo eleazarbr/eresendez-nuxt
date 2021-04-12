@@ -1,7 +1,5 @@
 ---
 title: My Workflowy
-slug: my-workflow
-category: sharing
 ---
 
 - [Ideas][1] - Ideas que quiero traer a la existencia

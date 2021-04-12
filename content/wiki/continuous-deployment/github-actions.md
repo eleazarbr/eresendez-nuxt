@@ -1,7 +1,5 @@
 ---
 title: GitHub Actions
-slug: github-actions
-category: continuous-deployment
 ---
 
 ## Links

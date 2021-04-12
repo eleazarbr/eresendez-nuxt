@@ -1,7 +1,5 @@
 ---
 title: Composer
-slug: composer
-category: package-manager
 ---
 
 ## Notes

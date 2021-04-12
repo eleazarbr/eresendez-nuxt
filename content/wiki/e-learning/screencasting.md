@@ -1,7 +1,5 @@
 ---
 title: Screencasting
-slug: screencasting
-category: e-learning
 ---
 
 ## Notes

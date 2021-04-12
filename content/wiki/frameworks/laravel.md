@@ -1,7 +1,5 @@
 ---
 title: Laravel
-slug: laravel
-category: frameworks
 ---
 
 ## Gists

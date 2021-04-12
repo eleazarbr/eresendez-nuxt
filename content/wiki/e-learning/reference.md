@@ -1,7 +1,5 @@
 ---
 title: Courses
-slug: reference
-category: e-learning
 ---
 
 ## Links

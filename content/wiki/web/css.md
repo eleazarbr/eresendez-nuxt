@@ -1,7 +1,5 @@
 ---
 title: CSS
-slug: css
-category: web
 ---
 
 ## Links

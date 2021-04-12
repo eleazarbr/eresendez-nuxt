@@ -1,7 +1,5 @@
 ---
 title: PHP
-slug: php
-category: programming-languages
 ---
 
 ## Links

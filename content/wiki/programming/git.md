@@ -1,7 +1,5 @@
 ---
 title: Git
-slug: git
-category: programming
 ---
 
 Me gusta Git para el control de versiones. Uso el control de versiones en cualquier proyecto que hago.

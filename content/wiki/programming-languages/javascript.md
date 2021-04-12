@@ -1,7 +1,5 @@
 ---
 title: JavaScript
-slug: javascript
-category: programming-languages
 ---
 
 ## Misc
