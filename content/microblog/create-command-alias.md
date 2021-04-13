@@ -1,6 +1,7 @@
 ---
-title: 
+title: Create command alias
 summary: Algo más que no quiero recordar. ¿Cómo crear alias en mi terminal?
+updatedAt: 2021-04-13 11:40:04
 tags:
 - bash
 ---

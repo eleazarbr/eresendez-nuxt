@@ -1,7 +1,7 @@
 <template>
   <div class="columns h-screen">
     <div class="column is-narrow">
-      <div class="p-3 bg-gray-100 h-full">
+      <div class="has-background-light h-full p-3">
         <!-- Mobile menu -->
         <div class="is-hidden-tablet">
           <div class="flex justify-between items-center">

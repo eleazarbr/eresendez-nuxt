@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="content text-sm sm:text-base md:text-base">
+    <div class="content">
       <!-- Article title -->
       <h2 class="text-2xl sm:text-3xl leading-tight font-bold pb-5">
         {{ page.title }}
@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: "article",
+  name: "wiki-article",
   transition: "slide",
 
   async asyncData({ $content, params }) {

@@ -1,4 +1,13 @@
 {
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+"editor.formatOnPaste": true,
+"spellright.language": [
+    "en",
+    "es"
+],
+"spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+],
 }
