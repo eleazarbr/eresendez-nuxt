@@ -1,13 +1,13 @@
 ---
 title: ¿Cómo configurar un Laravel Project en Digital Ocean?
-summary: Guía sencilla de pasos que tampoco quiero recordar para configurar un Laravel Project en Digital Ocean.
 tags:
 - laravel
 ---
 
-Probablemente esto se convierta en un blog-post.
+Guía sencilla de pasos que tampoco quiero recordar para configurar un Laravel Project en Digital Ocean.
+<!--more-->
 
-Guía sencilla de pasos que no quiero recordar; lo escribo aquí para consultarlo despues cuando sea necesario.
+Probablemente esto se convierta en un blog-post.
 
 **Instalar la última versión de Laravel localmente**
 `composer create-project --prefer-dist laravel/laravel appName`

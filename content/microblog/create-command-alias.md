@@ -1,12 +1,12 @@
 ---
-title: Create command alias
-summary: Algo más que no quiero recordar. ¿Cómo crear alias en mi terminal?
+title: Create command 
 updatedAt: 2021-04-13 11:40:04
 tags:
 - bash
 ---
 
 Algo más que no quiero recordar: ¿Cómo crear alias en mi terminal?
+<!--more-->
 
 ```bash
 # Create alias in ubuntu

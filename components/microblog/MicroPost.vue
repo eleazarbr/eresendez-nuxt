@@ -10,7 +10,7 @@
         <p>
           <strong>Eleazar Reséndez</strong>
           <br />
-          {{ post.summary }}
+          {{ post.description }}
           <br />
           <small>
             <router-link :to="{ name: 'micropost.show', params: { slug: post.slug } }">

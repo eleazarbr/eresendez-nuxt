@@ -1,10 +1,12 @@
 ---
 title: Gamedev.js Jam 2021 Let's make HTML5 games!
-summary: Gamesdev.js Jam. Crea un web game en 13 días…
 tags:
 - html
 - javascript
 ---
+
+Gamesdev.js Jam. Crea un web game en 13 días…
+<!--more-->
 
 El tema de este concurso será anunciado el 13 de abril. 
 

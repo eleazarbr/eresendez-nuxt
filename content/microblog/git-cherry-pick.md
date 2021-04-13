@@ -6,7 +6,8 @@ tags:
   - git
 ---
 
-Add more here tag for description summary…
+Workflow para hacer un Cherry Pick en Git.
+<!--more-->
 
 ```Git
 git checkout master...a-good-feature  [checkout the common ancestor]

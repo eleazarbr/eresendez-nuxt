@@ -1,11 +1,12 @@
 ---
 title: Personalización del Scrollbar
-summary: Acerca de la personalización de los Scrollbars con CSS…
 tags:
 - css
 ---
 
-Sobre el estilo de las barras de desplazamiento: 
+Sobre la personalización de los Scrollbars con CSS: 
+<!--more-->
+
 - Los motores de navegadores basados en **WebKit** incorporaron cosas como `::-webkit-scrollbar`. Lo anterior funciona para Safari, Chrome, etc. [^1]
 - Los estándares finalmente se han involucrado y esas opciones de estilo están cubiertas por propiedades _sin prefijo_ como: `scrollbar-color` y `scrollbar-width`. [^2]
 

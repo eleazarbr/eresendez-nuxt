@@ -1,11 +1,11 @@
 ---
 title:
-summary: Recuerden que existe $model->refresh() en Laravel.
 tags:
 - laravel
 ---
 
-Pequeños detalles que te ahorran horas de debuggear :smile:
+Pequeños detalles que te ahorran horas de debuggear :smile: Recuerden que existe $model->refresh() en Laravel.
+<!--more-->
 
 Espero no le suceda a alguien más y recuerde que existe la función `$model->refresh()`. [^1]
 

@@ -1,11 +1,11 @@
 ---
 title: Mac OS xcrun error invalid active developer path, missing xcrun
-summary: Despues de instalar las ultimas actualizaciones en Mac OS, sucede el error Mac OS xcrun error invalid active developer path, missing xcrun…
 tags:
 - git
 ---
 
-Casi siempre, despues de instalar las ultimas actualizaciones en Mac OS, sucede el siguiente error:
+Casi siempre, despues de instalar las ultimas actualizaciones en Mac OS, sucede el siguiente error: Mac OS xcrun error invalid active developer path, missing xcrun…
+<!--more-->
 
 ```bash
 git pull

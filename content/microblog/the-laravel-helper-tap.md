@@ -1,9 +1,11 @@
 ---
 title:
-summary: Una manera de obtener el mismo resultado con una sola linea de código. Laravel helper method tap().
 tags:
 - laravel
 ---
+
+Una manera de obtener el mismo resultado con una sola linea de código. Laravel helper method tap().
+<!--more-->
 
 Interesante entrada en donde se explica el uso del helper `tap` en Laravel. [^1]
 

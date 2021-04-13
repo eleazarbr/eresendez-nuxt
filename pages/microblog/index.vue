@@ -27,7 +27,7 @@ export default {
 
   async asyncData({ $content }) {
     const posts = await $content("microblog")
-      .only(["title", "slug", "summary", "tags", "createdAt", "updatedAt"])
+      .only(["title", "slug", "description", "tags", "createdAt", "updatedAt"])
       .sortBy("createdAt", "desc")
       .fetch();
 
