@@ -1,5 +1,6 @@
 ---
 title: Mac OS xcrun error invalid active developer path, missing xcrun
+createdAt: 2021-04-05 09:54
 tags:
 - git
 ---

@@ -1,5 +1,6 @@
 ---
 title: Create command 
+createdAt: 2021-04-11 15:56
 updatedAt: 2021-04-13 11:40:04
 tags:
 - bash

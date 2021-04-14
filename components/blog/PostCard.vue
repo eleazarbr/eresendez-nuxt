@@ -15,7 +15,13 @@
       </nuxt-link>
 
       <p class="subtitle is-size-6">
-        {{ post.summary }}
+        <!-- TODO remove summary attribute from blog posts -->
+        <span v-if="post.summary">
+          {{ post.summary }}
+        </span>
+        <span v-else>
+          {{ post.description }}
+        </span>
       </p>
     </div>
     <div class="card-foot p-3">

@@ -1,5 +1,6 @@
 ---
 title: Diferencia entre map y forEach en JavaScript
+createdAt: 2021-04-04 14:49
 tags:
 - javascript
 ---

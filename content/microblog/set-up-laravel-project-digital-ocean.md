@@ -1,5 +1,7 @@
 ---
 title: ¿Cómo configurar un Laravel Project en Digital Ocean?
+createdAt: 2021-04-08 12:18
+updatedAt: 2021-04-13 17:17
 tags:
 - laravel
 ---
@@ -7,10 +9,10 @@ tags:
 Guía sencilla de pasos que tampoco quiero recordar para configurar un Laravel Project en Digital Ocean.
 <!--more-->
 
-Probablemente esto se convierta en un blog-post.
-
 **Instalar la última versión de Laravel localmente**
-`composer create-project --prefer-dist laravel/laravel appName`
+```bash
+composer create-project --prefer-dist laravel/laravel appName
+```
 
 **Configurar el repositorio remote y hacer primer commit**
 ```bash
@@ -39,6 +41,13 @@ composer install
 npm install
 
 sudo nano .env
+```
+
+**Permisos**
+```bash
+sudo chgrp -R www-data storage bootstrap/cache;
+sudo chmod -R 775 storage bootstrap/cache;
+sudo chown -R $USER:www-data storage;
 ```
 
 **NGINX settings**
@@ -88,7 +97,7 @@ server {
 }
 ```
 
-Add site in Cloudflare.
+**Add site in Cloudflare**
 - Configure DNS
 - Create, get and set Cloudflare SSL Certificate
 ```bash
@@ -97,3 +106,11 @@ sudo nano /etc/ssl/private/key-project.pem
 sudo nano /etc/ssl/certs/cloudflare.crt
 ```
 
+**Activate site NGINX**
+```bash
+sudo ln -s /etc/nginx/sites-available/project.com /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+Listo: visita `project.com` para visualizar el resultado. 

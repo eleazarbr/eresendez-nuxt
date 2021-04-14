@@ -1,5 +1,22 @@
 [
   {
+    "title": "Xiolab",
+    "description": "",
+    "image": "",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://xiolab.care",
+        "target": "_blank"
+      },
+      {
+        "label": "Write-up",
+        "to": "/side-projects/xiolab",
+        "target": "_self"
+      }
+    ]
+  },
+  {
     "title": "Escuela Sabática Digital",
     "links": [
       {
