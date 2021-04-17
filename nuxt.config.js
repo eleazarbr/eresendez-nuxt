@@ -1,6 +1,11 @@
 require('dotenv').config()
 import webpack from 'webpack'
 
+import theme from '@nuxt/content-theme-docs'
+export default theme({
+  // [additional nuxt configuration]
+})
+
 let posts = []
 const createSitemapRoutes = async () => {
   let routes = []
