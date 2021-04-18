@@ -24,18 +24,6 @@ const routes = [
 
   { path: '/ideas', name: 'web.ideas', component: page('web/ideas.vue') },
   {
-    path: '/wiki',
-    component: page('web/wiki.vue'),
-    children: [
-      {
-        path: '/wiki/:category/:slug',
-        name: 'wiki.article',
-        component: page('web/wiki/article.vue')
-      }
-    ]
-  },
-
-  {
     path: '/side-projects',
     name: 'web.projects',
     component: page('web/projects.vue')
@@ -46,7 +34,6 @@ const routes = [
     component: page('blog/_slug.vue')
   },
   { path: '/resume', name: 'web.cv', component: page('web/curriculum.vue') }
-  // { path: '/about', name: 'web.about', component: page('web/about.vue') },
 ]
 
 const router = new Router({

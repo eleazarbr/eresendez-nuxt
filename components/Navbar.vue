@@ -15,14 +15,11 @@
       <b-navbar-item tag="router-link" :to="{ name: 'microblog.index' }">
         {{ $t("navbar.microblog") }}
       </b-navbar-item>
-      <b-navbar-item
-        tag="router-link"
-        :to="{
-          name: 'wiki.article',
-          params: { category: 'introduction', slug: 'introduction' },
-        }"
-      >
-        {{ $t("navbar.wiki") }}
+      <b-navbar-item tag="a" href="https://garden.eresendez.com">
+        <span>
+          {{ $t("navbar.garden") }}
+        </span>
+        <b-icon size="is-small" icon="launch"></b-icon>
       </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'web.ideas' }">
         {{ $t("navbar.ideas") }}
