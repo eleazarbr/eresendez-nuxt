@@ -1,0 +1,14 @@
+{
+  "[markdown]": {
+    "editor.fontFamily": "\"Helvetica Neue\", monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 26,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "editor.lineNumbers": "off",
+    "editor.quickSuggestions": false
+  },
+  "spellright.language": ["en", "es"],
+  "spellright.documentTypes": ["mdx", "md", "markdown", "latex", "plaintext"]
+}
