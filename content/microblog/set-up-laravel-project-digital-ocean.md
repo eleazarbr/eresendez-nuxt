@@ -50,6 +50,21 @@ sudo chmod -R 775 storage bootstrap/cache;
 sudo chown -R $USER:www-data storage;
 ```
 
+**Más sobre permisos**
+```bash
+# Add self to group www-data:
+sudo usermod -a -G www-data $USER 
+
+# Change ownership of laravel folder:
+sudo chgrp -R www-data /var/www/project.com/html 
+   
+# Tip: to setup laravel storage:
+sudo chmod -R 775 /var/www/project.com/html/storage 
+
+# Permanent solution:
+sudo setfacl -d -R -m u:$USER:rwx,g:www-data:rwx,o:rx /var/www/project.com/html 
+```
+
 **NGINX settings**
 ```bash
 sudo nano /etc/nginx/sites-available/project.com
