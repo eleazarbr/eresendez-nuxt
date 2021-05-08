@@ -42,12 +42,12 @@
         {
           "dates": "2021",
           "title": {
-            "en": "Escuela Sabática Digital",
+            "en": "Digital Sabbath School",
             "es": "Escuela Sabática Digital"
           },
           "subtitle": "",
           "description": {
-            "en": "Es una aplicación que me ayuda a estudiar diariamente las lecciones de la Escuela Sabática, sustituyendo el estudio en papel por una experiencia digital",
+            "en": "It is an application that helps me study the Sabbath School lessons daily, replacing the study on paper with a digital experience",
             "es": "Es una aplicación que me ayuda a estudiar diariamente las lecciones de la Escuela Sabática, sustituyendo el estudio en papel por una experiencia digital"
           },
           "url": "https://escuelasabatica.digital",
@@ -70,7 +70,7 @@
           },
           "subtitle": "",
           "description": {
-            "en": "Es un ecommerce de productos electrónicos. La tienda se actualiza cada dos horas consultando la API del proveedor. Espero en el futuro se convierta en un proyecto que brinde mas servicios relacionados con el desarrollo web y móvil",
+            "en": "It's an ecommerce of computer hardware products. The store is updated hourly by querying a provider's API. It also accepts payments through openpay",
             "es": "Es un ecommerce de productos electrónicos. La tienda se actualiza cada dos horas consultando la API del proveedor. Espero en el futuro se convierta en un proyecto que brinde mas servicios relacionados con el desarrollo web y móvil"
           },
           "url": "https://isabyte.com",
@@ -99,7 +99,7 @@
           },
           "subtitle": "",
           "description": {
-            "en": "Es mi sitio web personal, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos",
+            "en": "It is my personal website, it is simply a digital garden where I can keep track of my progress",
             "es": "Es mi sitio web personal, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos"
           },
           "url": "https://eresendez.com",
@@ -175,7 +175,7 @@
           },
           "subtitle": "Remote",
           "description": {
-            "en": "Desarrollo de la aplicación Preventus, una herramienta administrativa para el area de la Salud Ocupacional.",
+            "en": "Development of the Preventus WebApp, an administrative tool for the Occupational Health area.",
             "es": "Desarrollo de la aplicación Preventus, una herramienta administrativa para el area de la Salud Ocupacional."
           },
           "url": "https://preventus.semt.com.mx",

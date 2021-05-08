@@ -2,6 +2,9 @@
 title: Laravel
 ---
 
+## Links
+- [Laravel convert an array to a model][0]
+
 ## Gists
 
 Install latest Laravel:
@@ -14,4 +17,5 @@ Install specific version:
 - [The Laravel Framework][1] - Packagist
 
 
-[1]:	https://packagist.org/packages/laravel/laravel
+[0]: https://stackoverflow.com/a/23662444/6456709
+[1]: https://packagist.org/packages/laravel/laravel
