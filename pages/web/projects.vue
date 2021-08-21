@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <breadcrumbs></breadcrumbs>
+          <Breadcrumbs></Breadcrumbs>
           <div class="content">
             <!-- Title -->
             <h2 class="title">Projects</h2>
@@ -23,7 +23,6 @@
                     :key="index"
                   >
                     <nuxt-link
-                      class="underline-blue"
                       :href="link.url"
                       :to="link.hasOwnProperty('to') ? link.to : ''"
                       :target="link.target"
@@ -45,10 +44,13 @@ import Breadcrumbs from "~/components/web/Breadcrumbs";
 import projects from "~/static/data/projects.json";
 export default {
   name: "projects",
+
   transition: "slide",
+
   components: {
     Breadcrumbs,
   },
+
   head() {
     return {
       title: "Side Projects",

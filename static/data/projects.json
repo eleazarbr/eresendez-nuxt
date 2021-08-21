@@ -1,46 +1,24 @@
 [
   {
-    "title": "Xiolab",
-    "description": "",
-    "image": "",
-    "links": [
-      {
-        "label": "Site (in development)",
-        "url": "https://xiolab.care",
-        "target": "_blank"
-      },
-      {
-        "label": "Write-up (Draft)",
-        "to": "/side-projects/xiolab",
-        "target": "_self"
-      }
-    ]
-  },
-  {
-    "title": "Escuela Sabática Digital",
+    "title": "Xardin",
+    "description": "Someday not too far away, it will be a digital platform related to digital gardens :)",
     "links": [
       {
         "label": "Site",
-        "url": "https://escuelasabatica.digital",
+        "url": "https://xardin.digital",
         "target": "_blank"
-      },
-      {
-        "label": "Write-up (Draft)",
-        "to": "/side-projects/escuela-sabatica-digital",
-        "target": "_self"
       },
       {
         "label": "Workflowy",
-        "url": "https://workflowy.com/s/escuelasabaticadigit/XYQdOuS2WjgeXTYi",
+        "url": "https://workflowy.com/s/xardindigital/xHHjfmqiKC81GNtS",
         "target": "_blank"
       }
     ],
-    "description": "",
-    "image": "X9GHkHbJIaU"
+    "image": ""
   },
   {
-    "title": "Eleazar Reséndez",
-    "description": "El código fuente de este website",
+    "title": "Eleazar Resendez",
+    "description": "The source code of this website",
     "links": [
       {
         "label": "Site",
@@ -54,33 +32,57 @@
       },
       {
         "label": "Workflowy",
-        "url": "https://workflowy.com/s/eresendezcom/xO5Co4k1tMe0PJ9g",
+        "url": "https://workflowy.com/s/eresendezcom/j0b95aNmMYAuyWyG",
         "target": "_blank"
       }
     ],
-    "image": "X9GHkHbJIaU"
+    "image": ""
   },
   {
     "title": "Isabyte",
-    "description": "Un ecommerce de productos electrónicos",
+    "description": "An ecommerce of hardware products",
     "links": [
       {
         "label": "Site",
         "url": "https://isabyte.com",
         "target": "_blank"
-      },
-      {
-        "label": "Docs",
-        "url": "https://docs.isabyte.com",
-        "target": "_blank"
-      },
-      {
-        "label": "Workflowy",
-        "url": "https://workflowy.com/s/isabyte/od67P4ld1oLkD2JS",
-        "target": "_blank"
       }
     ],
-    "image": "Px3iBXV-4TU"
+    "image": ""
+  },
+  {
+    "title": "Xiolab",
+    "description": "",
+    "image": "",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://xiolab.care",
+        "target": "_blank"
+      },
+      {
+        "label": "Write-up (will be written some day)",
+        "to": "",
+        "target": ""
+      }
+    ]
+  },
+  {
+    "title": "Digital Sabbath School",
+    "links": [
+      {
+        "label": "Site",
+        "url": "https://escuelasabatica.digital",
+        "target": "_blank"
+      },
+      {
+        "label": "Write-up (will be written some day)",
+        "to": "",
+        "target": ""
+      }
+    ],
+    "description": "",
+    "image": ""
   },
   {
     "title": "Preventus",
@@ -97,6 +99,6 @@
       }
     ],
     "description": "",
-    "image": "NFvdKIhxYlU"
+    "image": ""
   }
 ]

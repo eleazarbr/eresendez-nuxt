@@ -6,7 +6,7 @@
       }}</b-navbar-item>
     </template>
     <template slot="start">
-      <locale-dropdown></locale-dropdown>
+      <LocaleDropdown></LocaleDropdown>
     </template>
     <template slot="end">
       <b-navbar-item tag="router-link" :to="{ name: 'blog.index' }">
@@ -15,7 +15,7 @@
       <b-navbar-item tag="router-link" :to="{ name: 'microblog.index' }">
         {{ $t("navbar.microblog") }}
       </b-navbar-item>
-      <b-navbar-item tag="a" href="https://garden.eresendez.com">
+      <b-navbar-item tag="a" target="_blank" href="https://xardin.digital/eresendez">
         <span>
           {{ $t("navbar.garden") }}
         </span>

@@ -1,8 +1,8 @@
 {
-  "title": "Eleazar Reséndez del Ángel",
+  "title": "Eleazar Resendez del Angel",
   "subtitle": {
-    "en": "Fullstack Web Developer",
-    "es": "Desarrollador Web Fullstack"
+    "en": "Full Stack Web Developer (Laravel + Vue)",
+    "es": "Desarrollador Web Fullstack (Laravel + Vue)"
   },
   "avatar": "/avatar.jpg",
   "links": [
@@ -17,7 +17,7 @@
       "icon": "github"
     },
     {
-      "name": "linkedin.com/in/eleazarbr",
+      "name": "linkedin.com/in/eleazarbr (currently hibernating)",
       "url": "https://linkedin.com/in/eleazarbr",
       "icon": "linkedin"
     }
@@ -40,6 +40,36 @@
       },
       "content": [
         {
+          "dates": "2022",
+          "title": {
+            "en": "Xardin",
+            "es": "Xardin"
+          },
+          "subtitle": "",
+          "description": {
+            "en": "It's going to be a platform that will simplify digital gardens",
+            "es": "It's going to be a platform that will simplify digital gardens"
+          },
+          "url": "https://xardin.digital",
+          "tags": [
+            "Laravel 8",
+            "Test Driven Development",
+            "Stripe",
+            "Markdown",
+            "Dropbox API",
+            "Vue 3",
+            "Buefy"
+          ],
+          "dependencies": [
+            "laravel/cashier",
+            "laravel/socialite",
+            "league/commonmark",
+            "spatie/yaml-front-matter",
+            "@v-craft/core",
+            "force-graph"
+          ]
+        },
+        {
           "dates": "2021",
           "title": {
             "en": "Digital Sabbath School",
@@ -60,7 +90,9 @@
             "Vue 2",
             "Buefy"
           ],
-          "dependencies": ["vue-quill-editor"]
+          "dependencies": [
+            "vue-quill-editor"
+          ]
         },
         {
           "dates": "2020",
@@ -99,8 +131,8 @@
           },
           "subtitle": "",
           "description": {
-            "en": "It is my personal website, it is simply a digital garden where I can keep track of my progress",
-            "es": "Es mi sitio web personal, simplemente es un jardín digital donde puedo realizar un seguimiento de mis progresos"
+            "en": "It is my personal website, it is simply a place where I can keep track of my progress",
+            "es": "Es mi sitio web personal, simplemente es un lugar donde puedo realizar un seguimiento de mis progresos"
           },
           "url": "https://eresendez.com",
           "tags": [
@@ -110,7 +142,9 @@
             "Markdown",
             "Multi Language (i18n)"
           ],
-          "dependencies": ["html2pdf.js"]
+          "dependencies": [
+            "html2pdf.js"
+          ]
         }
       ]
     },
@@ -121,9 +155,28 @@
       },
       "content": [
         {
-          "dates": "09/2018 - present",
+          "dates": "09/2021 - present",
           "title": {
-            "en": "Fullstack Web developer at XML Team, LLC",
+            "en": "Application developer at Curotec, LLC",
+            "es": "Desarrollador Web Fullstack en Curotec, LLC"
+          },
+          "subtitle": "Remote",
+          "description": {
+            "en": "",
+            "es": ""
+          },
+          "url": "https://curotec.com",
+          "tags": [
+            "Laravel 8",
+            "Vue 3",
+            "PHP 7.4",
+            "MySQL 8"
+          ]
+        },
+        {
+          "dates": "09/2018 - 09/2021",
+          "title": {
+            "en": "Full Stack Web developer at XML Team, LLC",
             "es": "Desarrollador Web Fullstack en XML Team, LLC"
           },
           "subtitle": "Remote",
@@ -179,7 +232,12 @@
             "es": "Desarrollo de la aplicación Preventus, una herramienta administrativa para el area de la Salud Ocupacional."
           },
           "url": "https://preventus.semt.com.mx",
-          "tags": ["Laravel 7", "PHP 7.4", "MySQL 8", "Bootstrap 3"]
+          "tags": [
+            "Laravel 7",
+            "PHP 7.4",
+            "MySQL 8",
+            "Bootstrap 3"
+          ]
         }
       ]
     },
@@ -226,7 +284,7 @@
         "en": "Languages",
         "es": "Idiomas"
       },
-      "has_break_page": true,
+      "has_break_page": false,
       "content": [
         {
           "dates": "Jul. 2018",
@@ -259,6 +317,16 @@
           "subtitle": "",
           "description": null,
           "url": "mailto:eleazar@eresendez.com"
+        },
+        {
+          "dates": "Address",
+          "title": {
+            "en": "Tampico, México",
+            "es": "Tampico, México"
+          },
+          "subtitle": "",
+          "description": null,
+          "url": ""
         }
       ]
     }

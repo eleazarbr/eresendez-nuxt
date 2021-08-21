@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <breadcrumbs></breadcrumbs>
+          <Breadcrumbs></Breadcrumbs>
           <div class="content text-sm sm:text-base md:text-base">
             <nuxt-content :document="page" />
           </div>

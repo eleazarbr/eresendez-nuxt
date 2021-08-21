@@ -9,9 +9,9 @@
       </li>
       <li
         v-for="(crumb, index) in crumbs"
-        :key="index"
         property="itemListElement"
         typeof="ListItem"
+        :key="index"
         :class="{ 'is-active': index == crumbs.length - 1 }"
       >
         <nuxt-link property="item" typeof="WebPage" :to="crumb.path">

@@ -4,12 +4,16 @@
       <!-- download button -->
       <div class="buttons is-right mt-1 is-hidden-mobile">
         <b-button
-          type="is-danger"
+          type="is-primary"
           rounded
+          icon-left="download"
           :loading="isGeneratingPdf"
-          @click="generatePdf"
-          >{{ $t("buttons.download_pdf") }}</b-button
+          @click="generatePdf()"
         >
+          <b>
+            {{ $t("buttons.download_pdf") }}
+          </b>
+        </b-button>
       </div>
 
       <!-- CV -->
@@ -20,15 +24,15 @@
             <div class="columns is-vcentered is-mobile">
               <div class="column is-narrow">
                 <!-- Avatar -->
-                <div class="flex justify-center">
+                <div class="is-flex is-justify-content-center">
                   <figure class="image is-96x96">
-                    <img class="is-rounded" :src="cv.avatar" alt="Image" />
+                    <img class="is-rounded" :src="cv.avatar" alt="Eleazar R." />
                   </figure>
                 </div>
               </div>
               <div class="column is-auto">
                 <div class="content text-sm">
-                  <h3 class="title is-size-5-desktop is-size-6-mobile truncate">
+                  <h3 class="title is-size-5-desktop is-size-6-mobile">
                     {{ cv.title }}
                   </h3>
                   <p class="subtitle is-size-6">
@@ -65,7 +69,9 @@
               v-for="(section, sectionIndex) in cv.sections"
               :key="sectionIndex"
             >
-              <div v-if="section.has_break_page" style="break-before: always"></div>
+              <!-- Style for adding a break page -->
+              <!-- style="break-before: always" -->
+              <!-- <div v-if="section.has_break_page"></div> -->
               <h3>{{ section.title[locale] }}</h3>
               <div
                 class="columns is-mobile"
@@ -83,16 +89,21 @@
                         <span>{{ content.title[locale] }}</span>
                         <b-icon icon="link" size="is-small"></b-icon>
                       </a>
-                      <span v-else class="has-text-weight-bold">{{ content.title[locale] }}</span>
+                      <span v-else class="has-text-weight-bold">
+                        {{ content.title[locale] }}
+                      </span>
                       <br />
                     </span>
 
                     <!-- Section content subtitle -->
                     <span v-if="content.subtitle">{{ content.subtitle }}</span>
                   </p>
+
+                  <!-- Description -->
                   <p v-if="content.description" class="has-text-dark">
                     {{ content.description[locale] }}
                   </p>
+
                   <!-- Tags -->
                   <p v-if="content.tags">
                     {{ join(content.tags) }}
