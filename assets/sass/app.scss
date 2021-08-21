@@ -1,5 +1,13 @@
-@import 'partials/main';
-@import 'partials/content';
-@import 'elements/box';
-@import 'elements/navbar';
-@import 'elements/transitions';
+// Theme
+@import "partials/_theme";
+
+// Bulma
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Main
+@import "partials/main";
+@import "partials/content";
+@import "elements/box";
+@import "elements/navbar";
+@import "elements/transitions";
