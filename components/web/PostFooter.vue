@@ -5,11 +5,11 @@
     <!-- Say thanks button -->
     <div class="columns is-variable is-1 is-vcentered is-mobile">
       <div class="column is-narrow">
-        <p class="font-bold">{{ $t("blog.say_thanks") }}</p>
+        <p class="has-text-weight-bold">{{ $t("blog.say_thanks") }}</p>
       </div>
       <div class="column is-narrow">
         <b-button
-          type="is-info"
+          type="is-twitter"
           icon-left="twitter"
           tag="a"
           target="_blank"
@@ -30,7 +30,7 @@
         :href="`${githubRepo}${page.path}${page.extension}`"
         target="_blank"
       >
-        <span class="font-bold">Editar</span>
+        <span class="has-text-weight-bold">Editar</span>
       </b-button>
     </b-field>
 

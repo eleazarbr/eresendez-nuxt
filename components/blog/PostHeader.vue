@@ -8,12 +8,12 @@
     <div class="absolute w-full h-80" style="background-color: rgba(0, 0, 0, 0.5)"></div>
 
     <!-- Hero content -->
-    <div class="hero-body flex items-center">
+    <div class="hero-body flex is-align-items-center">
       <div class="container">
         <div class="columns">
           <div class="column is-auto">
             <!-- Post title -->
-            <h2 class="text-2xl sm:text-3xl leading-tight font-bold">
+            <h2 class="text-2xl sm:is-size-3 leading-tight has-text-weight-bold">
               {{ page.title }}
             </h2>
 
@@ -23,7 +23,7 @@
               <p>
                 <b-icon icon="face" size="is-small"></b-icon>
                 <span> Eleazar Reséndez</span>
-                <a class="font-bold" target="_blank" href="https://twitter.com/eleazarbr"
+                <a class="has-text-weight-bold" target="_blank" href="https://twitter.com/eleazarbr"
                   >@eleazarbr</a
                 >
               </p>
@@ -65,7 +65,7 @@
                   type="is-primary"
                   :class="{ 'is-danger': tag === 'Draft' }"
                 >
-                  <span class="font-bold">
+                  <span class="has-text-weight-bold">
                     {{ tag }}
                   </span>
                 </b-tag>

@@ -6,7 +6,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-              <h2 class="text-3xl font-bold has-text-black">
+              <h2 class="is-size-3 has-text-weight-bold has-text-black">
                 {{ $t("blog.posts") }}
                 <span>&#9997;&#65039;</span>
               </h2>
@@ -17,7 +17,7 @@
               <b-field group-multiline grouped>
                 <b-field v-if="tag" expanded>
                   <div class="tags">
-                    <b-tag type="is-dark" closable @close="clearSearch">
+                    <b-tag type="is-dark" closable @close="clearSearch()">
                       {{ tag }}
                     </b-tag>
                   </div>
@@ -30,7 +30,7 @@
                     icon="search-web"
                     :loading="isLoading"
                     :placeholder="$t('search')"
-                    @input="search"
+                    @input="search()"
                   ></b-input>
                 </b-field>
               </b-field>
@@ -48,7 +48,7 @@
                 v-for="(post, index) in posts"
                 :key="index"
               >
-                <post-card :post="post" show-route="post.show"></post-card>
+                <PostCard :post="post" show-route="post.show"></PostCard>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
         <div v-if="isSubscribeActive" class="section">
           <div class="columns is-centered">
             <div class="column is-7">
-              <subscribe-form></subscribe-form>
+              <SubscribeForm></SubscribeForm>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default {
   methods: {
     search: _.debounce(function () {
       this.searchQuery ? this.searchPost() : this.getPosts();
-    }, 1000),
+    }, 500),
 
     clearSearch() {
       this.tag = null;

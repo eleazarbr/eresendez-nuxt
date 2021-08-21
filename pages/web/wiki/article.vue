@@ -2,7 +2,7 @@
   <div>
     <div class="content">
       <!-- Article title -->
-      <h2 class="text-2xl sm:text-3xl leading-tight font-bold pb-5">
+      <h2 class="text-2xl sm:is-size-3 leading-tight has-text-weight-bold pb-5">
         {{ page.title }}
       </h2>
 

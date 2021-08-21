@@ -4,8 +4,8 @@
       <div class="has-background-light h-full p-3">
         <!-- Mobile menu -->
         <div class="is-hidden-tablet">
-          <div class="flex justify-between items-center">
-            <p class="font-bold"></p>
+          <div class="flex is-justify-content-space-between is-align-items-center">
+            <p class="has-text-weight-bold"></p>
             <b-button icon-left="menu" @click="sidebar.open = !sidebar.open"> </b-button>
           </div>
 

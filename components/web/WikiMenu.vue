@@ -3,7 +3,7 @@
     <b-menu-list>
       <b-menu-item v-for="(category, categoryKey) in menu" :key="categoryKey">
         <template slot="label">
-          <span class="font-bold">
+          <span class="has-text-weight-bold">
             {{ categoryKey | capitalize }}
           </span>
         </template>

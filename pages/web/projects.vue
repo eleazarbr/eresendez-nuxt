@@ -12,13 +12,13 @@
             <!-- Projects -->
             <ul>
               <li v-for="(project, index) in projects" :key="index">
-                <span class="font-bold">
+                <span class="has-text-weight-bold">
                   {{ project.title }}
                 </span>
                 <span v-if="project.description"> - {{ project.description }} </span>
                 <ul>
                   <li
-                    class="font-bold"
+                    class="has-text-weight-bold"
                     v-for="(link, index) in project.links"
                     :key="index"
                   >

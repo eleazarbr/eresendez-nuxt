@@ -83,7 +83,7 @@
                         <span>{{ content.title[locale] }}</span>
                         <b-icon icon="link" size="is-small"></b-icon>
                       </a>
-                      <span v-else class="font-bold">{{ content.title[locale] }}</span>
+                      <span v-else class="has-text-weight-bold">{{ content.title[locale] }}</span>
                       <br />
                     </span>
 

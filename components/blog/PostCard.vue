@@ -1,5 +1,5 @@
 <template>
-  <div class="card flex flex-col justify-between h-full">
+  <div class="card flex is-flex-direction-column is-justify-content-space-between h-full">
     <div v-if="post.image" class="card-image">
       <nuxt-link :to="{ name: showRoute, params: { slug: post.slug } }">
         <figure class="image is-3by1">
@@ -25,7 +25,7 @@
       </p>
     </div>
     <div class="card-foot p-3">
-      <div class="flex justify-between items-center">
+      <div class="is-flex is-justify-content-space-between is-align-items-center">
         <p class="text-sm my-1">
           <span>
             {{
@@ -40,10 +40,11 @@
         <b-taglist class="is-centered">
           <b-tag
             v-for="(tag, index) in post.tags"
+            type="is-dark"
             :key="index"
             :class="{ 'is-danger': tag === 'Draft' }"
           >
-            <span class="font-bold">
+            <span class="has-text-weight-bold">
               {{ tag }}
             </span>
           </b-tag>
