@@ -66,8 +66,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
     'nuxt-buefy',
-    '@nuxtjs/sitemap'
+    'modules/twitter'
   ],
 
   tailwindcss: {
@@ -129,7 +130,7 @@ export default {
 
     // Fixes: https://github.com/nuxt/nuxt.js/issues/8882
     babel: {
-      presets () {
+      presets() {
         return [
           [
             '@nuxt/babel-preset-app',
@@ -148,6 +149,6 @@ export default {
         _: 'lodash'
       })
     ],
-    extend (config, ctx) {}
+    extend(config, ctx) {}
   }
 }

@@ -56,6 +56,7 @@
   },
   "microblog": {
     "see_all": "Ver todos los microposts",
-    "continue_reading": "Continuar leyendo"
+    "continue_reading": "Continuar leyendo",
+    "latest_tweets": "Últimos Tweets"
   }
 }

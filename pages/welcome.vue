@@ -21,11 +21,15 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-half-desktop">
-            <micro-post
-              v-for="(microPost, index) in microPosts"
-              :key="index"
-              :post="microPost"
-            ></micro-post>
+            <h2 class="title has-text-centered">
+              {{ $t("microblog.latest_tweets") }}
+            </h2>
+
+            <Tweet
+              v-for="tweet in tweets.slice(0, 3)"
+              :key="tweet.id"
+              :tweet="tweet"
+            ></Tweet>
           </div>
         </div>
         <div class="buttons is-centered">
@@ -66,8 +70,8 @@
 <script>
 import TheFooter from "~/components/TheFooter";
 import PostCard from "../components/blog/PostCard.vue";
-import MicroPost from "../components/microblog/MicroPost.vue";
-
+import Tweet from "@/components/microblog/Tweet.vue";
+import tweets from "~/tweets/tweets.json";
 export default {
   name: "welcome",
   transition: "slide",
@@ -75,7 +79,7 @@ export default {
   components: {
     TheFooter,
     PostCard,
-    MicroPost,
+    Tweet,
   },
 
   head() {
@@ -119,15 +123,9 @@ export default {
       .limit(5)
       .fetch();
 
-    const microPosts = await $content("microblog")
-      .only(["title", "slug", "description", "tags", "createdAt", "updatedAt"])
-      .sortBy("createdAt", "desc")
-      .limit(3)
-      .fetch();
-
     return {
       posts,
-      microPosts,
+      tweets,
     };
   },
 };

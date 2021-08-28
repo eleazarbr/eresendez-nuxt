@@ -91,3 +91,6 @@ sw.*
 
 # Ulysses
 .Ulysses-Group.plist
+
+# Tweets
+tweets/
